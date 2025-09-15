@@ -1,0 +1,157 @@
+{
+    "bugs": {
+        "com.github.jasminb.jsonapi.ResourceConverterTest.testWriteWithKebabCaseRelationships": {
+            "issue": "https://github.com/jasminb/jsonapi-converter/issues/128"
+        },
+        "org.ojalgo.scalar.RationalNumberTest.testMultiplication": {
+            "issue": "https://github.com/optimatika/ojAlgo/issues/49"
+        },
+        "com.alipay.sofa.rpc.codec.jackson.JacksonSerializerTest.testMoreParameters": {
+            "issue": "https://github.com/sofastack/sofa-rpc/issues/871"
+        },
+        "org.apache.dubbo.common.io.BytesTest.testBase642bCharArrCall": {
+            "issue": "https://github.com/apache/dubbo/issues/4515"
+        },
+        "io.ebeaninternal.server.type.ScalarTypeYearMonthDateTest.testConvertFromMillis": {
+            "issue": "https://github.com/ebean-orm/ebean/issues/1684"
+        },
+        "zingg.common.client.TestArguments.testSubstituteVariablesWithAllEnvVarSet": {
+            "issue": "https://github.com/zinggAI/zingg/issues/60"
+        },
+        "com.thealgorithms.datastructures.lists.SkipListTest.removeFromTail": {
+            "issue": "https://github.com/TheAlgorithms/Java/issues/316"
+        },
+        "org.jeasy.rules.core.RuleProxyTest.invokeEquals": {
+            "issue": "https://github.com/j-easy/easy-rules/issues/115"
+        },
+        "org.jeasy.rules.core.RuleProxyTest.invokeHashCode": {
+            "issue": "https://github.com/j-easy/easy-rules/issues/98"
+        },
+        "com.jcabi.github.mock.MkGithubTest.canCreateRandomRepo": {
+            "issue": "https://github.com/jcabi/jcabi-github/issues/888"
+        },
+        "org.apache.rocketmq.remoting.protocol.CheckpointFileTest.testNormalWriteAndRead": {
+            "issue": "https://github.com/apache/rocketmq/issues/4627"
+        },
+        "com.github.davidmoten.rtree2.geometry.RectangleTest.testIntersects": {
+            "issue": "https://github.com/davidmoten/rtree2/issues/7"
+        },
+        "org.dyn4j.geometry.AABBTest.testHashcode": {
+            "issue": "https://github.com/dyn4j/dyn4j/issues/127"
+        },
+        "org.dyn4j.world.ConstraintGraphTest.testRemoveBodyWithUnaryJoint": {
+            "issue": "https://github.com/dyn4j/dyn4j/issues/182"
+        },
+        "fi.thl.covid19.exposurenotification.diagnosiskey.IntervalNumberTest.dayLastIntervalWorks": {
+            "issue": "https://github.com/THLfi/koronavilkku-backend/issues/30"
+        },
+        "zingg.common.client.TestArguments.testNumericWithinQuotes": {
+            "issue": "https://github.com/zinggAI/zingg/issues/60"
+        },
+        "com.esri.core.geometry.TestEnvelope.testEquals": {
+            "issue": "https://github.com/Esri/geometry-api-java/issues/238"
+        },
+        "com.esri.core.geometry.TestOGCContains.testAcceleratedPiP": {
+            "issue": "https://github.com/Esri/geometry-api-java/issues/207"
+        },
+        "com.esri.core.geometry.TestPoint.testPt": {
+            "issue": "https://github.com/Esri/geometry-api-java/issues/238"
+        },
+        "com.esri.core.geometry.TestWKBSupport.testWKB3": {
+            "issue": "https://github.com/Esri/geometry-api-java/issues/268"
+        },
+        "com.adobe.cq.commerce.core.components.internal.models.v1.navigation.NavigationImplTest.testNavigationCategoryHierarchySelection": {
+            "issue": "https://github.com/adobe/aem-core-cif-components/issues/588"
+        },
+        "com.zaxxer.sparsebits.PreviousClearBitTest.level1Miss": {
+            "issue": "https://github.com/brettwooldridge/SparseBitSet/issues/13"
+        },
+        "org.apache.rocketmq.remoting.protocol.CheckpointFileTest.testAbNormalWriteAndRead": {
+            "issue": "https://github.com/apache/rocketmq/issues/4627"
+        },
+        "org.nutz.lang.TimesTest.test_sep_by_T": {
+            "issue": "https://github.com/nutzam/nutz/issues/524"
+        },
+        "org.eclipse.mosaic.lib.routing.database.RouteManagerTest.getRouteForRTI_originSumo": {
+            "issue": "https://github.com/eclipse/mosaic/issues/86"
+        },
+        "com.willwinder.ugs.nbp.designer.io.ugsd.UgsDesignReaderTest.readDesignWithGroup": {
+            "issue": "https://github.com/winder/Universal-G-Code-Sender/issues/2128"
+        },
+        "org.ojalgo.array.SparseTest.testIndexOfLargest": {
+            "issue": "https://github.com/optimatika/ojAlgo/issues/471"
+        },
+        "com.github.davidmoten.rtree2.geometry.LineTest.testLineFloatIntersectsWithHorizontalLine": {
+            "issue": "https://github.com/davidmoten/rtree2/issues/91"
+        },
+        "com.alipay.sofa.rpc.context.RpcInvokeContextTest.testSetContext": {
+            "issue": "https://github.com/sofastack/sofa-rpc/issues/1081"
+        },
+        "org.ojalgo.type.context.NumberContextTest.testComparePrecisionAndScalePrimitive": {
+            "issue": "https://github.com/optimatika/ojAlgo/issues/429"
+        },
+        "com.thoughtworks.qdox.library.JavaClassContextTest.testGetClassByName": {
+            "issue": "https://github.com/paul-hammant/qdox/issues/171"
+        },
+        "io.opentracing.mock.MockTracerTest.testTextMapPropagatorTextMap": {
+            "issue": "https://github.com/opentracing/opentracing-java/issues/129"
+        },
+        "com.github.davidmoten.rtree2.geometry.RectangleTest.testIntersectsNoRectangleContainsCornerOfAnother": {
+            "issue": "https://github.com/davidmoten/rtree2/issues/7"
+        },
+        "io.opentracing.mock.MockTracerTest.testDefaultConstructor": {
+            "issue": "https://github.com/opentracing/opentracing-java/issues/179"
+        },
+        "com.zaxxer.sparsebits.PreviousClearBitTest.level2Miss": {
+            "issue": "https://github.com/brettwooldridge/SparseBitSet/issues/13"
+        },
+        "com.jme3.bounding.TestBoundingSphere.testEquals": {
+            "issue": "https://github.com/jMonkeyEngine/jmonkeyengine/issues/2252"
+        },
+        "com.ctrip.framework.apollo.portal.environment.EnvTest.testTransformEnvValid": {
+            "issue": "https://github.com/apolloconfig/apollo/issues/4011"
+        },
+        "herddb.utils.BytesTest.testNextLenPreservation": {
+            "issue": "https://github.com/diennea/herddb/issues/277"
+        },
+        "org.apache.iotdb.consensus.ratis.utils.UtilsTest.testEncryption": {
+            "issue": "https://github.com/apache/iotdb/issues/9168"
+        },
+        "org.apache.iotdb.db.storageengine.dataregion.compaction.cross.InsertionCrossSpaceCompactionTest.testInsertionCompactionUpdateFileMetrics": {
+            "issue": "https://github.com/apache/iotdb/issues/13691"
+        },
+        "com.vdurmont.semver4j.RequirementTest.testEquals": {
+            "issue": "https://github.com/vdurmont/semver4j/issues/34"
+        },
+        "com.zaxxer.sparsebits.PreviousClearBitTest.level3Miss": {
+            "issue": "https://github.com/brettwooldridge/SparseBitSet/issues/13"
+        },
+        "com.github.davidmoten.geo.LatLongTest.testHashCode": {
+            "issue": "https://github.com/davidmoten/geo/issues/179"
+        },
+        "com.alipay.sofa.jraft.conf.ConfigurationTest.testToStringParseWithSpace": {
+            "issue": "https://github.com/sofastack/sofa-jraft/issues/1115"
+        },
+        "com.github.davidmoten.rtree2.geometry.LineTest.testLineDoubleIntersectsWithHorizontalLine": {
+            "issue": "https://github.com/davidmoten/rtree2/issues/91"
+        },
+        "com.vdurmont.semver4j.RequirementTest.testHashCode": {
+            "issue": "https://github.com/vdurmont/semver4j/issues/34"
+        },
+        "com.github.davidmoten.rtree2.geometry.PointTest.testDoesNotContain": {
+            "issue": "https://github.com/davidmoten/rtree2/issues/60"
+        },
+        "io.smallrye.config.PropertyNameTest.mappingNameEquals": {
+            "issue": "https://github.com/smallrye/smallrye-config/issues/1147"
+        },
+        "org.geolatte.geom.json.FeatureDeserializationTest.testDeSerializeWithNullGeometry": {
+            "issue": "https://github.com/GeoLatte/geolatte-geom/issues/143"
+        },
+        "fi.thl.covid19.exposurenotification.diagnosiskey.IntervalNumberTest.utcLocalDateWorks": {
+            "issue": "https://github.com/THLfi/koronavilkku-backend/issues/30"
+        },
+        "zingg.common.client.TestArguments.testBooleanType": {
+            "issue":"https://github.com/zinggAI/zingg/issues/60"
+        }
+    }
+}
