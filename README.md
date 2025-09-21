@@ -26,7 +26,7 @@ The source code of MR-Coupler can be found [here](https://github.com/MR-Coupler/
 ## Experimental Data
 ---
 **Dataset.** 
-The first [dataset](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/data/Human-written-MTCs) contains 1,471 executable MTCs written by developers in open-source Java projects. 
+The first [dataset](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/data/Human-written-MTCs.json) contains 1,471 executable MTCs written by developers in open-source Java projects. 
 The other [dataset](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/data/Bug-Revealing-MTCs.json) is made up of 50 entities with bug-revealing MTCs filtered from the first dataset.
 (NOTE: The experimental projects were collected on December 16, 2024. Due to the continuous evolution of these projects, provided links of MTCs may be outdated. If you encounter any outdated cases, please report the issue to us. Your contributions are greatly appreciated! 😄)
 
