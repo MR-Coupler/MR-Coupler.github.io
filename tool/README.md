@@ -3,7 +3,7 @@
 **MR-Coupler** is an automated approach to automatically generate metamorphic test case via functional coupling analysis.
 
 
-### Environment Configuration 
+## Environment Configuration 
 
 * Java: 11.0.18
 * Python: 3.10, the required depdencies can be found in `requirements.txt`
@@ -23,7 +23,7 @@ client = openai.AzureOpenAI(
 )
 ```
 
-### Quick Start: Metamorphic test case generation
+## Quick Start: Metamorphic test case generation
     
 Navigate to MR-Coupler's directory and execute the following command:
 
@@ -35,6 +35,6 @@ $ cd MR-Coupler; python generate_MTCs.py
    * generate input pairs and the validation results can be found at `validation_generated_MRs_$LLM_name$.json` 
 
 
-### Update
+#### Update
 
 If you have any questions or issues, please feel free to report an issue. We will continue to maintain this project. Thanks for your feedback😄. 
