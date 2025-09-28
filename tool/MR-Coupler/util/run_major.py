@@ -3,7 +3,7 @@ import subprocess
 import logging
 from typing import Union, List
 
-from CyUtil import java_file_processing, java_test
+from util import java_file_processing, java_test
 
 major_home = "TO_CONFIG"
 mml_file = "TO_CONFIG"

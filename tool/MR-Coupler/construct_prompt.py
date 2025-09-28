@@ -7,7 +7,7 @@ import time
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from CyUtil import file_processing,json_processing, java_parser, java_file_processing, config
+from util import file_processing,json_processing, java_parser, java_file_processing, config
 
 from bugrevealingmrgen import request_LLMs, running_config
 from bugrevealingmrgen.request_GitHub import GitHubIssueFetcher
@@ -86,13 +86,13 @@ def generate_prompt_from_profile(input_generator):
     target_methods_FQN = input_generator.target_methods_FQN
     target_methods_FQS = input_generator.target_methods_FQS
     prompt = input_generator.prompt_template
-    number_of_candidate_per_request = "five"  # by default: "five", or "one"
+    number_of_candidate_per_request = "five" 
     if "number_of_MR_per_request" in Setting and Setting["number_of_MR_per_request"] != "":
         number_of_candidate_per_request = Setting["number_of_MR_per_request"]
     test_file_path =input_generator.path_MTC_version_testclass_file
     test_class_name = test_file_path.split("/")[-1].replace(".java", "")
     MTC_test_method_name = MTC_FQN.split(".")[-1]
-    invoked_methods_FQS = input_generator.invoked_methods_FQS.copy()   # 防止被修改
+    invoked_methods_FQS = input_generator.invoked_methods_FQS.copy()   
     dir_MTCFQN_VERSION_BUGREV = input_generator.dir_MTCFQN_VERSION_BUGREV
     MTC_version_poj_dir = input_generator.MTC_version_poj_dir
     invoked_package_FQN = input_generator.invoked_package_FQN
@@ -138,11 +138,11 @@ def generate_prompt_from_profile(input_generator):
     target_methodsFQN_CUTpaths = {}
     # for method_FQS in invoked_methods_FQS:
     # for method_FQS in target_methods_FQS:
-    for method_FQS in target_methods_FQN: # mark: original 2025-06-08
+    for method_FQS in target_methods_FQN: 
         method_name = method_FQS.split("(")[0].split(".")[-1]
         class_path = java_file_processing.find_class_file_path_by_methodFQS(poj_dir, method_FQS)
         print( f"1 method_name: {method_name}, class_path: {class_path}, poj_dir: {poj_dir} " )
-        if class_path== None: # 绥靖政策。。。。
+        if class_path== None: 
             class_path = java_file_processing.find_class_file_path_by_methodFQS(MTC_item["poj_dir"], method_FQS)
             print( f"1 method_name: {method_name}, class_path: {class_path}, poj_dir: {MTC_item['poj_dir']} " )
         if class_path==None: continue
@@ -177,27 +177,16 @@ def generate_prompt_from_profile(input_generator):
             class_skeleton = java_parser.get_skeleton_of_class(file_path=class_path, function="extractClassSkeleton") # option 1, method body is replaced by "'"
         if class_skeleton not in skeleton_of_classes:
             skeleton_of_classes.append(class_skeleton)
-        # # 2. the skeleton of classes of input objects,
-        # inputs_FQN = method_FQS.split("(")[1].split(")")[0]
-        # for input_FQN in inputs_FQN.split(","):
-        #     if "." not in input_FQN or input_FQN.startswith("java."):  continue # 说明非JDK version
-        #     clear_input_FQN = input_FQN.split("<")[0]
-        #     class_path = java_file_processing.find_class_file_path_by_methodFQS(poj_dir, clear_input_FQN)
-        #     if class_path== None: continue # 说明当前项目下未找到
-
-        #     class_skeleton = java_parser.get_skeleton_of_class(file_path=class_path, function="extractClassSkeleton")
-        #     if class_skeleton not in skeleton_of_classes:
-        #         skeleton_of_classes.append(class_skeleton)
         if file_processing.pathExist(class_path):
             target_CUTs_pathes.append(class_path)
     # based on the target_CUTs_pathes, to get the fully_qualified_names of the classes
     target_CUTs_FQNs = java_file_processing.get_class_fully_qualified_names(target_CUTs_pathes)
     
     """ paired method info """
-    # invoked_methods_FQS 就是 paired method info
+    # invoked_methods_FQS is paired method info
     similar_MUTb_MTC_code = ""
     if Setting["paired_method_info"]=="":
-        # invoked_methods_FQS = invoked_methods_FQS # 不变
+        # invoked_methods_FQS = invoked_methods_FQS
         pass
     elif Setting["paired_method_info"]=="similarMTC":
         
@@ -207,11 +196,11 @@ def generate_prompt_from_profile(input_generator):
         if Setting["pair_method_methodology"] in ["S","2","P","2-1"]:
             suggested_methods = []
             suggested_methods = context_data_for_current_task_symbol["suggested_methods"]
-            similar_MUTb = context_data_for_current_task_symbol["similar_MUTb"][0] # TODO, check: 取第一个? or all?
+            similar_MUTb = context_data_for_current_task_symbol["similar_MUTb"][0] 
             if hasattr(similar_MUTb, "metadata"):
                 similar_MUTb_MTC_code = similar_MUTb.metadata["MTC_code"]
             elif isinstance(similar_MUTb, list):
-                similar_MUTb = similar_MUTb[0] # TODO, check: 取第一个? or all?
+                similar_MUTb = similar_MUTb[0] 
             else:
                 print(f"DEBUG: what issimilar_MUTb: {similar_MUTb}")
             
@@ -240,7 +229,7 @@ def generate_prompt_from_profile(input_generator):
                 suggested_methods = pattern_suggested_pairMethods[pattern_type]
                 
                 all_suggested_methods.extend([ f"{FQN_prefix}.{method}" for method in suggested_methods])
-            invoked_methods_FQS = list(set(all_suggested_methods))[:5] # default: 最多取5个 。。。
+            invoked_methods_FQS = list(set(all_suggested_methods))[:5]
             print(f"LOG: invoked_methods_FQS: {invoked_methods_FQS}")
         
         # methodology: (baseline) 1 MUTa -> 5 * similar MUTsB (with pattern) -> n* suggested methods (for pair) [just get the first 5 suggested methods]
@@ -257,21 +246,6 @@ def generate_prompt_from_profile(input_generator):
                     # option1
                     class_path_, MUT_code, return_type = java_file_processing.get_classPath_methodCode_returnType(method_FQS, poj_dir)
                     
-                    # option2: previous
-                    # # FQN
-                    # method_FQN = method_FQS.split("(")[0]
-                    # # method name
-                    # method_name = method_FQN.split(".")[-1]
-                    # # parameter types
-                    # parameter_types = method_FQS.split("(")[1].split(")")[0]
-                    # parameter_simple_types = ",".join([param.split(".")[-1] for param in parameter_types.split(",")])
-                    # method_signature_formated = f"{return_type}:{method_name}:{parameter_simple_types}"
-                    
-                    # MUT_code = java_parser.getMethodBasedOnMethodSignature(class_path, method_signature_formated,function="getMethodBasedOnMethodSignature")
-                    # # get more precise return_type 
-                    # return_type = java_parser._get_precise_return_type(MUT_code, method_name)
-                    # if return_type == "empty": return_type = ""
-                    
                     target_methods_FQS_return_type[method_FQS] = return_type
                 else:
                     return_type = target_methods_FQS_return_type[method_FQS]
@@ -281,7 +255,7 @@ def generate_prompt_from_profile(input_generator):
                 suggested_methods = query_DB.get_suggested_MUTs(f"{return_type} {method_FQS}", MTC_FQN, path_CUT)
                 
                 all_suggested_methods.extend([ f"{FQN_prefix}.{method}" for method in suggested_methods])
-            invoked_methods_FQS = list(set(all_suggested_methods))[:5] # default: 最多取5个 。。。
+            invoked_methods_FQS = list(set(all_suggested_methods))[:5] 
             print(f"LOG: invoked_methods_FQS: {invoked_methods_FQS}")
         
         
@@ -299,20 +273,7 @@ def generate_prompt_from_profile(input_generator):
     test_file_content = keep_relevant_tests(test_file_content, list(set(target_methods_FQN + invoked_methods_FQS)))
     # print(f"LOG: after keep_relevant_tests: {test_file_content}")
     
-    """ get <MR-ENCODED TESTS> """
-    # 先用原来的tests代替一下。
-    test_file_path = MTC_item["file_path"]
-    MTC_test_method_name = MTC_FQN.split(".")[-1]
-    print(f"LOG: get <MR-ENCODED TESTS> MTC_test_method_name: {MTC_test_method_name}, test_file_path: {test_file_path}")
-    mr_encoded_tests = java_parser.get_method_body_or_related_class_field(file_path=test_file_path, method_name=MTC_test_method_name, function="getMethod") # hhhhh
-    mr_encoded_tests = similar_MUTb_MTC_code # 
-    # print(f"LOG: get <MR-ENCODED TESTS> mr_encoded_tests: {mr_encoded_tests}")
-    # just one, not overloading issues...
     
-    
-    """ get <METHOD INVOCATION EXAMPLES> """
-    # TODO: if not existing tests found for a method, try to find the invocation in the production code
-
     """ get # <SUGGESTED METHODS> """    
     # invoked_methods_FQS -> invoked_methods_names
     invoked_methods_names = [ ele.split("(")[0].split(".")[-1] for ele in invoked_methods_FQS ]
@@ -329,7 +290,7 @@ def generate_prompt_from_profile(input_generator):
         method_name = method_FQS.split("(")[0].split(".")[-1]
         class_path = java_file_processing.find_class_file_path_by_methodFQS(poj_dir, method_FQS)
         print( f"2 method_name: {method_name}, class_path: {class_path}, poj_dir: {poj_dir} " )
-        if class_path== None: # 绥靖政策。。。。
+        if class_path== None:
             class_path = java_file_processing.find_class_file_path_by_methodFQS(MTC_item["poj_dir"], method_FQS)
             print( f"2 method_name: {method_name}, class_path: {class_path}, poj_dir: {MTC_item['poj_dir']} " )
         
@@ -352,25 +313,13 @@ def generate_prompt_from_profile(input_generator):
         if method_declaration not in declarations_of_invoked_methods:
             declarations_of_invoked_methods.append(method_declaration)
 
-
-
-
     
     """ get: REQUIRED DELIVERABLE """
-    # task_symbol = "D"
-    # if task_type.startswith("direct_prompt"):
-    #     task_symbol = "D"
-        
-    # if task_type=="direct_prompt":
-    #     # TO UPDATE
-    #     genreated_test_class_name = f"{test_class_name}_{MTC_test_method_name}_{task_symbol}_{index_of_request}"
-    #     pass
     genreated_test_class_name = f"{test_class_name}_{MTC_test_method_name}_{task_symbol}_{index_of_request}"
     promt_id = genreated_test_class_name
 
     """ fine tune the prompt """
     if len(declarations_of_focal_methods)<=1 and  "empty empty() {" in ("\n").join(declarations_of_focal_methods):
-        # 说明没找到 该方法，该方法继承自object, solution: show the target method here
         declarations_of_focal_methods = [ f'method name: {ele.split(".")[-1]}' for ele in target_methods_FQN ]
         pass
     if len(declarations_of_invoked_methods)<=1 and "empty empty() {" in ("\n").join(declarations_of_invoked_methods):
@@ -382,8 +331,6 @@ def generate_prompt_from_profile(input_generator):
     readable_issue_info = GitHubIssueFetcher.get_readable_issue_titleBodyComments(issue_info_dict)
     issue_info = f"*Title*\n{readable_issue_info['title']}\n\n*Body*\n{readable_issue_info['body']}\n\n*Comments*\n{readable_issue_info['comments']}"
     
-
-    # SUGGESTED METHODS should not contain FOCAL METHOD declarations_of_focal_methods
     FOCAL_METHOD = ("\n").join(declarations_of_focal_methods)
     SUGGESTED_METHODS = ("\n").join(declarations_of_invoked_methods)
     SUGGESTED_METHODS = SUGGESTED_METHODS.replace(FOCAL_METHOD, "")
@@ -396,7 +343,6 @@ def generate_prompt_from_profile(input_generator):
         if file_processing.pathExist(prompt_messages_path):
             refactored_SUGGESTED_METHODS = file_processing.read_TXTfile(response_content_path)
         else:
-            # replace <FOCAL METHOD> and <SUGGESTED METHODS> with structure refactored code
             refactored_SUGGESTED_METHODS = request_LLMs.request_deepseekChat(
                 prompt= prompt_content,
                 model="deepseek-chat",
@@ -454,7 +400,6 @@ def generate_prompt_from_profile(input_generator):
     CUT = ("\n\n").join(skeleton_of_classes)
     EXISTING_TESTS = test_file_content
     
-    # some fixes 补救措施.
     if len(FOCAL_METHOD.replace("\n", "").strip(" ")) <= 10 or len(FOCAL_METHOD.split("\n")) ==1:
         # give the MUT signature
         sigatures_str = "\n".join([f"* {ele}" for ele in target_methods_FQS])
@@ -508,11 +453,6 @@ def generate_prompt_from_profile(input_generator):
     number_of_tests_per_MR = Setting["number_of_tests_per_MR"]
     prompt_apply_MRs_w_more_inputs = file_processing.read_TXTfile(InputGenTemplate0_path)
     prompt_apply_MRs_w_more_inputs = prompt_apply_MRs_w_more_inputs.replace("<M>", str(number_of_tests_per_MR))
-    # # info about alternater input classes TODO: may be not the target method, but also invoked method
-    # alternative_input_classes_w_examples = get_alternative_input_classes_w_examples(input_generator)
-    # alternative_input_classes_w_examples = find_object_subclasses_and_examples(test_file_path, parameter_FQN)
-    # print(f"LOG: alternative_input_classes_w_examples: {alternative_input_classes_w_examples}")
-    # for buggy method, the target_method_FQS is not the first invoked one .... may also consider the invoked methods ... 
     
     
     """ before replace, do code refactoring: renaming """
@@ -549,15 +489,14 @@ def generate_prompt_from_profile(input_generator):
             OriginalNames_newNames_dict.pop(item)
         json_processing.write(OriginalNames_newNames_dict, response_content_path_updated_json)
         
-        for original_name, new_name in OriginalNames_newNames_dict.items(): # 过分简单粗暴。。。应该有不少错误。。。后面应该需要调整
+        for original_name, new_name in OriginalNames_newNames_dict.items():
             prompt = prompt.replace(original_name, new_name)
 
     """ write prompt """
-    # print( f"path: {input_generator.Crafted_prompts_dir}{MTChClass}.md" )
     prompt = prompt.strip("\n")
     prompt_path = f"{Crafted_prompts_dir}{genreated_test_class_name}.md"
     system_message_path = prompt_path.replace(".md",".system_message")
-    if Setting["Prompt_template"]=="M" and file_processing.pathExist(prompt_path): # 说明不用生成prompt，因为manually crafted了
+    if Setting["Prompt_template"]=="M" and file_processing.pathExist(prompt_path):
         prompt = file_processing.read_TXTfile(prompt_path)
         system_message = file_processing.read_TXTfile(system_message_path)
     else:
@@ -572,8 +511,6 @@ def generate_prompt_from_profile(input_generator):
     input_generator.promt_id = promt_id
     input_generator.promt_content = prompt
     input_generator.genreated_test_class_name = genreated_test_class_name
-    # input_generator.genreated_test_class_FQN =  MTC_FQN.replace( f".{test_class_name}", f".{genreated_test_class_name}")
-    # input_generator.genreated_test_class_FQN =  MTC_FQN.split(f".{test_class_name}.")[0] + f".{genreated_test_class_name}"
     input_generator.genreated_test_class_FQN =  f"{invoked_package_FQN}.{genreated_test_class_name}"
     input_generator.target_CUTs_FQNs = target_CUTs_FQNs
     input_generator.target_CUTs_pathes = target_CUTs_pathes
@@ -588,16 +525,6 @@ def generate_prompt_from_profile(input_generator):
 
 
     return input_generator
-
-
-# def get_chat_history(MR_generator):
-#     # TO check: 
-#     pre_revision_prompt_messages_path = MR_generator.pre_revision_evaluation_result["prompt_messages_path"]
-#     pre_revision_response_content_path = MR_generator.pre_revision_evaluation_result["response_content_path"]
-#     pre_revision_prompt_messages = json_processing.read(pre_revision_prompt_messages_path)
-#     pre_revision_response_content = file_processing.read_TXTfile(pre_revision_response_content_path)
-#     chat_history = pre_revision_prompt_messages[1:2] # the first one is the system message; 只要第一次prompt吧。。。后面的interface就都不要了。。。
-#     return chat_history
 
 
 def keep_relevant_tests(test_file_content, target_methods_FQS):

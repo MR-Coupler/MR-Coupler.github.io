@@ -2,7 +2,7 @@ import datetime
 import os, sys
 import time
 
-from CyUtil import file_processing,json_processing
+from util import file_processing,json_processing
 import openai
 
 prompt_cache_dir_default = "outputs/requesting_LLMs/"
@@ -368,9 +368,7 @@ def request_LLMs_main(prompt, model, promt_id, temperature, prompt_results_conte
     """
     response_content = None
     reasoning_content = None
-    if "gpt" in model.lower():
-        response_content = request_GPT_UST(prompt, model, promt_id, temperature, prompt_results_content_dir, system_message, few_shot_info, chat_history, flag_include_chat_history)  
-    elif "deepseek-chat" in model.lower():
+    if "deepseek-chat" in model.lower():
         response_content = request_deepseekChat(prompt, model, promt_id, temperature, prompt_results_content_dir, system_message, few_shot_info, chat_history, flag_include_chat_history)   
     elif "deepseek-reasoner" in model.lower():
         response_content, reasoning_content = request_deepseekChat(prompt, model, promt_id, temperature, prompt_results_content_dir, system_message, few_shot_info, chat_history, flag_include_chat_history, return_reasoning_content)        

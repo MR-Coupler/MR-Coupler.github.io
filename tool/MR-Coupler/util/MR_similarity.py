@@ -36,7 +36,7 @@ implement:
 """
 
 import os
-from CyUtil import file_processing,json_processing, java_parser, compile_java_poj, java_test, config, java_file_processing, PIT
+from util import file_processing,json_processing, java_parser, compile_java_poj, java_test, config, java_file_processing, PIT
 import re
 
 class MRMetaInfo:

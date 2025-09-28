@@ -28,7 +28,7 @@ minors to update:
 import re
 import logging
 
-from CyUtil import java_parser
+from util import java_parser
 
 
 

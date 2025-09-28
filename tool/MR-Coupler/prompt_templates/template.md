@@ -24,7 +24,7 @@ Your task is to:
 
 Additional Notes:
 * In addition to the **TARGET METHOD** and **RELATED METHOD**, you may use other methods (listed in the class under test's skeleton) to support your test case — for example, for input preparation, method invocations, or assertion.
-* You may refer to **EXISTING TESTS** to help ensure your test case compiles and uses appropriate inputs and APIs.
+* You may refer to **Invocation examples** to help ensure your test case compiles and uses appropriate inputs and APIs.
 * Your output may follow this pseudocode:
 ```java
 @Test
@@ -50,30 +50,30 @@ public void testMR() {
 ```
 <SYSTEM MESSAGE: END>
 
-
-# TARGET METHOD
+# Code of the paired method
+## TARGET METHOD
 ```java
 <FOCAL METHOD>
 ```
 
-# RELATED METHODS
+## RELATED METHODS
 ```java
 <SUGGESTED METHODS>
 ```
 
-# RELEVANCE BETWEEN METHODS
+# Coupling patterns on the paired methods
 <FUNCTIONAL RELEVANCE>
 
+# Invocation examples
+```java
+<EXISTING TESTS>
+```
 
-# SKELETON of CLASS UNDER TEST
+# SKELETON of CCLASS UNDER TEST
 ```java
 <METHOD CONTEXT>
 ```
 
-# EXISTING TESTS
-```java
-<EXISTING TESTS>
-```
 
 # REQUIRED DELIVERABLE
 Only one MR-encoded test case is required.
