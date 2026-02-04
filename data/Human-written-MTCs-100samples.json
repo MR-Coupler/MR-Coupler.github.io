@@ -1,0 +1,2161 @@
+{
+    "MTCs": [
+        {
+            "poj_link": "https://github.com/dbs-leipzig/gradoop/",
+            "file_path": "dbs-leipzig/gradoop/gradoop-flink/src/test/java/org/gradoop/flink/model/impl/operators/layouting/util/VectorTest.java",
+            "test_name": "testRotate",
+            "FQS": "org.gradoop.flink.model.impl.operators.layouting.util.VectorTest.testRotate()",
+            "start_line": "111",
+            "blame_result": "b9368446494c (dbaumgarten 2020-01-21 13:03:34 +0100 112)     Vector a = new Vector(100, 20);\nb9368446494c (dbaumgarten 2020-01-21 13:03:34 +0100 113)     Vector b = a.rotate(87);\nb9368446494c (dbaumgarten 2020-01-21 13:03:34 +0100 114)     Assert.assertEquals(a.magnitude(), b.magnitude(), 0.0000001);\nb9368446494c (dbaumgarten 2020-01-21 13:03:34 +0100 115)     Assert.assertEquals(87, a.angle(b), 0.00000001);\nb9368446494c (dbaumgarten 2020-01-21 13:03:34 +0100 116)   }\n",
+            "commit_hashes": {
+                "b9368446494c": "    [#1274] Implemented distributed layouting (#1401)"
+            },
+            "Commit&issueIDs": {
+                "b9368446494c": [
+                    "(#1401)"
+                ]
+            },
+            "links": [
+                "https://github.com/dbs-leipzig/gradoop/issues/1401",
+                "https://github.com/dbs-leipzig/gradoop/commit/b9368446494c"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dbs-leipzig/gradoop/",
+            "file_path": "dbs-leipzig/gradoop/gradoop-temporal/src/test/java/org/gradoop/temporal/model/impl/operators/matching/single/cypher/planning/estimation/CNFEstimationTest.java",
+            "test_name": "propertyComparisonTest",
+            "FQS": "org.gradoop.temporal.model.impl.operators.matching.single.cypher.planning.estimation.CNFEstimationTest.propertyComparisonTest()",
+            "start_line": "173",
+            "blame_result": "600551c28f0d (lc0197 2021-03-26 16:50:34 +0100 174)     CNFEstimation estimator = getEstimator();\n600551c28f0d (lc0197 2021-03-26 16:50:34 +0100 175) \n600551c28f0d (lc0197 2021-03-26 16:50:34 +0100 176)     // categorical\n600551c28f0d (lc0197 2021-03-26 16:50:34 +0100 177)     Comparison comp1 = new Comparison(\n600551c28f0d (lc0197 2021-03-26 16:50:34 +0100 178)       new PropertySelector(\"a\", \"catProp1\"),\n",
+            "commit_hashes": {
+                "600551c28f0d": "    [#1482] Implemented Temporal Pattern Matching (#1501)"
+            },
+            "Commit&issueIDs": {
+                "600551c28f0d": [
+                    "(#1501)"
+                ]
+            },
+            "links": [
+                "https://github.com/dbs-leipzig/gradoop/issues/1501",
+                "https://github.com/dbs-leipzig/gradoop/commit/600551c28f0d"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/Cornutum/tcases/",
+            "file_path": "Cornutum/tcases/tcases-io/src/test/java/org/cornutum/tcases/io/TestSystemTestDocReader.java",
+            "test_name": "testGetSystemTestDef_1",
+            "FQS": "org.cornutum.tcases.io.TestSystemTestDocReader.testGetSystemTestDef_1()",
+            "start_line": "137",
+            "blame_result": "14a98a47d test/com/startingblocktech/tcases/io/TestSystemTestDocReader.java            (kerrykimbrough@gmail.com 2012-01-07 00:53:53 +0000 138)     {\n708ae73d7 tcases-lib/src/test/java/org/cornutum/tcases/io/TestSystemTestDocReader.java (Kerry Kimbrough          2018-07-24 17:26:55 -0500 139)     // Given...\n708ae73d7 tcases-lib/src/test/java/org/cornutum/tcases/io/TestSystemTestDocReader.java (Kerry Kimbrough          2018-07-24 17:26:55 -0500 140)     SystemTestDef expected =\n708ae73d7 tcases-lib/src/test/java/org/cornutum/tcases/io/TestSystemTestDocReader.java (Kerry Kimbrough          2018-07-24 17:26:55 -0500 141)       SystemTestDefBuilder.with( \"System-1\")\n708ae73d7 tcases-lib/src/test/java/org/cornutum/tcases/io/TestSystemTestDocReader.java (Kerry Kimbrough          2018-07-24 17:26:55 -0500 142)       .build();\n",
+            "commit_hashes": {
+                "14a98a47d": "    Add SystemTestDocReader",
+                "708ae73d7": "    For better testability, add builders and matchers (#38)"
+            },
+            "Commit&issueIDs": {
+                "708ae73d7": [
+                    "38"
+                ]
+            },
+            "links": [
+                "https://github.com/Cornutum/tcases/issues/38",
+                "https://github.com/Cornutum/tcases/commit/708ae73d7"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/robovm/robovm/",
+            "file_path": "robovm/robovm/libimobiledevice/src/test/java/org/robovm/libimobiledevice/AfcClientTest.java",
+            "test_name": "testGetDeviceInfo",
+            "FQS": "org.robovm.libimobiledevice.AfcClientTest.testGetDeviceInfo()",
+            "start_line": "98",
+            "blame_result": "912b96dc55 (Niklas Therning 2013-10-14 14:18:33 +0200  99)         Map<String, String> devInfo = client.getDeviceInfo();\n912b96dc55 (Niklas Therning 2013-10-14 14:18:33 +0200 100)         assertFalse(devInfo.isEmpty());\n912b96dc55 (Niklas Therning 2013-10-14 14:18:33 +0200 101)         assertTrue(devInfo.containsKey(AfcClient.DEVICE_INFO_KEY_FS_BLOCK_SIZE));\n912b96dc55 (Niklas Therning 2013-10-14 14:18:33 +0200 102)         assertTrue(devInfo.containsKey(AfcClient.DEVICE_INFO_KEY_FS_FREE_BYTES));\n912b96dc55 (Niklas Therning 2013-10-14 14:18:33 +0200 103)         assertTrue(devInfo.containsKey(AfcClient.DEVICE_INFO_KEY_FS_TOTAL_BYTES));\n",
+            "commit_hashes": {
+                "912b96dc55": "    Added JNI bindings for libimobiledevice (OSX so far). Also added the AppLauncher class which replicates what fruitstrap does. (#190)"
+            },
+            "Commit&issueIDs": {
+                "912b96dc55": [
+                    "(#190)"
+                ]
+            },
+            "links": [
+                "https://github.com/robovm/robovm/issues/190",
+                "https://github.com/robovm/robovm/commit/912b96dc55"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/Cornutum/tcases/",
+            "file_path": "Cornutum/tcases/tcases-lib/src/test/java/org/cornutum/tcases/resolve/MergeSchemaTest.java",
+            "test_name": "whenIntegerNumber",
+            "FQS": "org.cornutum.tcases.resolve.MergeSchemaTest.whenIntegerNumber()",
+            "start_line": "148",
+            "blame_result": "b255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 149)     {\nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 150)     // Given...\nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 151)     Schema defaults =\nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 152)       SchemaBuilder.type( \"integer\")\nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 153)       .format( \"null\")\n",
+            "commit_hashes": {
+                "b255f2568": "    Schemas to define values (#267)"
+            },
+            "Commit&issueIDs": {
+                "b255f2568": [
+                    "267"
+                ]
+            },
+            "links": [
+                "https://github.com/Cornutum/tcases/issues/267",
+                "https://github.com/Cornutum/tcases/commit/b255f2568"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/redfx-quantum/strange/",
+            "file_path": "redfx-quantum/strange/src/test/java/org/redfx/strange/test/BellStateTest.java",
+            "test_name": "cnotH",
+            "FQS": "org.redfx.strange.test.BellStateTest.cnotH()",
+            "start_line": "100",
+            "blame_result": "7026d154 src/test/java/com/gluonhq/strange/test/BellStateTest.java (Eugene Ryzhikov 2019-12-12 05:15:18 -0500 101)         Program p = new Program(3,\n7026d154 src/test/java/com/gluonhq/strange/test/BellStateTest.java (Eugene Ryzhikov 2019-12-12 05:15:18 -0500 102)             new Step(new Hadamard(0)),\n7026d154 src/test/java/com/gluonhq/strange/test/BellStateTest.java (Eugene Ryzhikov 2019-12-12 05:15:18 -0500 103)             new Step(new Cnot(0,1)),\n7026d154 src/test/java/com/gluonhq/strange/test/BellStateTest.java (Eugene Ryzhikov 2019-12-12 05:15:18 -0500 104)             new Step(new Hadamard(2))\n7026d154 src/test/java/com/gluonhq/strange/test/BellStateTest.java (Eugene Ryzhikov 2019-12-12 05:15:18 -0500 105)         );\n",
+            "commit_hashes": {
+                "7026d154": "    New round on API enhancements (#34)"
+            },
+            "Commit&issueIDs": {
+                "7026d154": [
+                    "34"
+                ]
+            },
+            "links": [
+                "https://github.com/redfx-quantum/strange/issues/34",
+                "https://github.com/redfx-quantum/strange/commit/7026d154"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/megaease/easeagent/",
+            "file_path": "megaease/easeagent/plugins/rabbitmq/src/test/java/com/megaease/easeagent/plugin/rabbitmq/spring/interceptor/RabbitMqOnMessageTracingInterceptorTest.java",
+            "test_name": "testRabbitConsumerRequest",
+            "FQS": "com.megaease.easeagent.plugin.rabbitmq.spring.interceptor.RabbitMqOnMessageTracingInterceptorTest.testRabbitConsumerRequest()",
+            "start_line": "262",
+            "blame_result": "1b9c15298 (yufu.deng 2022-02-28 14:38:50 +0800 263)         MessageProperties messageProperties = new MessageProperties();\n1b9c15298 (yufu.deng 2022-02-28 14:38:50 +0800 264) \n1b9c15298 (yufu.deng 2022-02-28 14:38:50 +0800 265)         String queue = \"testConsumerQueue\";\n1b9c15298 (yufu.deng 2022-02-28 14:38:50 +0800 266)         messageProperties.setConsumerQueue(queue);\n1b9c15298 (yufu.deng 2022-02-28 14:38:50 +0800 267)         String testMqUri = \"testMqUri\";\n",
+            "commit_hashes": {
+                "1b9c15298": "    add unit test and fix : rabbitmq and jdbc (#224)"
+            },
+            "Commit&issueIDs": {
+                "1b9c15298": [
+                    "(#224)"
+                ]
+            },
+            "links": [
+                "https://github.com/megaease/easeagent/issues/224",
+                "https://github.com/megaease/easeagent/commit/1b9c15298"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/megaease/easeagent/",
+            "file_path": "megaease/easeagent/plugins/spring-gateway/src/test/java/easeagent/plugin/spring/gateway/interceptor/metric/TimeUtilsTest.java",
+            "test_name": "startTime",
+            "FQS": "easeagent.plugin.spring.gateway.interceptor.metric.TimeUtilsTest.startTime()",
+            "start_line": "32",
+            "blame_result": "964c49465 (yufu.deng 2022-02-21 17:29:35 +0800 33)         Object key = new Object();\n964c49465 (yufu.deng 2022-02-21 17:29:35 +0800 34)         long startTime = TimeUtils.startTime(EaseAgent.getContext(), key);\n964c49465 (yufu.deng 2022-02-21 17:29:35 +0800 35)         Thread.sleep(10);\n964c49465 (yufu.deng 2022-02-21 17:29:35 +0800 36)         assertEquals(startTime, TimeUtils.startTime(EaseAgent.getContext(), key));\n964c49465 (yufu.deng 2022-02-21 17:29:35 +0800 37)         Object key2 = new Object();\n",
+            "commit_hashes": {
+                "964c49465": "    Unit test (#214)"
+            },
+            "Commit&issueIDs": {
+                "964c49465": [
+                    "(#214)"
+                ]
+            },
+            "links": [
+                "https://github.com/megaease/easeagent/issues/214",
+                "https://github.com/megaease/easeagent/commit/964c49465"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/megaease/easeagent/",
+            "file_path": "megaease/easeagent/zipkin/src/test/java/com/megaease/easeagent/zipkin/impl/TracingImplTest.java",
+            "test_name": "consumerSpan",
+            "FQS": "com.megaease.easeagent.zipkin.impl.TracingImplTest.consumerSpan()",
+            "start_line": "237",
+            "blame_result": "93332becb (yufu.deng 2022-01-24 19:05:56 +0800 238)         Span span = iTracing.consumerSpan(new MessagingRequestMock().setOperation(operation).setChannelKind(channelKind).setChannelName(channelName));\n93332becb (yufu.deng 2022-01-24 19:05:56 +0800 239)         assertFalse(span.isNoop());\n93332becb (yufu.deng 2022-01-24 19:05:56 +0800 240)         MutableSpan state = AgentFieldReflectAccessor.getFieldValue(span.unwrap(), \"state\");\n93332becb (yufu.deng 2022-01-24 19:05:56 +0800 241)         checkTag(state);\n93332becb (yufu.deng 2022-01-24 19:05:56 +0800 242) \n",
+            "commit_hashes": {
+                "93332becb": "    add unit test: zipkin, context, httpclient (#196)"
+            },
+            "Commit&issueIDs": {
+                "93332becb": [
+                    "(#196)"
+                ]
+            },
+            "links": [
+                "https://github.com/megaease/easeagent/issues/196",
+                "https://github.com/megaease/easeagent/commit/93332becb"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/apache/rocketmq/",
+            "file_path": "apache/rocketmq/proxy/src/test/java/org/apache/rocketmq/proxy/service/route/MessageQueueSelectorTest.java",
+            "test_name": "testWriteMessageQueue",
+            "FQS": "org.apache.rocketmq.proxy.service.route.MessageQueueSelectorTest.testWriteMessageQueue()",
+            "start_line": "58",
+            "blame_result": "a45b040fba (kaiyi.lk  2022-05-23 19:12:58 +0800 59)         queueData.setPerm(PermName.PERM_WRITE);\na45b040fba (kaiyi.lk  2022-05-23 19:12:58 +0800 60)         queueData.setReadQueueNums(0);\nb028277018 (Ji Juntao 2023-08-29 16:13:38 +0800 61)         MessageQueueSelector messageQueueSelector = new MessageQueueSelector(new TopicRouteWrapper(topicRouteData, TOPIC), null, false);\na45b040fba (kaiyi.lk  2022-05-23 19:12:58 +0800 62)         assertTrue(messageQueueSelector.getQueues().isEmpty());\na45b040fba (kaiyi.lk  2022-05-23 19:12:58 +0800 63) \n",
+            "commit_hashes": {
+                "a45b040fba": "    [ISSUE #3949] add test cases",
+                "b028277018": "    [ISSUE #6567] [RIP-63] Queue Selection Strategy Optimization (#6568)"
+            },
+            "Commit&issueIDs": {
+                "b028277018": [
+                    "(#6568)"
+                ]
+            },
+            "links": [
+                "https://github.com/apache/rocketmq/issues/6568",
+                "https://github.com/apache/rocketmq/commit/b028277018"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/Cornutum/tcases/",
+            "file_path": "Cornutum/tcases/tcases-lib/src/test/java/org/cornutum/tcases/resolve/NormalizeSchemaTest.java",
+            "test_name": "whenMaxLengthAboveFormatMax",
+            "FQS": "org.cornutum.tcases.resolve.NormalizeSchemaTest.whenMaxLengthAboveFormatMax()",
+            "start_line": "578",
+            "blame_result": "b255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 579)     {\nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 580)     // Given...\nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 581)     Schemas schemas = new Schemas( withConditionRecorder());\nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 582) \nb255f2568 (Kerry Kimbrough 2022-12-22 17:48:29 -0600 583)     Schema schema =\n",
+            "commit_hashes": {
+                "b255f2568": "    Schemas to define values (#267)"
+            },
+            "Commit&issueIDs": {
+                "b255f2568": [
+                    "267"
+                ]
+            },
+            "links": [
+                "https://github.com/Cornutum/tcases/issues/267",
+                "https://github.com/Cornutum/tcases/commit/b255f2568"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/TheAlgorithms/Java/",
+            "file_path": "TheAlgorithms/Java/src/test/java/com/thealgorithms/ciphers/XORCipherTest.java",
+            "test_name": "testNonASCIICharacters",
+            "FQS": "com.thealgorithms.ciphers.XORCipherTest.testNonASCIICharacters()",
+            "start_line": "54",
+            "blame_result": "4e4600210 (Hardik Pawar   2024-10-26 20:37:47 +0530 55)         String plaintext = \"\u3053\u3093\u306b\u3061\u306f\u4e16\u754c\"; // \"Hello World\" in Japanese (Konichiwa Sekai)\n4e4600210 (Hardik Pawar   2024-10-26 20:37:47 +0530 56)         String key = \"key\";\n4e4600210 (Hardik Pawar   2024-10-26 20:37:47 +0530 57) \n41f767ef9 (Luiz Carlos Jr 2024-10-04 13:10:18 -0300 58)         String cipherText = XORCipher.encrypt(plaintext, key);\n4e4600210 (Hardik Pawar   2024-10-26 20:37:47 +0530 59)         String decryptedText = XORCipher.decrypt(cipherText, key);\n",
+            "commit_hashes": {
+                "4e4600210": "    Enhance docs, add more tests in `XORCipher` (#5900)",
+                "41f767ef9": "    Add XOR Cipher (#5490)"
+            },
+            "Commit&issueIDs": {
+                "4e4600210": [
+                    "5900"
+                ],
+                "41f767ef9": [
+                    "5490"
+                ]
+            },
+            "links": [
+                "https://github.com/TheAlgorithms/Java/issues/5900",
+                "https://github.com/TheAlgorithms/Java/commit/4e4600210",
+                "https://github.com/TheAlgorithms/Java/issues/5490",
+                "https://github.com/TheAlgorithms/Java/commit/41f767ef9"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/TheAlgorithms/Java/",
+            "file_path": "TheAlgorithms/Java/src/test/java/com/thealgorithms/datastructures/hashmap/hashing/HashMapTest.java",
+            "test_name": "testInsertLargeNumberOfElements",
+            "FQS": "com.thealgorithms.datastructures.hashmap.hashing.HashMapTest.testInsertLargeNumberOfElements()",
+            "start_line": "98",
+            "blame_result": "a23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200  99)         HashMap<Integer, String> hashMap = new HashMap<>(10);\na23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200 100)         for (int i = 0; i < 100; i++) {\na23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200 101)             hashMap.insert(i, \"Value\" + i);\na23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200 102)         }\na23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200 103) \n",
+            "commit_hashes": {
+                "a23e9b0ba": "    refactor: `HashMap` (#5426)"
+            },
+            "Commit&issueIDs": {
+                "a23e9b0ba": [
+                    "5426"
+                ]
+            },
+            "links": [
+                "https://github.com/TheAlgorithms/Java/issues/5426",
+                "https://github.com/TheAlgorithms/Java/commit/a23e9b0ba"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/TheAlgorithms/Java/",
+            "file_path": "TheAlgorithms/Java/src/test/java/com/thealgorithms/datastructures/hashmap/hashing/HashMapTest.java",
+            "test_name": "testResizeHashMap",
+            "FQS": "com.thealgorithms.datastructures.hashmap.hashing.HashMapTest.testResizeHashMap()",
+            "start_line": "149",
+            "blame_result": "f5bc2c807 (Hardik Pawar  2024-10-26 21:59:21 +0530 150)         HashMap<Integer, String> hashMap = new HashMap<>(2); // Small initial size to force rehashing\nf5bc2c807 (Hardik Pawar  2024-10-26 21:59:21 +0530 151)         for (int i = 0; i < 10; i++) {\na23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200 152)             hashMap.insert(i, \"Value\" + i);\na23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200 153)         }\na23e9b0ba (Alex Klymenko 2024-08-28 22:29:24 +0200 154) \n",
+            "commit_hashes": {
+                "f5bc2c807": "    Add more tests in `HashMap` (#5974)",
+                "a23e9b0ba": "    refactor: `HashMap` (#5426)"
+            },
+            "Commit&issueIDs": {
+                "f5bc2c807": [
+                    "5974"
+                ],
+                "a23e9b0ba": [
+                    "5426"
+                ]
+            },
+            "links": [
+                "https://github.com/TheAlgorithms/Java/issues/5974",
+                "https://github.com/TheAlgorithms/Java/commit/f5bc2c807",
+                "https://github.com/TheAlgorithms/Java/issues/5426",
+                "https://github.com/TheAlgorithms/Java/commit/a23e9b0ba"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/apache/sedona/",
+            "file_path": "apache/sedona/spark/common/src/test/java/org/apache/sedona/core/spatialPartitioning/quadtree/QuadTreeTest.java",
+            "test_name": "testIntersectElementsAreInserted",
+            "FQS": "org.apache.sedona.core.spatialPartitioning.quadtree.QuadTreeTest.testIntersectElementsAreInserted()",
+            "start_line": "101",
+            "blame_result": "b69bc21b1a (Kristin Cowalcijk 2024-06-12 12:19:52 +0800 102)     StandardQuadTree<QuadRectangle> quadTree =\nb69bc21b1a (Kristin Cowalcijk 2024-06-12 12:19:52 +0800 103)         new StandardQuadTree<>(new QuadRectangle(0, 0, 10, 10), 0, 1, 2);\n2490b86268 (John Bampton      2024-03-12 01:08:26 +1000 104) \nb69bc21b1a (Kristin Cowalcijk 2024-06-12 12:19:52 +0800 105)     QuadRectangle r1 = new QuadRectangle(1, 1, 1, 1);\nb69bc21b1a (Kristin Cowalcijk 2024-06-12 12:19:52 +0800 106)     QuadRectangle r2 = new QuadRectangle(2, 2, 1, 1);\n",
+            "commit_hashes": {
+                "b69bc21b1a": "    [SEDONA-102] Use spotless as Java and Scala code formatter (#1428)",
+                "2490b86268": "    [SEDONA-513] Add pre-commit hook `mixed-line-ending` (#1274)"
+            },
+            "Commit&issueIDs": {
+                "b69bc21b1a": [
+                    "1428"
+                ],
+                "2490b86268": [
+                    "1274"
+                ]
+            },
+            "links": [
+                "https://github.com/apache/sedona/issues/1428",
+                "https://github.com/apache/sedona/commit/b69bc21b1a",
+                "https://github.com/apache/sedona/issues/1274",
+                "https://github.com/apache/sedona/commit/2490b86268"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dyn4j/dyn4j/",
+            "file_path": "dyn4j/dyn4j/src/test/java/org/dyn4j/dynamics/SettingsTest.java",
+            "test_name": "copy",
+            "FQS": "org.dyn4j.dynamics.SettingsTest.copy()",
+            "start_line": "8",
+            "blame_result": "^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java         (wjbittle       2010-02-06 19:03:09 +0000  9)  *     and the following disclaimer.\n^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java         (wjbittle       2010-02-06 19:03:09 +0000 10)  *   * Redistributions in binary form must reproduce the above copyright notice, this list of conditions \n^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java         (wjbittle       2010-02-06 19:03:09 +0000 11)  *     and the following disclaimer in the documentation and/or other materials provided with the \n^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java         (wjbittle       2010-02-06 19:03:09 +0000 12)  *     distribution.\n4fdc119a src/test/java/org/dyn4j/dynamics/SettingsTest.java (William Bittle 2020-08-29 20:14:14 -0400 13)  *   * Neither the name of the copyright holder nor the names of its contributors may be used to endorse or \n",
+            "commit_hashes": {
+                "1f6b11f": "    Initial check in from local repository.",
+                "4fdc119a": "    V4 (#127)"
+            },
+            "Commit&issueIDs": {
+                "4fdc119a": [
+                    "(#127)"
+                ]
+            },
+            "links": [
+                "https://github.com/dyn4j/dyn4j/issues/127",
+                "https://github.com/dyn4j/dyn4j/commit/4fdc119a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dyn4j/dyn4j/",
+            "file_path": "dyn4j/dyn4j/src/test/java/org/dyn4j/dynamics/joint/PrismaticJointTest.java",
+            "test_name": "copy",
+            "FQS": "org.dyn4j.dynamics.joint.PrismaticJointTest.copy()",
+            "start_line": "8",
+            "blame_result": "^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java                     (wjbittle       2010-02-06 19:03:09 +0000  9)  *     and the following disclaimer.\n^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java                     (wjbittle       2010-02-06 19:03:09 +0000 10)  *   * Redistributions in binary form must reproduce the above copyright notice, this list of conditions \n^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java                     (wjbittle       2010-02-06 19:03:09 +0000 11)  *     and the following disclaimer in the documentation and/or other materials provided with the \n^1f6b11f test/org/dyn4j/game2d/testbed/TestBed.java                     (wjbittle       2010-02-06 19:03:09 +0000 12)  *     distribution.\n4fdc119a src/test/java/org/dyn4j/dynamics/joint/PrismaticJointTest.java (William Bittle 2020-08-29 20:14:14 -0400 13)  *   * Neither the name of the copyright holder nor the names of its contributors may be used to endorse or \n",
+            "commit_hashes": {
+                "1f6b11f": "    Initial check in from local repository.",
+                "4fdc119a": "    V4 (#127)"
+            },
+            "Commit&issueIDs": {
+                "4fdc119a": [
+                    "127"
+                ]
+            },
+            "links": [
+                "https://github.com/dyn4j/dyn4j/issues/127",
+                "https://github.com/dyn4j/dyn4j/commit/4fdc119a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dyn4j/dyn4j/",
+            "file_path": "dyn4j/dyn4j/src/test/java/org/dyn4j/world/AbstractPhysicsWorldTest.java",
+            "test_name": "addJoint",
+            "FQS": "org.dyn4j.world.AbstractPhysicsWorldTest.addJoint()",
+            "start_line": "233",
+            "blame_result": "4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 234) \t\tTestWorld w = new TestWorld();\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 235) \t\t\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 236) \t\tBody b1 = new Body(); b1.addFixture(Geometry.createCapsule(1.0, 0.5));\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 237) \t\tBody b2 = new Body(); b2.addFixture(Geometry.createCapsule(1.0, 0.5));\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 238) \t\t\n",
+            "commit_hashes": {
+                "4fdc119a": "    V4 (#127)"
+            },
+            "Commit&issueIDs": {
+                "4fdc119a": [
+                    "(#127)"
+                ]
+            },
+            "links": [
+                "https://github.com/dyn4j/dyn4j/issues/127",
+                "https://github.com/dyn4j/dyn4j/commit/4fdc119a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dyn4j/dyn4j/",
+            "file_path": "dyn4j/dyn4j/src/test/java/org/dyn4j/world/AbstractPhysicsWorldTest.java",
+            "test_name": "fixtureModification",
+            "FQS": "org.dyn4j.world.AbstractPhysicsWorldTest.fixtureModification()",
+            "start_line": "676",
+            "blame_result": "4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 677) \t\tTestWorld w = new TestWorld();\nd6b78bdf (William Bittle 2021-01-26 20:06:24 -0500 678) \t\t\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 679) \t\t// setup the bodies\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 680) \t\tConvex c1 = Geometry.createCircle(1.0);\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 681) \t\tConvex c2 = Geometry.createEquilateralTriangle(0.5);\n",
+            "commit_hashes": {
+                "4fdc119a": "    V4 (#127)",
+                "d6b78bdf": "    More tests and bug fix for removal of contacts/joints"
+            },
+            "Commit&issueIDs": {
+                "4fdc119a": [
+                    "(#127)"
+                ]
+            },
+            "links": [
+                "https://github.com/dyn4j/dyn4j/issues/127",
+                "https://github.com/dyn4j/dyn4j/commit/4fdc119a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dyn4j/dyn4j/",
+            "file_path": "dyn4j/dyn4j/src/test/java/org/dyn4j/world/AbstractPhysicsWorldTest.java",
+            "test_name": "getJoinedBodies",
+            "FQS": "org.dyn4j.world.AbstractPhysicsWorldTest.getJoinedBodies()",
+            "start_line": "1133",
+            "blame_result": "4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 1134) \t */\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 1135) \t@Test\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 1136) \tpublic void getJoinedBodies() {\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 1137) \t\tTestWorld w = new TestWorld();\n4fdc119a (William Bittle 2020-08-29 20:14:14 -0400 1138) \t\t\n",
+            "commit_hashes": {
+                "4fdc119a": "    V4 (#127)"
+            },
+            "Commit&issueIDs": {
+                "4fdc119a": [
+                    "(#127)"
+                ]
+            },
+            "links": [
+                "https://github.com/dyn4j/dyn4j/issues/127",
+                "https://github.com/dyn4j/dyn4j/commit/4fdc119a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dyn4j/dyn4j/",
+            "file_path": "dyn4j/dyn4j/src/test/java/org/dyn4j/world/result/DetectResultTest.java",
+            "test_name": "copy",
+            "FQS": "org.dyn4j.world.result.DetectResultTest.copy()",
+            "start_line": "8",
+            "blame_result": "e220841d src/test/java/org/dyn4j/geometry/RobustGeometryTest.java   (mtsamis        2019-12-23 17:49:23 +0200  9)  *     and the following disclaimer.\ne220841d src/test/java/org/dyn4j/geometry/RobustGeometryTest.java   (mtsamis        2019-12-23 17:49:23 +0200 10)  *   * Redistributions in binary form must reproduce the above copyright notice, this list of conditions \ne220841d src/test/java/org/dyn4j/geometry/RobustGeometryTest.java   (mtsamis        2019-12-23 17:49:23 +0200 11)  *     and the following disclaimer in the documentation and/or other materials provided with the \ne220841d src/test/java/org/dyn4j/geometry/RobustGeometryTest.java   (mtsamis        2019-12-23 17:49:23 +0200 12)  *     distribution.\n4fdc119a src/test/java/org/dyn4j/world/result/DetectResultTest.java (William Bittle 2020-08-29 20:14:14 -0400 13)  *   * Neither the name of the copyright holder nor the names of its contributors may be used to endorse or \n",
+            "commit_hashes": {
+                "e220841d": "    Robust hull algorithms (#97)",
+                "4fdc119a": "    V4 (#127)"
+            },
+            "Commit&issueIDs": {
+                "e220841d": [
+                    "(#97)"
+                ],
+                "4fdc119a": [
+                    "(#127)"
+                ]
+            },
+            "links": [
+                "https://github.com/dyn4j/dyn4j/issues/97",
+                "https://github.com/dyn4j/dyn4j/commit/e220841d",
+                "https://github.com/dyn4j/dyn4j/issues/127",
+                "https://github.com/dyn4j/dyn4j/commit/4fdc119a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/veraPDF/veraPDF-library/",
+            "file_path": "veraPDF/veraPDF-library/core/src/test/java/org/verapdf/metadata/fixer/FixerConfigTest.java",
+            "test_name": "testToXmlMetadataFixerConfigOutputStreamBoolean",
+            "FQS": "org.verapdf.metadata.fixer.FixerConfigTest.testToXmlMetadataFixerConfigOutputStreamBoolean()",
+            "start_line": "93",
+            "blame_result": "146ed5279 (Carl Wilson 2016-10-30 11:14:57 +0000 94) \t\tFile temp = Files.createTempFile(\"\", \"\").toFile();\n146ed5279 (Carl Wilson 2016-10-30 11:14:57 +0000 95) \t\tMetadataFixerConfig defaultInstance = FixerFactory.defaultConfig();\nc40505559 (MaximPlusov 2022-06-01 14:20:49 +0300 96) \t\tassertSame(defaultInstance, FixerFactory.defaultConfig());\n146ed5279 (Carl Wilson 2016-10-30 11:14:57 +0000 97) \t\ttry (OutputStream fos = new FileOutputStream(temp)) {\na5fa854ea (Carl Wilson 2016-11-03 12:50:36 +0000 98) \t\t\tXmlSerialiser.toXml(FixerFactory.defaultConfig(), fos, true, true);\n",
+            "commit_hashes": {
+                "146ed5279": "    REFACT - Processor configuration",
+                "c40505559": "    Fix codacy issues (#1256)",
+                "a5fa854ea": "    REFACT - Purge old JAXB methods"
+            },
+            "Commit&issueIDs": {
+                "c40505559": [
+                    "(#1256)"
+                ]
+            },
+            "links": [
+                "https://github.com/veraPDF/veraPDF-library/issues/1256",
+                "https://github.com/veraPDF/veraPDF-library/commit/c40505559"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/veraPDF/veraPDF-library/",
+            "file_path": "veraPDF/veraPDF-library/core/src/test/java/org/verapdf/pdfa/results/LocationTest.java",
+            "test_name": "testFromValues",
+            "FQS": "org.verapdf.pdfa.results.LocationTest.testFromValues()",
+            "start_line": "70",
+            "blame_result": "b1b9998df core/src/test/java/org/verapdf/pdfa/results/LocationTest.java  (Carl Wilson 2017-04-13 18:02:27 +0300 71)         Location fromValLoc = ValidationResults.locationFromValues(\"level\", \"context\"); //$NON-NLS-1$ //$NON-NLS-2$\nc40505559 core/src/test/java/org/verapdf/pdfa/results/LocationTest.java  (MaximPlusov 2022-06-01 14:20:49 +0300 72)         assertEquals(fromValLoc, ValidationResults.defaultLocation());\nc40505559 core/src/test/java/org/verapdf/pdfa/results/LocationTest.java  (MaximPlusov 2022-06-01 14:20:49 +0300 73)         assertNotSame(fromValLoc, ValidationResults.defaultLocation());\n47a86b701 core/src/test/java/org/verapdf/pdfa/results/LocationTests.java (Carl Wilson 2015-11-16 15:03:49 +0000 74)     }\n47a86b701 core/src/test/java/org/verapdf/pdfa/results/LocationTests.java (Carl Wilson 2015-11-16 15:03:49 +0000 75) \n",
+            "commit_hashes": {
+                "b1b9998df": "    FIX - XML Report & Result Deserialisation",
+                "c40505559": "    Fix codacy issues (#1256)",
+                "47a86b701": "    Improved core unit test coverage."
+            },
+            "Commit&issueIDs": {
+                "c40505559": [
+                    "(#1256)"
+                ]
+            },
+            "links": [
+                "https://github.com/veraPDF/veraPDF-library/issues/1256",
+                "https://github.com/veraPDF/veraPDF-library/commit/c40505559"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/iluwatar/java-design-patterns/",
+            "file_path": "iluwatar/java-design-patterns/abstract-document/src/test/java/com/iluwatar/abstractdocument/AbstractDocumentTest.java",
+            "test_name": "shouldUpdateExistingValue",
+            "FQS": "com.iluwatar.abstractdocument.AbstractDocumentTest.shouldUpdateExistingValue()",
+            "start_line": "111",
+            "blame_result": "44a9766656 (drishtii7 2024-03-31 04:47:04 -0300 112)     // Arrange\n44a9766656 (drishtii7 2024-03-31 04:47:04 -0300 113)     final String key = \"key\";\n44a9766656 (drishtii7 2024-03-31 04:47:04 -0300 114)     final String originalValue = \"originalValue\";\n44a9766656 (drishtii7 2024-03-31 04:47:04 -0300 115)     final String updatedValue = \"updatedValue\";\n44a9766656 (drishtii7 2024-03-31 04:47:04 -0300 116) \n",
+            "commit_hashes": {
+                "44a9766656": "    refactor: Changes to make Abstract-Document and Adapter better. (#2872)"
+            },
+            "Commit&issueIDs": {
+                "44a9766656": [
+                    "2872"
+                ]
+            },
+            "links": [
+                "https://github.com/iluwatar/java-design-patterns/issues/2872",
+                "https://github.com/iluwatar/java-design-patterns/commit/44a9766656"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/OpenHFT/Chronicle-Core/",
+            "file_path": "OpenHFT/Chronicle-Core/src/test/java/net/openhft/chronicle/core/UnsafeMemory2Test.java",
+            "test_name": "directMemoryOrderedInt",
+            "FQS": "net.openhft.chronicle.core.UnsafeMemory2Test.directMemoryOrderedInt()",
+            "start_line": "575",
+            "blame_result": "0cabce8d3 (Peter Lawrey    2021-07-05 15:13:23 +0100 576)         long memory = this.memory.allocate(32);\n34c0f5fb3 (Per-\u00c5ke Minborg 2021-12-16 10:46:19 +0100 577)         this.memory.writeOrderedInt(null, memory, INT_VAL);\n34c0f5fb3 (Per-\u00c5ke Minborg 2021-12-16 10:46:19 +0100 578)         assertEquals(INT_VAL, this.memory.readVolatileInt(null, memory));\n0cabce8d3 (Peter Lawrey    2021-07-05 15:13:23 +0100 579)         this.memory.freeMemory(memory, 32);\n0cabce8d3 (Peter Lawrey    2021-07-05 15:13:23 +0100 580)     }\n",
+            "commit_hashes": {
+                "0cabce8d3": "    Improve test coverage of combinations of access to Unsafe.",
+                "34c0f5fb3": "    Remove flaky tests in UnsafeMemory2Test, Fix #297 (#298)"
+            },
+            "Commit&issueIDs": {
+                "34c0f5fb3": [
+                    "#297",
+                    "(#298)"
+                ]
+            },
+            "links": [
+                "https://github.com/OpenHFT/Chronicle-Core/issues/297",
+                "https://github.com/OpenHFT/Chronicle-Core/commit/34c0f5fb3"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/geosolutions-it/jai-ext/",
+            "file_path": "geosolutions-it/jai-ext/jt-jiffle/jt-jiffle-language/src/test/java/it/geosolutions/jaiext/jiffle/runtime/ExecutorGeneralTest.java",
+            "test_name": "removeEventListener",
+            "FQS": "it.geosolutions.jaiext.jiffle.runtime.ExecutorGeneralTest.removeEventListener()",
+            "start_line": "184",
+            "blame_result": "a8471b688 (Andrea Aime 2018-06-18 17:11:50 +0200 185)         System.out.println(\"   remove event listener\");\na8471b688 (Andrea Aime 2018-06-18 17:11:50 +0200 186)         \na8471b688 (Andrea Aime 2018-06-18 17:11:50 +0200 187)         JiffleEventListener listener = createListener();\na8471b688 (Andrea Aime 2018-06-18 17:11:50 +0200 188)         executor.addEventListener(listener);\na8471b688 (Andrea Aime 2018-06-18 17:11:50 +0200 189)         \n",
+            "commit_hashes": {
+                "a8471b688": "    Resurrect the Jiffle language as a JAI-EXT module #192"
+            },
+            "Commit&issueIDs": {
+                "a8471b688": [
+                    "#192"
+                ]
+            },
+            "links": [
+                "https://github.com/geosolutions-it/jai-ext/issues/192",
+                "https://github.com/geosolutions-it/jai-ext/commit/a8471b688"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/brettwooldridge/SparseBitSet/",
+            "file_path": "brettwooldridge/SparseBitSet/src/test/java/com/zaxxer/sparsebits/PreviousClearBitTest.java",
+            "test_name": "level1MissPlus1",
+            "FQS": "com.zaxxer.sparsebits.PreviousClearBitTest.level1MissPlus1()",
+            "start_line": "66",
+            "blame_result": "0622dfd9 (Brent Douglas 2017-11-06 07:37:03 +0800 67)         final int i = (1 << (SHIFT1 + SHIFT3)) + 1;\n0622dfd9 (Brent Douglas 2017-11-06 07:37:03 +0800 68)         set.set(i);\n37ec0681 (Brent Douglas 2017-11-05 21:05:15 +0800 69)         final int ret = set.previousClearBit(i);\n37ec0681 (Brent Douglas 2017-11-05 21:05:15 +0800 70) \n0622dfd9 (Brent Douglas 2017-11-06 07:37:03 +0800 71)         assertEquals(i - 1, ret);\n",
+            "commit_hashes": {
+                "0622dfd9": "    [#7] Fix buggy handling around array boundaries (#13)",
+                "37ec0681": "    [#7] Implement previousClearBit and previousSetBit (#12)"
+            },
+            "Commit&issueIDs": {
+                "0622dfd9": [
+                    "(#13)"
+                ],
+                "37ec0681": [
+                    "(#12)"
+                ]
+            },
+            "links": [
+                "https://github.com/brettwooldridge/SparseBitSet/issues/13",
+                "https://github.com/brettwooldridge/SparseBitSet/commit/0622dfd9",
+                "https://github.com/brettwooldridge/SparseBitSet/issues/12",
+                "https://github.com/brettwooldridge/SparseBitSet/commit/37ec0681"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/brettwooldridge/SparseBitSet/",
+            "file_path": "brettwooldridge/SparseBitSet/src/test/java/com/zaxxer/sparsebits/PreviousClearBitTest.java",
+            "test_name": "level2MissPlus1",
+            "FQS": "com.zaxxer.sparsebits.PreviousClearBitTest.level2MissPlus1()",
+            "start_line": "93",
+            "blame_result": "0622dfd9 (Brent Douglas 2017-11-06 07:37:03 +0800 94)         final int i = (1 << (SHIFT3 + SHIFT2)) + 1;\n0622dfd9 (Brent Douglas 2017-11-06 07:37:03 +0800 95)         set.set(i);\n37ec0681 (Brent Douglas 2017-11-05 21:05:15 +0800 96)         final int ret = set.previousClearBit(i);\n37ec0681 (Brent Douglas 2017-11-05 21:05:15 +0800 97) \n0622dfd9 (Brent Douglas 2017-11-06 07:37:03 +0800 98)         assertEquals(i - 1, ret);\n",
+            "commit_hashes": {
+                "0622dfd9": "    [#7] Fix buggy handling around array boundaries (#13)",
+                "37ec0681": "    [#7] Implement previousClearBit and previousSetBit (#12)"
+            },
+            "Commit&issueIDs": {
+                "0622dfd9": [
+                    "(#13)"
+                ],
+                "37ec0681": [
+                    "(#12)"
+                ]
+            },
+            "links": [
+                "https://github.com/brettwooldridge/SparseBitSet/issues/13",
+                "https://github.com/brettwooldridge/SparseBitSet/commit/0622dfd9",
+                "https://github.com/brettwooldridge/SparseBitSet/issues/12",
+                "https://github.com/brettwooldridge/SparseBitSet/commit/37ec0681"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/EsotericSoftware/yamlbeans/",
+            "file_path": "EsotericSoftware/yamlbeans/test/com/esotericsoftware/yamlbeans/tokenizer/TokenizerTest.java",
+            "test_name": "testTokenizerReader",
+            "FQS": "com.esotericsoftware.yamlbeans.tokenizer.TokenizerTest.testTokenizerReader()",
+            "start_line": "58",
+            "blame_result": "c6df1de7 (gihwan 2017-05-04 21:54:40 -0700 59)         Tokenizer tokenizer = new Tokenizer(new FileReader(\"test/test1.yml\"));\nc6df1de7 (gihwan 2017-05-04 21:54:40 -0700 60)         assertEquals(tokenizer.peekNextToken() + \"\", STREAM_START + \"\");\nc6df1de7 (gihwan 2017-05-04 21:54:40 -0700 61)         Tokenizer tokenizer_nbuffered = new Tokenizer((new BufferedReader(new FileReader(\"test/test1.yml\"))));\nc6df1de7 (gihwan 2017-05-04 21:54:40 -0700 62) \nc6df1de7 (gihwan 2017-05-04 21:54:40 -0700 63)         Iterator tokenizer_iter = tokenizer.iterator();\n",
+            "commit_hashes": {
+                "c6df1de7": "    Add test (#71)"
+            },
+            "Commit&issueIDs": {
+                "c6df1de7": [
+                    "(#71)"
+                ]
+            },
+            "links": [
+                "https://github.com/EsotericSoftware/yamlbeans/issues/71",
+                "https://github.com/EsotericSoftware/yamlbeans/commit/c6df1de7"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/GeoLatte/geolatte-geom/",
+            "file_path": "GeoLatte/geolatte-geom/json/src/test/java/org/geolatte/geom/json/FeatureDeserializationTest.java",
+            "test_name": "testDeSerializeWithNullGeometry",
+            "FQS": "org.geolatte.geom.json.FeatureDeserializationTest.testDeSerializeWithNullGeometry()",
+            "start_line": "49",
+            "blame_result": "777bafdb (Gabriel Landais 2022-01-26 09:05:19 +0100 50)         Feature<?,?> rec = mapper.readValue(featureNullGeometry, Feature.class);\n4be34133 (Karel Maesen    2018-07-13 17:39:46 +0200 51)         Map<String, Object> map = new HashMap<>();\n4be34133 (Karel Maesen    2018-07-13 17:39:46 +0200 52)         map.put(\"a\", 1);\n777bafdb (Gabriel Landais 2022-01-26 09:05:19 +0100 53)         Feature<?, ?> feature = new GeoJsonFeature<>(null, \"1\", map);\n4be34133 (Karel Maesen    2018-07-13 17:39:46 +0200 54)         assertEquals(feature,rec) ;\n",
+            "commit_hashes": {
+                "777bafdb": "    Fix for #143 : Parsing a GeoJSON feature with null geometry fails",
+                "4be34133": "    Adds support for GeoJsonFeature"
+            },
+            "Commit&issueIDs": {
+                "777bafdb": [
+                    "#143"
+                ]
+            },
+            "links": [
+                "https://github.com/GeoLatte/geolatte-geom/issues/143",
+                "https://github.com/GeoLatte/geolatte-geom/commit/777bafdb"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/twilio/twilio-java/",
+            "file_path": "twilio/twilio-java/src/test/java/com/twilio/twiml/MessagingResponseTest.java",
+            "test_name": "testXmlAttributesDeserialization",
+            "FQS": "com.twilio.twiml.MessagingResponseTest.testXmlAttributesDeserialization()",
+            "start_line": "156",
+            "blame_result": "c215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 157)         final MessagingResponse elem = new MessagingResponse.Builder().build();\nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 158) \nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 159)         Assert.assertEquals(\nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 160)             MessagingResponse.Builder.fromXml(\"<Response/>\").build().toXml(),\nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 161)             elem.toXml()\n",
+            "commit_hashes": {
+                "c215e0c724": "    feat: add fromXml method on builders (twiml) (#661)"
+            },
+            "Commit&issueIDs": {
+                "c215e0c724": [
+                    "(#661)"
+                ]
+            },
+            "links": [
+                "https://github.com/twilio/twilio-java/issues/661",
+                "https://github.com/twilio/twilio-java/commit/c215e0c724"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/twilio/twilio-java/",
+            "file_path": "twilio/twilio-java/src/test/java/com/twilio/twiml/voice/ClientTest.java",
+            "test_name": "testXmlAttributesDeserialization",
+            "FQS": "com.twilio.twiml.voice.ClientTest.testXmlAttributesDeserialization()",
+            "start_line": "168",
+            "blame_result": "c215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 169)         final Client elem = new Client.Builder(\"identity\")\n6e3fddb257 (Evan Fossier  2017-12-15 16:28:55 -0800 170)             .url(URI.create(\"https://example.com\"))\n6e3fddb257 (Evan Fossier  2017-12-15 16:28:55 -0800 171)             .method(HttpMethod.GET)\n6e3fddb257 (Evan Fossier  2017-12-15 16:28:55 -0800 172)             .statusCallbackEvents(Promoter.listOfOne(Client.Event.INITIATED))\n6e3fddb257 (Evan Fossier  2017-12-15 16:28:55 -0800 173)             .statusCallback(URI.create(\"https://example.com\"))\n",
+            "commit_hashes": {
+                "c215e0c724": "    feat: add fromXml method on builders (twiml) (#661)",
+                "6e3fddb257": "    [Librarian] Regenerated @ 9e369cf9a8faca3a4590250f768d8ce69a65d0e8"
+            },
+            "Commit&issueIDs": {
+                "c215e0c724": [
+                    "(#661)"
+                ]
+            },
+            "links": [
+                "https://github.com/twilio/twilio-java/issues/661",
+                "https://github.com/twilio/twilio-java/commit/c215e0c724"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/twilio/twilio-java/",
+            "file_path": "twilio/twilio-java/src/test/java/com/twilio/twiml/voice/PlayTest.java",
+            "test_name": "testXmlAttributesDeserialization",
+            "FQS": "com.twilio.twiml.voice.PlayTest.testXmlAttributesDeserialization()",
+            "start_line": "31",
+            "blame_result": "c215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 32)         final Play elem = new Play.Builder(URI.create(\"https://example.com\")).loop(1).digits(\"digits\").build();\nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 33) \nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 34)         Assert.assertEquals(\nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 35)             Play.Builder.fromXml(\"<Play digits=\\\"digits\\\" loop=\\\"1\\\">https://example.com</Play>\").build().toXml(),\nc215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 36)             elem.toXml()\n",
+            "commit_hashes": {
+                "c215e0c724": "    feat: add fromXml method on builders (twiml) (#661)"
+            },
+            "Commit&issueIDs": {
+                "c215e0c724": [
+                    "(#661)"
+                ]
+            },
+            "links": [
+                "https://github.com/twilio/twilio-java/issues/661",
+                "https://github.com/twilio/twilio-java/commit/c215e0c724"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/twilio/twilio-java/",
+            "file_path": "twilio/twilio-java/src/test/java/com/twilio/twiml/voice/VirtualAgentTest.java",
+            "test_name": "testXmlAttributesDeserialization",
+            "FQS": "com.twilio.twiml.voice.VirtualAgentTest.testXmlAttributesDeserialization()",
+            "start_line": "164",
+            "blame_result": "c215e0c724 (Borja Canseco 2021-11-30 15:46:59 -0700 165)         final VirtualAgent elem = new VirtualAgent.Builder()\n4cd2939edf (Twilio        2021-03-15 21:37:47 +0000 166)             .connectorName(\"connector_name\")\n4cd2939edf (Twilio        2021-03-15 21:37:47 +0000 167)             .language(\"language\")\n4cd2939edf (Twilio        2021-03-15 21:37:47 +0000 168)             .sentimentAnalysis(true)\n4cd2939edf (Twilio        2021-03-15 21:37:47 +0000 169)             .statusCallback(\"status_callback\")\n",
+            "commit_hashes": {
+                "c215e0c724": "    feat: add fromXml method on builders (twiml) (#661)",
+                "4cd2939edf": "    [Librarian] Regenerated @ ea687051c299d913d47e5ccde2b85955dc738246"
+            },
+            "Commit&issueIDs": {
+                "c215e0c724": [
+                    "(#661)"
+                ]
+            },
+            "links": [
+                "https://github.com/twilio/twilio-java/issues/661",
+                "https://github.com/twilio/twilio-java/commit/c215e0c724"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/sweble/sweble-wikitext/",
+            "file_path": "sweble/sweble-wikitext/sweble-wikitext-components-parent/swc-engine/src/test/java/org/sweble/wikitext/engine/PageTitleTest.java",
+            "test_name": "testName",
+            "FQS": "org.sweble.wikitext.engine.PageTitleTest.testName()",
+            "start_line": "29",
+            "blame_result": "d55405b4d (Hannes Dohrn 2017-02-03 14:56:53 +0100 30) \t{\nd55405b4d (Hannes Dohrn 2017-02-03 14:56:53 +0100 31) \t\tWikiConfigImpl config = DefaultConfigEnWp.generate();\n4c83de30b (Hannes Dohrn 2017-02-03 15:12:12 +0100 32) \n4c83de30b (Hannes Dohrn 2017-02-03 15:12:12 +0100 33) \t\t// Must not fail with illegal entity error\n4c83de30b (Hannes Dohrn 2017-02-03 15:12:12 +0100 34) \t\tPageTitle title = PageTitle.make(\n",
+            "commit_hashes": {
+                "d55405b4d": "    Fixes #45 The title `Template:Did you know nominations/Steve Taylor & The Perfect Foil; Wow to the Deadness' contains invalid entities: &_The_Perfect_Foil;",
+                "4c83de30b": "    Further improved fix for issue #45 and improved unit test"
+            },
+            "Commit&issueIDs": {
+                "d55405b4d": [
+                    "#45"
+                ],
+                "4c83de30b": [
+                    "#45"
+                ]
+            },
+            "links": [
+                "https://github.com/sweble/sweble-wikitext/issues/45",
+                "https://github.com/sweble/sweble-wikitext/commit/d55405b4d",
+                "https://github.com/sweble/sweble-wikitext/issues/45",
+                "https://github.com/sweble/sweble-wikitext/commit/4c83de30b"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/sofastack/sofa-rpc/",
+            "file_path": "sofastack/sofa-rpc/core/api/src/test/java/com/alipay/sofa/rpc/config/RegistryConfigTest.java",
+            "test_name": "testAll",
+            "FQS": "com.alipay.sofa.rpc.config.RegistryConfigTest.testAll()",
+            "start_line": "30",
+            "blame_result": "3e63253d5 (Geng Zhang 2018-06-15 11:47:30 +0800 31)         RegistryConfig config = new RegistryConfig();\n3e63253d5 (Geng Zhang 2018-06-15 11:47:30 +0800 32)         config.setProtocol(\"xx\")\n3e63253d5 (Geng Zhang 2018-06-15 11:47:30 +0800 33)             .setAddress(\"127.0.0.1\")\n3e63253d5 (Geng Zhang 2018-06-15 11:47:30 +0800 34)             .setFile(\"file\")\n3e63253d5 (Geng Zhang 2018-06-15 11:47:30 +0800 35)             .setRegister(true)\n",
+            "commit_hashes": {
+                "3e63253d5": "    Code cleanup and add more test cases. (#177)"
+            },
+            "Commit&issueIDs": {
+                "3e63253d5": [
+                    "(#177)"
+                ]
+            },
+            "links": [
+                "https://github.com/sofastack/sofa-rpc/issues/177",
+                "https://github.com/sofastack/sofa-rpc/commit/3e63253d5"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dflib/dflib/",
+            "file_path": "dflib/dflib/dflib-jdbc/src/test/java/org/dflib/jdbc/connector/metadata/TableFQNameTest.java",
+            "test_name": "hashCode_CatalogSchemaName",
+            "FQS": "org.dflib.jdbc.connector.metadata.TableFQNameTest.hashCode_CatalogSchemaName()",
+            "start_line": "67",
+            "blame_result": "9b21c73dc dflib-jdbc/src/test/java/com/nhl/dflib/jdbc/connector/metadata/TableFQNameTest.java (Andrus Adamchik 2019-08-01 15:43:24 -0400 68) \n9b21c73dc dflib-jdbc/src/test/java/com/nhl/dflib/jdbc/connector/metadata/TableFQNameTest.java (Andrus Adamchik 2019-08-01 15:43:24 -0400 69)         TableFQName n1 = TableFQName.forCatalogSchemaAndName(\"c1\", \"s1\", \"t1\");\n9b21c73dc dflib-jdbc/src/test/java/com/nhl/dflib/jdbc/connector/metadata/TableFQNameTest.java (Andrus Adamchik 2019-08-01 15:43:24 -0400 70)         TableFQName n2 = TableFQName.forCatalogSchemaAndName(\"c1\", \"s1\", \"t1\");\n9b21c73dc dflib-jdbc/src/test/java/com/nhl/dflib/jdbc/connector/metadata/TableFQNameTest.java (Andrus Adamchik 2019-08-01 15:43:24 -0400 71)         TableFQName n3 = TableFQName.forCatalogSchemaAndName(\"c2\", \"s1\", \"t1\");\n9b21c73dc dflib-jdbc/src/test/java/com/nhl/dflib/jdbc/connector/metadata/TableFQNameTest.java (Andrus Adamchik 2019-08-01 15:43:24 -0400 72)         TableFQName n4 = TableFQName.forCatalogSchemaAndName(\"c1\", \"s2\", \"t1\");\n",
+            "commit_hashes": {
+                "9b21c73dc": "     TableSaver: apply quotes to schema/catalog/table name separately #69"
+            },
+            "Commit&issueIDs": {
+                "9b21c73dc": [
+                    "#69"
+                ]
+            },
+            "links": [
+                "https://github.com/dflib/dflib/issues/69",
+                "https://github.com/dflib/dflib/commit/9b21c73dc"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/dapr/java-sdk/",
+            "file_path": "dapr/java-sdk/sdk/src/test/java/io/dapr/client/domain/StateTest.java",
+            "test_name": "testEqualsAndHashcode",
+            "FQS": "io.dapr.client.domain.StateTest.testEqualsAndHashcode()",
+            "start_line": "88",
+            "blame_result": "5d7700b57 (Artur Souza 2021-02-01 19:03:25 -0800 89)     State<String> state1 = new State<>(KEY, \"value\", ETAG, new HashMap<>(METADATA), OPTIONS);\n5d7700b57 (Artur Souza 2021-02-01 19:03:25 -0800 90)     State<String> state2 = new State<>(KEY, \"value\", ETAG, new HashMap<>(METADATA), OPTIONS);\n912ff7a78 (Sky/\u6556\u5c0f\u5251  2020-12-02 13:13:25 +0800 91)     assertEquals(state1.toString(), state2.toString());\n912ff7a78 (Sky/\u6556\u5c0f\u5251  2020-12-02 13:13:25 +0800 92)     assertEquals(state1.hashCode(), state2.hashCode());\n912ff7a78 (Sky/\u6556\u5c0f\u5251  2020-12-02 13:13:25 +0800 93)     assertEquals(state1, state2);\n",
+            "commit_hashes": {
+                "5d7700b57": "    Refactor params for State class + Unit test example (#473)",
+                "912ff7a78": "    Add metadata for state save operation (#397)"
+            },
+            "Commit&issueIDs": {
+                "5d7700b57": [
+                    "(#473)"
+                ],
+                "912ff7a78": [
+                    "(#397)"
+                ]
+            },
+            "links": [
+                "https://github.com/dapr/java-sdk/issues/473",
+                "https://github.com/dapr/java-sdk/commit/5d7700b57",
+                "https://github.com/dapr/java-sdk/issues/397",
+                "https://github.com/dapr/java-sdk/commit/912ff7a78"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/jmrozanec/cron-utils/",
+            "file_path": "jmrozanec/cron-utils/src/test/java/com/cronutils/Issue528Test.java",
+            "test_name": "testCronMapperRebootSupportedOnTarget",
+            "FQS": "com.cronutils.Issue528Test.testCronMapperRebootSupportedOnTarget()",
+            "start_line": "38",
+            "blame_result": "33f1b077 (Jonas 2022-07-30 12:35:36 +0200 39)         Cron cron = new CronParser(REBOOT_CRON_DEFINITION).parse(\"@reboot\");\n1cf9247a (Jonas 2022-07-30 12:58:04 +0200 40)         CronDefinition unix = CronDefinitionBuilder.defineCron()\n1cf9247a (Jonas 2022-07-30 12:58:04 +0200 41)                 .withMinutes().withValidRange(0, 59).withStrictRange().and()\n1cf9247a (Jonas 2022-07-30 12:58:04 +0200 42)                 .withHours().withValidRange(0, 23).withStrictRange().and()\n1cf9247a (Jonas 2022-07-30 12:58:04 +0200 43)                 .withDayOfMonth().withValidRange(1, 31).withStrictRange().and()\n",
+            "commit_hashes": {
+                "33f1b077": "    Add unit test for #528",
+                "1cf9247a": "    Add unit tests for CronDescriptor & CronMapper"
+            },
+            "Commit&issueIDs": {
+                "33f1b077": [
+                    "#528"
+                ]
+            },
+            "links": [
+                "https://github.com/jmrozanec/cron-utils/issues/528",
+                "https://github.com/jmrozanec/cron-utils/commit/33f1b077"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/SAP/cloud-security-services-integration-library/",
+            "file_path": "SAP/cloud-security-services-integration-library/spring-security/src/test/java/com/sap/cloud/security/spring/config/OAuth2ServiceConfigurationPropertiesTest.java",
+            "test_name": "setGetCertUrl",
+            "FQS": "com.sap.cloud.security.spring.config.OAuth2ServiceConfigurationPropertiesTest.setGetCertUrl()",
+            "start_line": "125",
+            "blame_result": "75eed64d4 (L\u012bga 2021-06-21 10:39:12 +0200 126) \t\tcutXsuaa.setCertUrl(ANY_VALUE);\n75eed64d4 (L\u012bga 2021-06-21 10:39:12 +0200 127) \t\tassertEquals(ANY_VALUE, cutXsuaa.getCertUrl().toString());\n75eed64d4 (L\u012bga 2021-06-21 10:39:12 +0200 128) \t\tassertTrue(cutXsuaa.hasProperty(XSUAA.CERT_URL));\n75eed64d4 (L\u012bga 2021-06-21 10:39:12 +0200 129) \t\tassertEquals(ANY_VALUE, cutXsuaa.getProperty(XSUAA.CERT_URL));\n75eed64d4 (L\u012bga 2021-06-21 10:39:12 +0200 130) \t}\n",
+            "commit_hashes": {
+                "75eed64d4": "    Token xchange with x509 (#534)"
+            },
+            "Commit&issueIDs": {
+                "75eed64d4": [
+                    "534"
+                ]
+            },
+            "links": [
+                "https://github.com/SAP/cloud-security-services-integration-library/issues/534",
+                "https://github.com/SAP/cloud-security-services-integration-library/commit/75eed64d4"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/tomp2p/TomP2P/",
+            "file_path": "tomp2p/TomP2P/core/src/test/java/net/tomp2p/message/TestMessage.java",
+            "test_name": "testRelayFlag",
+            "FQS": "net.tomp2p.message.TestMessage.testRelayFlag()",
+            "start_line": "520",
+            "blame_result": "7e864b8e8 (Thomas Bocek 2013-12-28 18:51:45 +0100 521) \t\tMessage m1 = Utils2.createDummyMessage();\ndb4df75a9 (Thomas Bocek 2014-10-30 23:29:57 +0100 522) \t\tm1.sender(m1.sender().changeRelayed(true));\ndb4df75a9 (Thomas Bocek 2014-10-30 23:29:57 +0100 523) \t\t\n7e864b8e8 (Thomas Bocek 2013-12-28 18:51:45 +0100 524) \t\tMessage m2 = encodeDecode(m1);\ndb4df75a9 (Thomas Bocek 2014-10-30 23:29:57 +0100 525) \t\tAssert.assertEquals(m1.sender().isRelayed(), m2.sender().isRelayed());\n",
+            "commit_hashes": {
+                "7e864b8e8": "    new Buffer handling, replaced the cumalative buffer with an alternative",
+                "db4df75a9": "    merged pull request #52"
+            },
+            "Commit&issueIDs": {
+                "db4df75a9": [
+                    "#52"
+                ]
+            },
+            "links": [
+                "https://github.com/tomp2p/TomP2P/issues/52",
+                "https://github.com/tomp2p/TomP2P/commit/db4df75a9"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/streamnative/rop/",
+            "file_path": "streamnative/rop/rocketmq-impl/src/test/java/org/streamnative/pulsar/handlers/rocketmq/inner/consumer/metadata/GroupOffsetValueTest.java",
+            "test_name": "encodeDecodeTest",
+            "FQS": "org.streamnative.pulsar.handlers.rocketmq.inner.consumer.metadata.GroupOffsetValueTest.encodeDecodeTest()",
+            "start_line": "40",
+            "blame_result": "2efad268 (xiaolong ran 2021-09-01 21:25:44 +0800 41)         ByteBuffer buffer = groupOffsetValue.encode();\n2efad268 (xiaolong ran 2021-09-01 21:25:44 +0800 42)         buffer.rewind();\n2efad268 (xiaolong ran 2021-09-01 21:25:44 +0800 43)         GroupOffsetValue temp = new GroupOffsetValue();\n2efad268 (xiaolong ran 2021-09-01 21:25:44 +0800 44)         temp.decode(buffer);\n2efad268 (xiaolong ran 2021-09-01 21:25:44 +0800 45)         assertEquals(groupOffsetValue, temp);\n",
+            "commit_hashes": {
+                "2efad268": "    Consumer offset management (#47)"
+            },
+            "Commit&issueIDs": {
+                "2efad268": [
+                    "47"
+                ]
+            },
+            "links": [
+                "https://github.com/streamnative/rop/issues/47",
+                "https://github.com/streamnative/rop/commit/2efad268"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/OpenHFT/Chronicle-Bytes/",
+            "file_path": "OpenHFT/Chronicle-Bytes/src/test/java/net/openhft/chronicle/bytes/BytesTest.java",
+            "test_name": "testToStringDoesNotChange",
+            "FQS": "net.openhft.chronicle.bytes.BytesTest.testToStringDoesNotChange()",
+            "start_line": "863",
+            "blame_result": "2579bd42d (Peter Lawrey 2022-04-12 10:35:46 +0100 864)         @NotNull Bytes<?> a = alloc1.elasticBytes(16);\n2579bd42d (Peter Lawrey 2022-04-12 10:35:46 +0100 865)         @NotNull Bytes<?> b = alloc1.elasticBytes(16);\n6ff0a65bd (Jerry Shea   2018-11-15 17:22:49 +1100 866)         try {\n6ff0a65bd (Jerry Shea   2018-11-15 17:22:49 +1100 867)             String hello = \"hello\";\n6ff0a65bd (Jerry Shea   2018-11-15 17:22:49 +1100 868)             a.append(hello);\n",
+            "commit_hashes": {
+                "2579bd42d": "    Make Bytes, BytesIn and ByteOut generic to fix raw type warning https://github.com/OpenHFT/Chronicle-Bytes/issues/358",
+                "6ff0a65bd": "    EnumInterner calls toString and can get \"Not available\" when running in debugger #552"
+            },
+            "Commit&issueIDs": {
+                "6ff0a65bd": [
+                    "#552"
+                ]
+            },
+            "links": [
+                "https://github.com/OpenHFT/Chronicle-Bytes/issues/552",
+                "https://github.com/OpenHFT/Chronicle-Bytes/commit/6ff0a65bd"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/neo4j/neo4j-java-driver/",
+            "file_path": "neo4j/neo4j-java-driver/driver/src/test/java/org/neo4j/driver/internal/InternalBookmarkTest.java",
+            "test_name": "shouldIgnoreNullAndEmptyInBookmarkList",
+            "FQS": "org.neo4j.driver.internal.InternalBookmarkTest.shouldIgnoreNullAndEmptyInBookmarkList()",
+            "start_line": "67",
+            "blame_result": "41b0d568f (Dmitriy Tverdiakov 2023-07-07 15:57:04 +0100 68)         var bookmark = InternalBookmark.from(Arrays.asList(InternalBookmark.empty(), null, null));\n7c2fb47fb (injectives         2022-05-19 15:52:11 +0100 69)         assertEquals(InternalBookmark.empty(), bookmark);\n143cc473b (Zhen Li            2019-07-25 17:26:22 +0200 70)     }\n143cc473b (Zhen Li            2019-07-25 17:26:22 +0200 71) \n143cc473b (Zhen Li            2019-07-25 17:26:22 +0200 72)     @Test\n",
+            "commit_hashes": {
+                "41b0d568f": "    Update to using the local variable type inference in tests (#1448)",
+                "7c2fb47fb": "    Add spotless-maven-plugin for Java formatting (#1227)",
+                "143cc473b": "    Passing bookmark to rediscover service"
+            },
+            "Commit&issueIDs": {
+                "41b0d568f": [
+                    "(#1448)"
+                ],
+                "7c2fb47fb": [
+                    "(#1227)"
+                ]
+            },
+            "links": [
+                "https://github.com/neo4j/neo4j-java-driver/issues/1448",
+                "https://github.com/neo4j/neo4j-java-driver/commit/41b0d568f",
+                "https://github.com/neo4j/neo4j-java-driver/issues/1227",
+                "https://github.com/neo4j/neo4j-java-driver/commit/7c2fb47fb"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/neo4j/neo4j-java-driver/",
+            "file_path": "neo4j/neo4j-java-driver/driver/src/test/java/org/neo4j/driver/internal/ValuesTest.java",
+            "test_name": "equalityRules",
+            "FQS": "org.neo4j.driver.internal.ValuesTest.equalityRules()",
+            "start_line": "123",
+            "blame_result": "7c2fb47fb (injectives 2022-05-19 15:52:11 +0100 124)         assertEquals(value(1), value(1));\n7c2fb47fb (injectives 2022-05-19 15:52:11 +0100 125)         assertEquals(value(Long.MAX_VALUE), value(Long.MAX_VALUE));\n7c2fb47fb (injectives 2022-05-19 15:52:11 +0100 126)         assertEquals(value(Long.MIN_VALUE), value(Long.MIN_VALUE));\n7c2fb47fb (injectives 2022-05-19 15:52:11 +0100 127)         assertNotEquals(value(1), value(2));\nfa6bbd173 (Zhen       2015-04-23 17:02:07 +0200 128) \n",
+            "commit_hashes": {
+                "7c2fb47fb": "    Add spotless-maven-plugin for Java formatting (#1227)",
+                "fa6bbd173": "    Java client driver for neo4j"
+            },
+            "Commit&issueIDs": {
+                "7c2fb47fb": [
+                    "(#1227)"
+                ]
+            },
+            "links": [
+                "https://github.com/neo4j/neo4j-java-driver/issues/1227",
+                "https://github.com/neo4j/neo4j-java-driver/commit/7c2fb47fb"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/undera/jmeter-plugins/",
+            "file_path": "undera/jmeter-plugins/plugins/prmctl/src/test/java/kg/apc/jmeter/control/sampler/SetVariablesActionGuiTest.java",
+            "test_name": "testGui",
+            "FQS": "kg.apc.jmeter.control.sampler.SetVariablesActionGuiTest.testGui()",
+            "start_line": "50",
+            "blame_result": "84392cdb0 (Artem Fedorov 2018-04-11 18:09:59 +0300 51)         SetVariablesActionGui gui = new SetVariablesActionGui();\n84392cdb0 (Artem Fedorov 2018-04-11 18:09:59 +0300 52) \n84392cdb0 (Artem Fedorov 2018-04-11 18:09:59 +0300 53)         SetVariablesAction element1 = (SetVariablesAction) gui.createTestElement();\n84392cdb0 (Artem Fedorov 2018-04-11 18:09:59 +0300 54)         SetVariablesAction element2 = (SetVariablesAction) gui.createTestElement();\n84392cdb0 (Artem Fedorov 2018-04-11 18:09:59 +0300 55) \n",
+            "commit_hashes": {
+                "84392cdb0": "    Add Set Varibles Action (#242)"
+            },
+            "Commit&issueIDs": {
+                "84392cdb0": [
+                    "(#242)"
+                ]
+            },
+            "links": [
+                "https://github.com/undera/jmeter-plugins/issues/242",
+                "https://github.com/undera/jmeter-plugins/commit/84392cdb0"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/ThreeTen/threeten-extra/",
+            "file_path": "ThreeTen/threeten-extra/src/test/java/org/threeten/extra/TestYearHalf.java",
+            "test_name": "test_withHalf_int",
+            "FQS": "org.threeten.extra.TestYearHalf.test_withHalf_int()",
+            "start_line": "610",
+            "blame_result": "54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 611)         assertEquals(YearHalf.of(2007, H1), YearHalf.of(2007, H2).withHalf(1));\n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 612)     }\n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 613) \n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 614)     @Test\n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 615)     public void test_withHalf_int_halfTooLow() {\n",
+            "commit_hashes": {
+                "54e3d4f6": "    Half years (#303)"
+            },
+            "Commit&issueIDs": {
+                "54e3d4f6": [
+                    "(#303)"
+                ]
+            },
+            "links": [
+                "https://github.com/ThreeTen/threeten-extra/issues/303",
+                "https://github.com/ThreeTen/threeten-extra/commit/54e3d4f6"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/ThreeTen/threeten-extra/",
+            "file_path": "ThreeTen/threeten-extra/src/test/java/org/threeten/extra/TestYearHalf.java",
+            "test_name": "test_plusYears",
+            "FQS": "org.threeten.extra.TestYearHalf.test_plusYears()",
+            "start_line": "641",
+            "blame_result": "54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 642)         assertEquals(YearHalf.of(2012, H2), YearHalf.of(2007, H2).plusYears(5));\n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 643)         assertEquals(YearHalf.of(2007, H2), YearHalf.of(2007, H2).plusYears(0));\n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 644)         assertEquals(YearHalf.of(2002, H2), YearHalf.of(2007, H2).plusYears(-5));\n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 645)     }\n54e3d4f6 (Stephen Colebourne 2023-11-12 19:45:14 +0000 646) \n",
+            "commit_hashes": {
+                "54e3d4f6": "    Half years (#303)"
+            },
+            "Commit&issueIDs": {
+                "54e3d4f6": [
+                    "(#303)"
+                ]
+            },
+            "links": [
+                "https://github.com/ThreeTen/threeten-extra/issues/303",
+                "https://github.com/ThreeTen/threeten-extra/commit/54e3d4f6"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/ThreeTen/threeten-extra/",
+            "file_path": "ThreeTen/threeten-extra/src/test/java/org/threeten/extra/TestYearWeek.java",
+            "test_name": "test_minus",
+            "FQS": "org.threeten.extra.TestYearWeek.test_minus()",
+            "start_line": "971",
+            "blame_result": "cc42d328 (Stephen Colebourne 2020-11-29 22:55:31 +0000 972)         assertEquals(YearWeek.of(2014, 1), YearWeek.of(2014, 2).minus(1, ChronoUnit.WEEKS));\ncc42d328 (Stephen Colebourne 2020-11-29 22:55:31 +0000 973)     }\ncc42d328 (Stephen Colebourne 2020-11-29 22:55:31 +0000 974) \n66fd7651 (mjustin            2021-03-03 16:44:42 -0600 975)     @Test\ncc42d328 (Stephen Colebourne 2020-11-29 22:55:31 +0000 976)     public void test_minus_overflow() {\n",
+            "commit_hashes": {
+                "cc42d328": "    Make YearWeek implement Temporal (#165)",
+                "66fd7651": "    Upgrade to JUnit 5 (#173)"
+            },
+            "Commit&issueIDs": {
+                "cc42d328": [
+                    "(#165)"
+                ],
+                "66fd7651": [
+                    "(#173)"
+                ]
+            },
+            "links": [
+                "https://github.com/ThreeTen/threeten-extra/issues/165",
+                "https://github.com/ThreeTen/threeten-extra/commit/cc42d328",
+                "https://github.com/ThreeTen/threeten-extra/issues/173",
+                "https://github.com/ThreeTen/threeten-extra/commit/66fd7651"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/FasterXML/jackson-core/",
+            "file_path": "FasterXML/jackson-core/src/test/java/com/fasterxml/jackson/core/jsonptr/JsonPointerTest.java",
+            "test_name": "equality",
+            "FQS": "com.fasterxml.jackson.core.jsonptr.JsonPointerTest.equality()",
+            "start_line": "151",
+            "blame_result": "fff79ea51 src/test/java/com/fasterxml/jackson/core/jsonptr/JsonPointerTest.java (timo-a         2024-03-22 22:16:22 +0100 152)         assertNotEquals(JsonPointer.empty(), JsonPointer.compile(\"/\"));\n66d935869 src/test/java/com/fasterxml/jackson/core/TestJsonPointer.java         (Tatu Saloranta 2019-08-29 14:10:49 -0700 153) \n66d935869 src/test/java/com/fasterxml/jackson/core/TestJsonPointer.java         (Tatu Saloranta 2019-08-29 14:10:49 -0700 154)         assertEquals(JsonPointer.compile(\"/foo/3\"), JsonPointer.compile(\"/foo/3\"));\nfff79ea51 src/test/java/com/fasterxml/jackson/core/jsonptr/JsonPointerTest.java (timo-a         2024-03-22 22:16:22 +0100 155)         assertNotEquals(JsonPointer.empty(), JsonPointer.compile(\"/12\"));\nfff79ea51 src/test/java/com/fasterxml/jackson/core/jsonptr/JsonPointerTest.java (timo-a         2024-03-22 22:16:22 +0100 156)         assertNotEquals(JsonPointer.compile(\"/12\"), JsonPointer.empty());\n",
+            "commit_hashes": {
+                "fff79ea51": "    update(tests): migrate JUnit 4 code to JUnit 5 in core.base64 to core.sym (#1247)",
+                "66d935869": "    Improve JsonPointer tests"
+            },
+            "Commit&issueIDs": {
+                "fff79ea51": [
+                    "1247"
+                ]
+            },
+            "links": [
+                "https://github.com/FasterXML/jackson-core/issues/1247",
+                "https://github.com/FasterXML/jackson-core/commit/fff79ea51"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/pf4j/pf4j/",
+            "file_path": "pf4j/pf4j/pf4j/src/test/java/org/pf4j/SecurePluginManagerWrapperTest.java",
+            "test_name": "getExtensionFactory",
+            "FQS": "org.pf4j.SecurePluginManagerWrapperTest.getExtensionFactory()",
+            "start_line": "117",
+            "blame_result": "dac4edb5 (wolframhaussig 2021-06-13 11:10:35 +0200 118)         pluginManager.loadPlugins();\ndac4edb5 (wolframhaussig 2021-06-13 11:10:35 +0200 119)         assertEquals(pluginManager.getExtensionFactory(), wrappedPluginManager.getExtensionFactory());\ndac4edb5 (wolframhaussig 2021-06-13 11:10:35 +0200 120)     }\ndac4edb5 (wolframhaussig 2021-06-13 11:10:35 +0200 121) \ndac4edb5 (wolframhaussig 2021-06-13 11:10:35 +0200 122)     @Test\n",
+            "commit_hashes": {
+                "dac4edb5": "    Add secure wrapper to plugin manager (#450)"
+            },
+            "Commit&issueIDs": {
+                "dac4edb5": [
+                    "(#450)"
+                ]
+            },
+            "links": [
+                "https://github.com/pf4j/pf4j/issues/450",
+                "https://github.com/pf4j/pf4j/commit/dac4edb5"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/eclipse-ee4j/angus-mail/",
+            "file_path": "eclipse-ee4j/angus-mail/providers/angus-mail/src/test/java/org/eclipse/angus/mail/util/logging/CompactFormatterTest.java",
+            "test_name": "testFormatThrownEmptyEmpty",
+            "FQS": "org.eclipse.angus.mail.util.logging.CompactFormatterTest.testFormatThrownEmptyEmpty()",
+            "start_line": "1559",
+            "blame_result": "3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1560)         //E[0] -> IOE[0]\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1561)         Exception e = new IOException(\"Fake I/O\");\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1562)         e.setStackTrace(new StackTraceElement[0]);\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1563)         e = new Exception(e.toString(), e);\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1564)         e.setStackTrace(new StackTraceElement[0]);\n",
+            "commit_hashes": {
+                "3b3df4f8": "    #64: change the package names to org.eclipse.angus.mail.* (#66)"
+            },
+            "Commit&issueIDs": {
+                "3b3df4f8": [
+                    "66"
+                ]
+            },
+            "links": [
+                "https://github.com/eclipse-ee4j/angus-mail/issues/66",
+                "https://github.com/eclipse-ee4j/angus-mail/commit/3b3df4f8"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/eclipse-ee4j/angus-mail/",
+            "file_path": "eclipse-ee4j/angus-mail/providers/angus-mail/src/test/java/org/eclipse/angus/mail/util/logging/CompactFormatterTest.java",
+            "test_name": "testFormatError",
+            "FQS": "org.eclipse.angus.mail.util.logging.CompactFormatterTest.testFormatError()",
+            "start_line": "1725",
+            "blame_result": "3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1726)         CompactFormatter cf = new CompactFormatter(\"%11$s\");\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1727)         LogRecord record = new LogRecord(Level.SEVERE, \"message\");\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1728)         record.setThrown(new Throwable(\"error\"));\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1729)         String output = cf.format(record);\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 1730)         assertTrue(output.startsWith(record.getThrown()\n",
+            "commit_hashes": {
+                "3b3df4f8": "    #64: change the package names to org.eclipse.angus.mail.* (#66)"
+            },
+            "Commit&issueIDs": {
+                "3b3df4f8": [
+                    "66"
+                ]
+            },
+            "links": [
+                "https://github.com/eclipse-ee4j/angus-mail/issues/66",
+                "https://github.com/eclipse-ee4j/angus-mail/commit/3b3df4f8"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/MenoData/Time4J/",
+            "file_path": "MenoData/Time4J/base/src/test/java/net/time4j/TimeOperatorTest.java",
+            "test_name": "digitalHourOfAmPmMaximized",
+            "FQS": "net.time4j.TimeOperatorTest.digitalHourOfAmPmMaximized()",
+            "start_line": "220",
+            "blame_result": "3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 221)         assertThat(\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 222)             PlainTime.of(19, 45, 30).with(DIGITAL_HOUR_OF_AMPM.maximized()),\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 223)             is(PlainTime.of(23, 45, 30)));\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 224)     }\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 225) \n",
+            "commit_hashes": {
+                "3ba388592": "    time operator tests and bugfix for issue #26"
+            },
+            "Commit&issueIDs": {
+                "3ba388592": [
+                    "#26"
+                ]
+            },
+            "links": [
+                "https://github.com/MenoData/Time4J/issues/26",
+                "https://github.com/MenoData/Time4J/commit/3ba388592"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/MenoData/Time4J/",
+            "file_path": "MenoData/Time4J/base/src/test/java/net/time4j/TimeOperatorTest.java",
+            "test_name": "clockHourOfDayMinimizedIfHour24",
+            "FQS": "net.time4j.TimeOperatorTest.clockHourOfDayMinimizedIfHour24()",
+            "start_line": "127",
+            "blame_result": "3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 128)         assertThat(\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 129)             PlainTime.of(24).with(CLOCK_HOUR_OF_DAY.minimized()),\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 130)             is(PlainTime.of(1)));\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 131)     }\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 132) \n",
+            "commit_hashes": {
+                "3ba388592": "    time operator tests and bugfix for issue #26"
+            },
+            "Commit&issueIDs": {
+                "3ba388592": [
+                    "#26"
+                ]
+            },
+            "links": [
+                "https://github.com/MenoData/Time4J/issues/26",
+                "https://github.com/MenoData/Time4J/commit/3ba388592"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/MenoData/Time4J/",
+            "file_path": "MenoData/Time4J/base/src/test/java/net/time4j/TimeOperatorTest.java",
+            "test_name": "digitalHourOfDayAtFloor",
+            "FQS": "net.time4j.TimeOperatorTest.digitalHourOfDayAtFloor()",
+            "start_line": "380",
+            "blame_result": "3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 381)         assertThat(\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 382)             PlainTime.of(19, 45, 30, 123456789)\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 383)                 .with(DIGITAL_HOUR_OF_DAY.atFloor()),\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 384)             is(PlainTime.of(19)));\n3ba388592 src/test/java/net/time4j/TimeOperatorTest.java (Meno Hochschild 2014-04-19 08:45:48 +0200 385)     }\n",
+            "commit_hashes": {
+                "3ba388592": "    time operator tests and bugfix for issue #26"
+            },
+            "Commit&issueIDs": {
+                "3ba388592": [
+                    "#26"
+                ]
+            },
+            "links": [
+                "https://github.com/MenoData/Time4J/issues/26",
+                "https://github.com/MenoData/Time4J/commit/3ba388592"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/optimatika/ojAlgo/",
+            "file_path": "optimatika/ojAlgo/src/test/java/org/ojalgo/function/multiary/LinearCase.java",
+            "test_name": "testGetLinearFactors",
+            "FQS": "org.ojalgo.function.multiary.LinearCase.testGetLinearFactors()",
+            "start_line": "88",
+            "blame_result": "e7a973d98 test/org/ojalgo/function/multiary/LinearCase.java          (Anders Peterson 2019-07-27 09:42:58 +0200 89) \n02b451530 src/test/java/org/ojalgo/function/multiary/LinearCase.java (Anders Peterson 2022-12-06 09:16:50 +0100 90)         TestUtils.assertEquals(myLinearFunction1.getLinearFactors(false), myLinearFunction2.getLinearFactors(false));\n02b451530 src/test/java/org/ojalgo/function/multiary/LinearCase.java (Anders Peterson 2022-12-06 09:16:50 +0100 91)         TestUtils.assertEquals(myAffineFunction1.getLinearFactors(false), myAffineFunction2.getLinearFactors(false));\n02b451530 src/test/java/org/ojalgo/function/multiary/LinearCase.java (Anders Peterson 2022-12-06 09:16:50 +0100 92)         TestUtils.assertEquals(myQuadraticFunction1.getLinearFactors(false), myQuadraticFunction2.getLinearFactors(false));\ne7a973d98 test/org/ojalgo/function/multiary/LinearCase.java          (Anders Peterson 2019-07-27 09:42:58 +0200 93) \n",
+            "commit_hashes": {
+                "e7a973d98": "    Prepare for LinearSolver.Builder changes (#213)",
+                "02b451530": "    OptimisationData (#483)"
+            },
+            "Commit&issueIDs": {
+                "e7a973d98": [
+                    "(#213)"
+                ],
+                "02b451530": [
+                    "(#483)"
+                ]
+            },
+            "links": [
+                "https://github.com/optimatika/ojAlgo/issues/213",
+                "https://github.com/optimatika/ojAlgo/commit/e7a973d98",
+                "https://github.com/optimatika/ojAlgo/issues/483",
+                "https://github.com/optimatika/ojAlgo/commit/02b451530"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/optimatika/ojAlgo/",
+            "file_path": "optimatika/ojAlgo/src/test/java/org/ojalgo/function/special/PowerOf2Test.java",
+            "test_name": "testPowerOfInt2",
+            "FQS": "org.ojalgo.function.special.PowerOf2Test.testPowerOfInt2()",
+            "start_line": "105",
+            "blame_result": "f4c7b7571 test/org/ojalgo/function/special/PowerOf2Test.java (Anders Peterson 2019-09-22 10:14:13 +0200 106) \nf4c7b7571 test/org/ojalgo/function/special/PowerOf2Test.java (Anders Peterson 2019-09-22 10:14:13 +0200 107)         int value = 1;\nf4c7b7571 test/org/ojalgo/function/special/PowerOf2Test.java (Anders Peterson 2019-09-22 10:14:13 +0200 108)         TestUtils.assertEquals(value, PowerOf2.powerOfInt2(0));\nf4c7b7571 test/org/ojalgo/function/special/PowerOf2Test.java (Anders Peterson 2019-09-22 10:14:13 +0200 109)         for (int i = 1; i < 31; i++) {\nf4c7b7571 test/org/ojalgo/function/special/PowerOf2Test.java (Anders Peterson 2019-09-22 10:14:13 +0200 110)             value *= 2;\n",
+            "commit_hashes": {
+                "f4c7b7571": "    PowerOf2 (#224)"
+            },
+            "Commit&issueIDs": {
+                "f4c7b7571": [
+                    "(#224)"
+                ]
+            },
+            "links": [
+                "https://github.com/optimatika/ojAlgo/issues/224",
+                "https://github.com/optimatika/ojAlgo/commit/f4c7b7571"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/sofastack/sofa-rpc/",
+            "file_path": "sofastack/sofa-rpc/core/api/src/test/java/com/alipay/sofa/rpc/std/config/AbstractInterfaceConfigTest.java",
+            "test_name": "testSetParameter",
+            "FQS": "com.alipay.sofa.rpc.std.config.AbstractInterfaceConfigTest.testSetParameter()",
+            "start_line": "220",
+            "blame_result": "9c56f7fc7 (\u5f20\u5448\u71b9 2022-03-28 11:54:29 +0800 221)         TestConfig config = new TestConfig();\n9c56f7fc7 (\u5f20\u5448\u71b9 2022-03-28 11:54:29 +0800 222)         String key = randomString();\n9c56f7fc7 (\u5f20\u5448\u71b9 2022-03-28 11:54:29 +0800 223)         String value = randomString();\n9c56f7fc7 (\u5f20\u5448\u71b9 2022-03-28 11:54:29 +0800 224)         assertNull(config.getParameter(key));\n9c56f7fc7 (\u5f20\u5448\u71b9 2022-03-28 11:54:29 +0800 225)         config.setParameter(key, value);\n",
+            "commit_hashes": {
+                "9c56f7fc7": "    Ut/bootstrap api (#1163)"
+            },
+            "Commit&issueIDs": {
+                "9c56f7fc7": [
+                    "(#1163)"
+                ]
+            },
+            "links": [
+                "https://github.com/sofastack/sofa-rpc/issues/1163",
+                "https://github.com/sofastack/sofa-rpc/commit/9c56f7fc7"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/sofastack/sofa-registry/",
+            "file_path": "sofastack/sofa-registry/server/server/session/src/test/java/com/alipay/sofa/registry/server/session/push/ChangeProcessorTest.java",
+            "test_name": "testChangeKey",
+            "FQS": "com.alipay.sofa.registry.server.session.push.ChangeProcessorTest.testChangeKey()",
+            "start_line": "124",
+            "blame_result": "24e3f9f03 (bjxiaojian 2023-02-21 15:45:36 +0800 125)     ChangeProcessor.ChangeKey key1 =\n24e3f9f03 (bjxiaojian 2023-02-21 15:45:36 +0800 126)         new ChangeProcessor.ChangeKey(Collections.singleton(dataCenter), dataInfoId);\n24e3f9f03 (bjxiaojian 2023-02-21 15:45:36 +0800 127)     ChangeProcessor.ChangeKey key2 =\n24e3f9f03 (bjxiaojian 2023-02-21 15:45:36 +0800 128)         new ChangeProcessor.ChangeKey(Collections.singleton(dataCenter), dataInfoId);\n9c9e7fabd (yuzhi.lyz  2021-04-21 22:45:04 +0800 129)     Assert.assertEquals(key1, key2);\n",
+            "commit_hashes": {
+                "24e3f9f03": "    Multi datacenter (#267)",
+                "9c9e7fabd": "     ut"
+            },
+            "Commit&issueIDs": {
+                "24e3f9f03": [
+                    "(#267)"
+                ]
+            },
+            "links": [
+                "https://github.com/sofastack/sofa-registry/issues/267",
+                "https://github.com/sofastack/sofa-registry/commit/24e3f9f03"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/eclipse-ee4j/angus-mail/",
+            "file_path": "eclipse-ee4j/angus-mail/providers/angus-mail/src/test/java/org/eclipse/angus/mail/util/logging/CompactFormatterTest.java",
+            "test_name": "testFormatBackTraceEvil",
+            "FQS": "org.eclipse.angus.mail.util.logging.CompactFormatterTest.testFormatBackTraceEvil()",
+            "start_line": "2073",
+            "blame_result": "3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2074)         LogRecord record = new LogRecord(Level.SEVERE, \"\");\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2075)         record.setThrown(createEvilThrowable());\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2076)         CompactFormatter cf = new CompactFormatter(\"%14$s\");\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2077)         String result = cf.formatBackTrace(record);\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2078)         assertNotNull(result);\n",
+            "commit_hashes": {
+                "3b3df4f8": "    #64: change the package names to org.eclipse.angus.mail.* (#66)"
+            },
+            "Commit&issueIDs": {
+                "3b3df4f8": [
+                    "66"
+                ]
+            },
+            "links": [
+                "https://github.com/eclipse-ee4j/angus-mail/issues/66",
+                "https://github.com/eclipse-ee4j/angus-mail/commit/3b3df4f8"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/locationtech/proj4j/",
+            "file_path": "locationtech/proj4j/core/src/test/java/org/locationtech/proj4j/datum/NTV2Test.java",
+            "test_name": "gridShiftNTV2",
+            "FQS": "org.locationtech.proj4j.datum.NTV2Test.gridShiftNTV2()",
+            "start_line": "44",
+            "blame_result": "96e395fd (Bart Hanssens 2023-03-28 03:22:29 +0200 45)         CoordinateTransform ct = CT.createTransform(cs1, cs2);\n96e395fd (Bart Hanssens 2023-03-28 03:22:29 +0200 46) \n96e395fd (Bart Hanssens 2023-03-28 03:22:29 +0200 47)         ProjCoordinate expected1 = new ProjCoordinate(299905.060, 4499796.515);\n96e395fd (Bart Hanssens 2023-03-28 03:22:29 +0200 48)         ProjCoordinate result1 = new ProjCoordinate();\n96e395fd (Bart Hanssens 2023-03-28 03:22:29 +0200 49)         ct.transform(new ProjCoordinate(300000.0, 4500000.0), result1);\n",
+            "commit_hashes": {
+                "96e395fd": "    GH-89: initial support for NTv2 (#98)"
+            },
+            "Commit&issueIDs": {
+                "96e395fd": [
+                    "98"
+                ]
+            },
+            "links": [
+                "https://github.com/locationtech/proj4j/issues/98",
+                "https://github.com/locationtech/proj4j/commit/96e395fd"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/eclipse-ee4j/angus-mail/",
+            "file_path": "eclipse-ee4j/angus-mail/providers/angus-mail/src/test/java/org/eclipse/angus/mail/util/logging/CompactFormatterTest.java",
+            "test_name": "testFormatBackTraceEvilIgnore",
+            "FQS": "org.eclipse.angus.mail.util.logging.CompactFormatterTest.testFormatBackTraceEvilIgnore()",
+            "start_line": "2083",
+            "blame_result": "3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2084)         LogRecord record = new LogRecord(Level.SEVERE, \"\");\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2085)         Throwable second = new Throwable();\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2086)         Throwable first = new Throwable(second);\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2087)         second.initCause(first); //Pure Evil.\n3b3df4f8 (Lukas Jungmann 2023-01-13 10:36:11 +0100 2088)         first.setStackTrace(new StackTraceElement[0]);\n",
+            "commit_hashes": {
+                "3b3df4f8": "    #64: change the package names to org.eclipse.angus.mail.* (#66)"
+            },
+            "Commit&issueIDs": {
+                "3b3df4f8": [
+                    "66"
+                ]
+            },
+            "links": [
+                "https://github.com/eclipse-ee4j/angus-mail/issues/66",
+                "https://github.com/eclipse-ee4j/angus-mail/commit/3b3df4f8"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/optimatika/ojAlgo/",
+            "file_path": "optimatika/ojAlgo/src/test/java/org/ojalgo/matrix/store/StoreProblems.java",
+            "test_name": "testP20180121",
+            "FQS": "org.ojalgo.matrix.store.StoreProblems.testP20180121()",
+            "start_line": "243",
+            "blame_result": "ed9340705 test/org/ojalgo/matrix/store/StoreProblems.java          (apete           2018-01-21 21:23:30 +0100 244) \n01e7c92a2 src/test/java/org/ojalgo/matrix/store/StoreProblems.java (Anders Peterson 2022-12-22 12:46:42 +0100 245)         final SparseStore<Double> m = SparseStore.R064.make(3, 2);\n5d103fb99 test/org/ojalgo/matrix/store/StoreProblems.java          (Anders Peterson 2019-11-03 12:41:01 +0100 246)         final Primitive64Store mAdd = Primitive64Store.FACTORY.rows(new double[][] { { 1.0, 0.0 }, { 0.0, 0.0 }, { 0.0, 0.0 } });\ned9340705 test/org/ojalgo/matrix/store/StoreProblems.java          (apete           2018-01-21 21:23:30 +0100 247)         final MatrixStore<Double> n = m.add(mAdd);\ned9340705 test/org/ojalgo/matrix/store/StoreProblems.java          (apete           2018-01-21 21:23:30 +0100 248) \n",
+            "commit_hashes": {
+                "ed9340705": "    testP20180121",
+                "01e7c92a2": "    SparseStore.Factory (#492)",
+                "5d103fb99": "    No more java.lang.Number (#232)"
+            },
+            "Commit&issueIDs": {
+                "01e7c92a2": [
+                    "(#492)"
+                ],
+                "5d103fb99": [
+                    "(#232)"
+                ]
+            },
+            "links": [
+                "https://github.com/optimatika/ojAlgo/issues/492",
+                "https://github.com/optimatika/ojAlgo/commit/01e7c92a2",
+                "https://github.com/optimatika/ojAlgo/issues/232",
+                "https://github.com/optimatika/ojAlgo/commit/5d103fb99"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/optimatika/ojAlgo/",
+            "file_path": "optimatika/ojAlgo/src/test/java/org/ojalgo/optimisation/linear/SpecialSituations.java",
+            "test_name": "testDegeneracy",
+            "FQS": "org.ojalgo.optimisation.linear.SpecialSituations.testDegeneracy()",
+            "start_line": "41",
+            "blame_result": "8dcb7d358 test/org/ojalgo/optimisation/linear/SpecialSituations.java          (Anders Peterson 2018-08-19 16:29:23 +0200 42) \na72ffc281 src/test/java/org/ojalgo/optimisation/linear/SpecialSituations.java (apete           2024-03-29 08:46:47 +0100 43)         R064Store c = R064Store.FACTORY.column(new double[] { -2, -1, 0, 0, 0 });\naf02ca652 src/test/java/org/ojalgo/optimisation/linear/SpecialSituations.java (apete           2024-08-03 08:36:16 +0200 44)         RawStore A = RawStore.wrap(new double[][] { { 4, 3, 1, 0, 0 }, { 4, 1, 0, 1, 0 }, { 4, 2, 0, 0, 1 } });\na72ffc281 src/test/java/org/ojalgo/optimisation/linear/SpecialSituations.java (apete           2024-03-29 08:46:47 +0100 45)         R064Store b = R064Store.FACTORY.column(new double[] { 12, 8, 8 });\n8dcb7d358 test/org/ojalgo/optimisation/linear/SpecialSituations.java          (Anders Peterson 2018-08-19 16:29:23 +0200 46) \n",
+            "commit_hashes": {
+                "8dcb7d358": "    Prepare to build v46.0.0 (#118)",
+                "a72ffc281": "    R064Store and R032Store",
+                "af02ca652": "    Removed deprecated factory methods"
+            },
+            "Commit&issueIDs": {
+                "8dcb7d358": [
+                    "118"
+                ]
+            },
+            "links": [
+                "https://github.com/optimatika/ojAlgo/issues/118",
+                "https://github.com/optimatika/ojAlgo/commit/8dcb7d358"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/optimatika/ojAlgo/",
+            "file_path": "optimatika/ojAlgo/src/test/java/org/ojalgo/optimisation/linear/TableauCutGeneratorTest.java",
+            "test_name": "testExploreP20130409a",
+            "FQS": "org.ojalgo.optimisation.linear.TableauCutGeneratorTest.testExploreP20130409a()",
+            "start_line": "133",
+            "blame_result": "ada73e20f (Anders Peterson 2022-04-20 08:58:51 +0200 134) \nada73e20f (Anders Peterson 2022-04-20 08:58:51 +0200 135)         NumberContext accuracy = NumberContext.of(7);\nada73e20f (Anders Peterson 2022-04-20 08:58:51 +0200 136) \n540ef89ca (apete           2023-04-09 18:03:06 +0200 137)         Variable[] variables = { new Variable(\"x1\").lower(BigMath.ZERO).weight(BigMath.ONE), new Variable(\"x2013\").lower(BigMath.ZERO).integer(),\nada73e20f (Anders Peterson 2022-04-20 08:58:51 +0200 138)                 new Variable(\"x2014\").lower(BigMath.ZERO).integer() };\n",
+            "commit_hashes": {
+                "ada73e20f": "    GMI cuts (#429)",
+                "540ef89ca": "    LinearStructure"
+            },
+            "Commit&issueIDs": {
+                "ada73e20f": [
+                    "(#429)"
+                ]
+            },
+            "links": [
+                "https://github.com/optimatika/ojAlgo/issues/429",
+                "https://github.com/optimatika/ojAlgo/commit/ada73e20f"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/networknt/json-schema-validator/",
+            "file_path": "networknt/json-schema-validator/src/test/java/com/networknt/schema/JsonNodePathTest.java",
+            "test_name": "startsWith",
+            "FQS": "com.networknt.schema.JsonNodePathTest.startsWith()",
+            "start_line": "115",
+            "blame_result": "5a94df7e (Justin Tay 2024-01-19 22:40:18 +0800 116)         JsonNodePath root = new JsonNodePath(PathType.JSON_PATH);\n5a94df7e (Justin Tay 2024-01-19 22:40:18 +0800 117)         JsonNodePath path = root.append(\"items\");\n5a94df7e (Justin Tay 2024-01-19 22:40:18 +0800 118)         JsonNodePath other = root.append(\"unevaluatedItems\");\n5a94df7e (Justin Tay 2024-01-19 22:40:18 +0800 119)         assertTrue(path.startsWith(other.getParent()));\n5a94df7e (Justin Tay 2024-01-19 22:40:18 +0800 120) \n",
+            "commit_hashes": {
+                "5a94df7e": "    Refactor of paths (#915)"
+            },
+            "Commit&issueIDs": {
+                "5a94df7e": [
+                    "(#915)"
+                ]
+            },
+            "links": [
+                "https://github.com/networknt/json-schema-validator/issues/915",
+                "https://github.com/networknt/json-schema-validator/commit/5a94df7e"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/bootique/bootique/",
+            "file_path": "bootique/bootique/bootique/src/test/java/io/bootique/ModuleCrateTest.java",
+            "test_name": "innerClass",
+            "FQS": "io.bootique.ModuleCrateTest.innerClass()",
+            "start_line": "52",
+            "blame_result": "0737c1b9e bootique/src/test/java/io/bootique/ModuleCrateTest.java (Andrus Adamchik 2023-11-26 10:02:20 -0500 53)         ModuleCrate moduleId1 = ModuleCrate.of(new MyModule()).build();\n0737c1b9e bootique/src/test/java/io/bootique/ModuleCrateTest.java (Andrus Adamchik 2023-11-26 10:02:20 -0500 54)         ModuleCrate moduleId2 = ModuleCrate.of(new MyModule()).build();\n0737c1b9e bootique/src/test/java/io/bootique/ModuleCrateTest.java (Andrus Adamchik 2023-11-26 10:02:20 -0500 55)         ModuleCrate moduleId3 = ModuleCrate.of(new MyModule2()).build();\nba1a21a47 bootique/src/test/java/io/bootique/BQModuleIdTest.java  (Nikita Timofeev 2020-05-25 16:12:35 +0300 56) \nba1a21a47 bootique/src/test/java/io/bootique/BQModuleIdTest.java  (Nikita Timofeev 2020-05-25 16:12:35 +0300 57)         assertEquals(moduleId1, moduleId1);\n",
+            "commit_hashes": {
+                "0737c1b9e": "    Unclutter BQModuleProvider #339",
+                "ba1a21a47": "    Fix module uniqueness check for modules as lambdas"
+            },
+            "Commit&issueIDs": {
+                "0737c1b9e": [
+                    "#339"
+                ]
+            },
+            "links": [
+                "https://github.com/bootique/bootique/issues/339",
+                "https://github.com/bootique/bootique/commit/0737c1b9e"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/bootique/bootique/",
+            "file_path": "bootique/bootique/bootique/src/test/java/io/bootique/value/BytesTest.java",
+            "test_name": "hashCodeTest",
+            "FQS": "io.bootique.value.BytesTest.hashCodeTest()",
+            "start_line": "129",
+            "blame_result": "889ab6b59 (kkomyak 2018-05-28 15:28:05 +0300 130)         Bytes b1 = new Bytes(\"5kb\");\n889ab6b59 (kkomyak 2018-05-28 15:28:05 +0300 131)         Bytes b2 = new Bytes(\"5368709120b\");\n889ab6b59 (kkomyak 2018-05-28 15:28:05 +0300 132)         Bytes b3 = new Bytes(\"5gb\");\n889ab6b59 (kkomyak 2018-05-28 15:28:05 +0300 133)         Bytes b4 = new Bytes(\"5120 b\");\n889ab6b59 (kkomyak 2018-05-28 15:28:05 +0300 134) \n",
+            "commit_hashes": {
+                "889ab6b59": "    #224"
+            },
+            "Commit&issueIDs": {
+                "889ab6b59": [
+                    "#224"
+                ]
+            },
+            "links": [
+                "https://github.com/bootique/bootique/issues/224",
+                "https://github.com/bootique/bootique/commit/889ab6b59"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/restfb/restfb/",
+            "file_path": "restfb/restfb/src/test/java/com/restfb/json/JsonObject_Test.java",
+            "test_name": "unmodifiableObject_hasSameValues",
+            "FQS": "com.restfb.json.JsonObject_Test.unmodifiableObject_hasSameValues()",
+            "start_line": "74",
+            "blame_result": "cb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 75)     object.add(\"foo\", 23);\ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 76)     JsonObject unmodifiableObject = JsonObject.unmodifiableObject(object);\ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 77) \ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 78)     assertEquals(object.names(), unmodifiableObject.names());\ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 79)     assertSame(object.get(\"foo\"), unmodifiableObject.get(\"foo\"));\n",
+            "commit_hashes": {
+                "cb64a723b": "    Issue #321 - json parser replaced with minimal json"
+            },
+            "Commit&issueIDs": {
+                "cb64a723b": [
+                    "#321"
+                ]
+            },
+            "links": [
+                "https://github.com/restfb/restfb/issues/321",
+                "https://github.com/restfb/restfb/commit/cb64a723b"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/restfb/restfb/",
+            "file_path": "restfb/restfb/src/test/java/com/restfb/json/JsonObject_Test.java",
+            "test_name": "member_hashCode_differsForDifferingobjects",
+            "FQS": "com.restfb.json.JsonObject_Test.member_hashCode_differsForDifferingobjects()",
+            "start_line": "1034",
+            "blame_result": "cb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 1035)     Member member = new Member(\"a\", Json.TRUE);\ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 1036) \ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 1037)     assertFalse(member.hashCode() == new Member(\"b\", Json.TRUE).hashCode());\ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 1038)     assertFalse(member.hashCode() == new Member(\"a\", Json.FALSE).hashCode());\ncb64a723b source/test/java/com/restfb/json/JsonObject_Test.java (Norbert Bartels 2015-09-26 19:55:25 +0200 1039)   }\n",
+            "commit_hashes": {
+                "cb64a723b": "    Issue #321 - json parser replaced with minimal json"
+            },
+            "Commit&issueIDs": {
+                "cb64a723b": [
+                    "#321"
+                ]
+            },
+            "links": [
+                "https://github.com/restfb/restfb/issues/321",
+                "https://github.com/restfb/restfb/commit/cb64a723b"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/haraldk/TwelveMonkeys/",
+            "file_path": "haraldk/TwelveMonkeys/common/common-lang/src/test/java/com/twelvemonkeys/util/LinkedMapTest.java",
+            "test_name": "testSequenceMap",
+            "FQS": "com.twelvemonkeys.util.LinkedMapTest.testSequenceMap()",
+            "start_line": "97",
+            "blame_result": "24c668223 (Harald Kuhr 2018-08-18 19:22:52 +0200  98)         Object[] keys = getKeys();\n24c668223 (Harald Kuhr 2018-08-18 19:22:52 +0200  99)         int expectedSize = keys.length;\n24c668223 (Harald Kuhr 2018-08-18 19:22:52 +0200 100)         Object[] values = getValues();\n24c668223 (Harald Kuhr 2018-08-18 19:22:52 +0200 101)         for (int i = 0; i < expectedSize; i++) {\n24c668223 (Harald Kuhr 2018-08-18 19:22:52 +0200 102)             labRat.put(keys[i], values[i]);\n",
+            "commit_hashes": {
+                "24c668223": "    #311 Updated license headers to be the same as in the LICENSE.txt"
+            },
+            "Commit&issueIDs": {
+                "24c668223": [
+                    "#311"
+                ]
+            },
+            "links": [
+                "https://github.com/haraldk/TwelveMonkeys/issues/311",
+                "https://github.com/haraldk/TwelveMonkeys/commit/24c668223"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/haraldk/TwelveMonkeys/",
+            "file_path": "haraldk/TwelveMonkeys/imageio/imageio-core/src/test/java/com/twelvemonkeys/imageio/color/ColorSpacesTest.java",
+            "test_name": "testEqualHeadersDifferentProfile",
+            "FQS": "com.twelvemonkeys.imageio.color.ColorSpacesTest.testEqualHeadersDifferentProfile()",
+            "start_line": "184",
+            "blame_result": "b2c5915db (Harald Kuhr 2021-12-11 18:13:07 +0100 185)         // These profiles are extracted from various JPEGs, and have the exact same profile header (but are different)...\nd677141ab (Harald Kuhr 2017-11-05 11:44:41 +0100 186)         ICC_Profile profile1 = ICC_Profile.getInstance(getClass().getResourceAsStream(\"/profiles/adobe_rgb_1998.icc\"));\nd677141ab (Harald Kuhr 2017-11-05 11:44:41 +0100 187)         ICC_Profile profile2 = ICC_Profile.getInstance(getClass().getResourceAsStream(\"/profiles/color_match_rgb.icc\"));\nd677141ab (Harald Kuhr 2017-11-05 11:44:41 +0100 188) \nd677141ab (Harald Kuhr 2017-11-05 11:44:41 +0100 189)         assertNotSame(profile1, profile2); // Sanity\n",
+            "commit_hashes": {
+                "b2c5915db": "    #631 New way of forcing profile activation + guarding all invocations of ICC_Profile.getInstance()",
+                "d677141ab": "    #386 Fixed ColorSpaces ICC profile caching bug"
+            },
+            "Commit&issueIDs": {
+                "b2c5915db": [
+                    "#631"
+                ],
+                "d677141ab": [
+                    "#386"
+                ]
+            },
+            "links": [
+                "https://github.com/haraldk/TwelveMonkeys/issues/631",
+                "https://github.com/haraldk/TwelveMonkeys/commit/b2c5915db",
+                "https://github.com/haraldk/TwelveMonkeys/issues/386",
+                "https://github.com/haraldk/TwelveMonkeys/commit/d677141ab"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/metamx/java-util/",
+            "file_path": "metamx/java-util/src/test/java/com/metamx/common/io/smoosh/SmooshedFileMapperTest.java",
+            "test_name": "testDeterministicFileUnmapping",
+            "FQS": "com.metamx.common.io.smoosh.SmooshedFileMapperTest.testDeterministicFileUnmapping()",
+            "start_line": "137",
+            "blame_result": "f02b9ce5 (Roman Leventov 2016-09-21 21:13:38 +0300 138)   {\nf02b9ce5 (Roman Leventov 2016-09-21 21:13:38 +0300 139)     File baseDir = folder.newFolder(\"base\");\nf02b9ce5 (Roman Leventov 2016-09-21 21:13:38 +0300 140) \nf02b9ce5 (Roman Leventov 2016-09-21 21:13:38 +0300 141)     long totalMemoryUsedBeforeAddingFile = BufferUtils.totalMemoryUsedByDirectAndMappedBuffers();\nf02b9ce5 (Roman Leventov 2016-09-21 21:13:38 +0300 142)     try (FileSmoosher smoosher = new FileSmoosher(baseDir)) {\n",
+            "commit_hashes": {
+                "f02b9ce5": "    Add ResourceHandler, FileUtils.map() returning ResourceHandler (#51)"
+            },
+            "Commit&issueIDs": {
+                "f02b9ce5": [
+                    "51"
+                ]
+            },
+            "links": [
+                "https://github.com/metamx/java-util/issues/51",
+                "https://github.com/metamx/java-util/commit/f02b9ce5"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/diennea/herddb/",
+            "file_path": "diennea/herddb/herddb-core/src/test/java/herddb/sql/SimplerPlannerTest.java",
+            "test_name": "basicVectorTest",
+            "FQS": "herddb.sql.SimplerPlannerTest.basicVectorTest()",
+            "start_line": "366",
+            "blame_result": "26d0cc5e8 (eolivelli 2017-11-12 15:57:53 +0100 367)         String nodeId = \"localhost\";\n2ff5af7de (tison     2019-08-24 20:26:42 +0800 368)         try (DBManager manager = new DBManager(\"localhost\", new MemoryMetadataStorageManager(), new MemoryDataStorageManager(), new MemoryCommitLogManager(), null, null)) {\n26d0cc5e8 (eolivelli 2017-11-12 15:57:53 +0100 369)             manager.start();\n26d0cc5e8 (eolivelli 2017-11-12 15:57:53 +0100 370)             CreateTableSpaceStatement st1 = new CreateTableSpaceStatement(\"tblspace1\", Collections.singleton(nodeId), nodeId, 1, 0, 0);\n26d0cc5e8 (eolivelli 2017-11-12 15:57:53 +0100 371)             manager.executeStatement(st1, StatementEvaluationContext.DEFAULT_EVALUATION_CONTEXT(), TransactionContext.NO_TRANSACTION);\n",
+            "commit_hashes": {
+                "26d0cc5e8": "    Calcite projections",
+                "2ff5af7de": "    Add checkstyle checks (#451)"
+            },
+            "Commit&issueIDs": {
+                "2ff5af7de": [
+                    "(#451)"
+                ]
+            },
+            "links": [
+                "https://github.com/diennea/herddb/issues/451",
+                "https://github.com/diennea/herddb/commit/2ff5af7de"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/f4b6a3/tsid-creator/",
+            "file_path": "f4b6a3/tsid-creator/src/test/java/com/github/f4b6a3/tsid/TsidTest.java",
+            "test_name": "testEquals",
+            "FQS": "com.github.f4b6a3.tsid.TsidTest.testEquals()",
+            "start_line": "373",
+            "blame_result": "4cf7e846 (Fabio Lima 2021-08-08 03:05:18 -0300 374) \n02dfcf17 (Fabio Lima 2021-11-19 19:14:15 -0300 375) \t\tbyte[] bytes = new byte[Tsid.TSID_BYTES];\n4cf7e846 (Fabio Lima 2021-08-08 03:05:18 -0300 376) \nb4fa4c38 (Fabio Lima 2022-04-14 21:15:54 -0300 377) \t\tfor (int i = 0; i < LOOP_MAX; i++) {\n4cf7e846 (Fabio Lima 2021-08-08 03:05:18 -0300 378) \n",
+            "commit_hashes": {
+                "4cf7e846": "    Version 4.0.0 #10",
+                "02dfcf17": "    Compare internal field as unsigned integers #12",
+                "b4fa4c38": "    feat: handle clock drift #14"
+            },
+            "Commit&issueIDs": {
+                "4cf7e846": [
+                    "#10"
+                ],
+                "02dfcf17": [
+                    "#12"
+                ],
+                "b4fa4c38": [
+                    "#14"
+                ]
+            },
+            "links": [
+                "https://github.com/f4b6a3/tsid-creator/issues/10",
+                "https://github.com/f4b6a3/tsid-creator/commit/4cf7e846",
+                "https://github.com/f4b6a3/tsid-creator/issues/12",
+                "https://github.com/f4b6a3/tsid-creator/commit/02dfcf17",
+                "https://github.com/f4b6a3/tsid-creator/issues/14",
+                "https://github.com/f4b6a3/tsid-creator/commit/b4fa4c38"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/redis/jedis/",
+            "file_path": "redis/jedis/src/test/java/redis/clients/jedis/params/GeoAddParamsTest.java",
+            "test_name": "checkHashCodeIdenticalParams",
+            "FQS": "redis.clients.jedis.params.GeoAddParamsTest.checkHashCodeIdenticalParams()",
+            "start_line": "17",
+            "blame_result": "b5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 18)         GeoAddParams firstParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 19)         GeoAddParams secondParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 20)         assertEquals(firstParam.hashCode(), secondParam.hashCode());\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 21)     }\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 22) \n",
+            "commit_hashes": {
+                "b5308044a": "    SetParams should implement equals and hashcode issue #2687 (#3728)"
+            },
+            "Commit&issueIDs": {
+                "b5308044a": [
+                    "#2687",
+                    "3728"
+                ]
+            },
+            "links": [
+                "https://github.com/redis/jedis/issues/2687",
+                "https://github.com/redis/jedis/commit/b5308044a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/redis/jedis/",
+            "file_path": "redis/jedis/src/test/java/redis/clients/jedis/params/MigrateParamsTest.java",
+            "test_name": "checkHashCodeIdenticalParams",
+            "FQS": "redis.clients.jedis.params.MigrateParamsTest.checkHashCodeIdenticalParams()",
+            "start_line": "17",
+            "blame_result": "b5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 18)         MigrateParams firstParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 19)         MigrateParams secondParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 20)         assertEquals(firstParam.hashCode(), secondParam.hashCode());\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 21)     }\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 22) \n",
+            "commit_hashes": {
+                "b5308044a": "    SetParams should implement equals and hashcode issue #2687 (#3728)"
+            },
+            "Commit&issueIDs": {
+                "b5308044a": [
+                    "#2687",
+                    "3728"
+                ]
+            },
+            "links": [
+                "https://github.com/redis/jedis/issues/2687",
+                "https://github.com/redis/jedis/commit/b5308044a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/redis/jedis/",
+            "file_path": "redis/jedis/src/test/java/redis/clients/jedis/params/SetParamsTest.java",
+            "test_name": "checkHashCodeIdenticalParams",
+            "FQS": "redis.clients.jedis.params.SetParamsTest.checkHashCodeIdenticalParams()",
+            "start_line": "17",
+            "blame_result": "b5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 18)         SetParams firstParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 19)         SetParams secondParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 20)         assertEquals(firstParam.hashCode(), secondParam.hashCode());\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 21)     }\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 22) \n",
+            "commit_hashes": {
+                "b5308044a": "    SetParams should implement equals and hashcode issue #2687 (#3728)"
+            },
+            "Commit&issueIDs": {
+                "b5308044a": [
+                    "#2687",
+                    "3728"
+                ]
+            },
+            "links": [
+                "https://github.com/redis/jedis/issues/2687",
+                "https://github.com/redis/jedis/commit/b5308044a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/redis/jedis/",
+            "file_path": "redis/jedis/src/test/java/redis/clients/jedis/params/XAutoClaimParamsTest.java",
+            "test_name": "checkHashCodeVariousParams",
+            "FQS": "redis.clients.jedis.params.XAutoClaimParamsTest.checkHashCodeVariousParams()",
+            "start_line": "33",
+            "blame_result": "b5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 34)         XAutoClaimParams firstParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 35)         firstParam.count(15);\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 36)         XAutoClaimParams secondParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 37)         secondParam.count(20);\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 38)         assertNotEquals(firstParam.hashCode(), secondParam.hashCode());\n",
+            "commit_hashes": {
+                "b5308044a": "    SetParams should implement equals and hashcode issue #2687 (#3728)"
+            },
+            "Commit&issueIDs": {
+                "b5308044a": [
+                    "#2687",
+                    "3728"
+                ]
+            },
+            "links": [
+                "https://github.com/redis/jedis/issues/2687",
+                "https://github.com/redis/jedis/commit/b5308044a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/redis/jedis/",
+            "file_path": "redis/jedis/src/test/java/redis/clients/jedis/params/XTrimParamsTest.java",
+            "test_name": "checkEqualsVariousParams",
+            "FQS": "redis.clients.jedis.params.XTrimParamsTest.checkEqualsVariousParams()",
+            "start_line": "24",
+            "blame_result": "b5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 25)         XTrimParams firstParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 26)         firstParam.maxLen(15);\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 27)         XTrimParams secondParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 28)         secondParam.maxLen(16);\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 29)         assertFalse(firstParam.equals(secondParam));\n",
+            "commit_hashes": {
+                "b5308044a": "    SetParams should implement equals and hashcode issue #2687 (#3728)"
+            },
+            "Commit&issueIDs": {
+                "b5308044a": [
+                    "#2687",
+                    "3728"
+                ]
+            },
+            "links": [
+                "https://github.com/redis/jedis/issues/2687",
+                "https://github.com/redis/jedis/commit/b5308044a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/redis/jedis/",
+            "file_path": "redis/jedis/src/test/java/redis/clients/jedis/params/ZIncrByParamsTest.java",
+            "test_name": "checkEqualsVariousParams",
+            "FQS": "redis.clients.jedis.params.ZIncrByParamsTest.checkEqualsVariousParams()",
+            "start_line": "24",
+            "blame_result": "b5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 25)         ZIncrByParams firstParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 26)         firstParam.nx();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 27)         ZIncrByParams secondParam = getDefaultValue();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 28)         secondParam.xx();\nb5308044a (Tyshchenko Leonid 2024-03-25 08:33:35 +0300 29)         assertFalse(firstParam.equals(secondParam));\n",
+            "commit_hashes": {
+                "b5308044a": "    SetParams should implement equals and hashcode issue #2687 (#3728)"
+            },
+            "Commit&issueIDs": {
+                "b5308044a": [
+                    "#2687",
+                    "3728"
+                ]
+            },
+            "links": [
+                "https://github.com/redis/jedis/issues/2687",
+                "https://github.com/redis/jedis/commit/b5308044a"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/apache/druid/",
+            "file_path": "apache/druid/extensions-core/druid-basic-security/src/test/java/org/apache/druid/security/basic/authentication/validator/PasswordHashGeneratorTest.java",
+            "test_name": "testHashIsNotRecomputedWhenCached",
+            "FQS": "org.apache.druid.security.basic.authentication.validator.PasswordHashGeneratorTest.testHashIsNotRecomputedWhenCached()",
+            "start_line": "43",
+            "blame_result": "d623756c668 (Kashif Faraz 2024-01-10 17:46:09 +0530 44)   {\nd623756c668 (Kashif Faraz 2024-01-10 17:46:09 +0530 45)     final PasswordHashGenerator hashGenerator = new PasswordHashGenerator();\nd623756c668 (Kashif Faraz 2024-01-10 17:46:09 +0530 46) \nd623756c668 (Kashif Faraz 2024-01-10 17:46:09 +0530 47)     final char[] password = \"this_is_a_long_password\".toCharArray();\nd623756c668 (Kashif Faraz 2024-01-10 17:46:09 +0530 48)     final int iterations = BasicAuthUtils.DEFAULT_KEY_ITERATIONS;\n",
+            "commit_hashes": {
+                "d623756c668": "    Add cache for password hash in druid-basic-security (#15648)"
+            },
+            "Commit&issueIDs": {
+                "d623756c668": [
+                    "(#15648)"
+                ]
+            },
+            "links": [
+                "https://github.com/apache/druid/issues/15648",
+                "https://github.com/apache/druid/commit/d623756c668"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/arextest/arex-agent-java/",
+            "file_path": "arextest/arex-agent-java/arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/TraceContextManagerTest.java",
+            "test_name": "test",
+            "FQS": "io.arex.agent.bootstrap.TraceContextManagerTest.test()",
+            "start_line": "13",
+            "blame_result": "664afac0 (Mark Zhang 2024-01-15 15:05:04 +0800 14)         TraceContextManager.init(\"test-ip\");\n664afac0 (Mark Zhang 2024-01-15 15:05:04 +0800 15)         String get1 = TraceContextManager.get(true);\n664afac0 (Mark Zhang 2024-01-15 15:05:04 +0800 16)         String get2 = TraceContextManager.get();\n664afac0 (Mark Zhang 2024-01-15 15:05:04 +0800 17)         assertEquals(get1, get2);\n664afac0 (Mark Zhang 2024-01-15 15:05:04 +0800 18) \n",
+            "commit_hashes": {
+                "664afac0": "    ci: change ci workflow trigger (#376)"
+            },
+            "Commit&issueIDs": {
+                "664afac0": [
+                    "(#376)"
+                ]
+            },
+            "links": [
+                "https://github.com/arextest/arex-agent-java/issues/376",
+                "https://github.com/arextest/arex-agent-java/commit/664afac0"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/osmlab/atlas/",
+            "file_path": "osmlab/atlas/src/test/java/org/openstreetmap/atlas/geography/atlas/change/MemberMergeStrategiesTest.java",
+            "test_name": "testDiffBasedRelationBeanMergeSuccess",
+            "FQS": "org.openstreetmap.atlas.geography.atlas.change.MemberMergeStrategiesTest.testDiffBasedRelationBeanMergeSuccess()",
+            "start_line": "592",
+            "blame_result": "8f02aa576 (lucaspcram 2019-03-29 10:07:42 -0700 593)     {\n8f02aa576 (lucaspcram 2019-03-29 10:07:42 -0700 594)         final RelationBean beforeBean = new RelationBean();\n8f02aa576 (lucaspcram 2019-03-29 10:07:42 -0700 595)         beforeBean.addItem(new RelationBeanItem(1L, \"pointRole1\", ItemType.POINT));\n8f02aa576 (lucaspcram 2019-03-29 10:07:42 -0700 596)         beforeBean.addItem(new RelationBeanItem(2L, \"pointRole2\", ItemType.POINT));\n8f02aa576 (lucaspcram 2019-03-29 10:07:42 -0700 597)         beforeBean.addItem(new RelationBeanItem(3L, \"pointRole3\", ItemType.POINT));\n",
+            "commit_hashes": {
+                "8f02aa576": "    FeatureChange now supports a beforeView for more robust merging (#393)"
+            },
+            "Commit&issueIDs": {
+                "8f02aa576": [
+                    "(#393)"
+                ]
+            },
+            "links": [
+                "https://github.com/osmlab/atlas/issues/393",
+                "https://github.com/osmlab/atlas/commit/8f02aa576"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/osmlab/atlas/",
+            "file_path": "osmlab/atlas/src/test/java/org/openstreetmap/atlas/utilities/collections/SetsTest.java",
+            "test_name": "testWithSets",
+            "FQS": "org.openstreetmap.atlas.utilities.collections.SetsTest.testWithSets()",
+            "start_line": "20",
+            "blame_result": "4cfd62841 (matthieun 2018-12-12 09:47:54 -0800 21)     {\n4cfd62841 (matthieun 2018-12-12 09:47:54 -0800 22)         final Set<String> set1 = Sets.hashSet(\"key1\");\n4cfd62841 (matthieun 2018-12-12 09:47:54 -0800 23)         final Set<String> set2 = Sets.hashSet(\"key2\");\n4cfd62841 (matthieun 2018-12-12 09:47:54 -0800 24)         final Set<String> result = Sets.hashSet(\"key1\", \"key2\");\n4cfd62841 (matthieun 2018-12-12 09:47:54 -0800 25) \n",
+            "commit_hashes": {
+                "4cfd62841": "    Apply a set of changes to an Atlas as a view (#300)"
+            },
+            "Commit&issueIDs": {
+                "4cfd62841": [
+                    "(#300)"
+                ]
+            },
+            "links": [
+                "https://github.com/osmlab/atlas/issues/300",
+                "https://github.com/osmlab/atlas/commit/4cfd62841"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/sofastack/sofa-jraft/",
+            "file_path": "sofastack/sofa-jraft/jraft-core/src/test/java/com/alipay/sofa/jraft/util/RecyclableByteBufferListTest.java",
+            "test_name": "testRecycle",
+            "FQS": "com.alipay.sofa.jraft.util.RecyclableByteBufferListTest.testRecycle()",
+            "start_line": "46",
+            "blame_result": "ba43a164 (block 2019-05-22 17:38:56 +0800 47)         final RecyclableByteBufferList object = RecyclableByteBufferList.newInstance();\nba43a164 (block 2019-05-22 17:38:56 +0800 48)         object.recycle();\nba43a164 (block 2019-05-22 17:38:56 +0800 49)         final RecyclableByteBufferList object2 = RecyclableByteBufferList.newInstance();\nba43a164 (block 2019-05-22 17:38:56 +0800 50)         Assert.assertSame(object, object2);\nba43a164 (block 2019-05-22 17:38:56 +0800 51)         object2.recycle();\n",
+            "commit_hashes": {
+                "ba43a164": "    (feat) add pooled buf allocator (#161)"
+            },
+            "Commit&issueIDs": {
+                "ba43a164": [
+                    "(#161)"
+                ]
+            },
+            "links": [
+                "https://github.com/sofastack/sofa-jraft/issues/161",
+                "https://github.com/sofastack/sofa-jraft/commit/ba43a164"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/sofastack/sofa-jraft/",
+            "file_path": "sofastack/sofa-jraft/jraft-core/src/test/java/com/alipay/sofa/jraft/util/SegmentListTest.java",
+            "test_name": "testAddPeek",
+            "FQS": "com.alipay.sofa.jraft.util.SegmentListTest.testAddPeek()",
+            "start_line": "192",
+            "blame_result": "64daa8bc (dennis zhuang 2019-12-30 10:22:09 +0800 193)         for (int i = 0; i < 1000; i++) {\n64daa8bc (dennis zhuang 2019-12-30 10:22:09 +0800 194)             this.list.add(i);\n64daa8bc (dennis zhuang 2019-12-30 10:22:09 +0800 195)             assertEquals(i, (int) this.list.peekLast());\n64daa8bc (dennis zhuang 2019-12-30 10:22:09 +0800 196)             assertEquals(0, (int) this.list.peekFirst());\n64daa8bc (dennis zhuang 2019-12-30 10:22:09 +0800 197)         }\n",
+            "commit_hashes": {
+                "64daa8bc": "    (feat) Impl SegmentList to replace ArrayDequeue in LogManagerImpl, #335 (#377)"
+            },
+            "Commit&issueIDs": {
+                "64daa8bc": [
+                    "#335",
+                    "(#377)"
+                ]
+            },
+            "links": [
+                "https://github.com/sofastack/sofa-jraft/issues/335",
+                "https://github.com/sofastack/sofa-jraft/commit/64daa8bc"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/awslabs/aws-glue-schema-registry/",
+            "file_path": "awslabs/aws-glue-schema-registry/serializer-deserializer/src/test/java/com/amazonaws/services/schemaregistry/deserializers/GlueSchemaRegistryDeserializerDataParserTest.java",
+            "test_name": "test_Invalid_Length",
+            "FQS": "com.amazonaws.services.schemaregistry.deserializers.GlueSchemaRegistryDeserializerDataParserTest.test_Invalid_Length()",
+            "start_line": "87",
+            "blame_result": "771f6db2 avro-serializer-deserializer/src/test/java/com/amazonaws/services/schemaregistry/deserializers/AWSDeserializerDataParserTest.java           (mohit         2020-11-15 15:39:02 -0800 88)         StringBuilder errorBuilder = new StringBuilder();\na7017fb7 serializer-deserializer/src/test/java/com/amazonaws/services/schemaregistry/deserializers/GlueSchemaRegistryDeserializerDataParserTest.java (Mohit Paliwal 2021-06-29 13:45:29 -0700 89)         assertFalse(GlueSchemaRegistryDeserializerDataParser.getInstance().isDataCompatible(ByteBuffer.wrap(new byte[2]),\na7017fb7 serializer-deserializer/src/test/java/com/amazonaws/services/schemaregistry/deserializers/GlueSchemaRegistryDeserializerDataParserTest.java (Mohit Paliwal 2021-06-29 13:45:29 -0700 90)                                                                                             errorBuilder));\na7017fb7 serializer-deserializer/src/test/java/com/amazonaws/services/schemaregistry/deserializers/GlueSchemaRegistryDeserializerDataParserTest.java (Mohit Paliwal 2021-06-29 13:45:29 -0700 91)         assertTrue(errorBuilder.toString().contains(GlueSchemaRegistryIncompatibleDataException.UNKNOWN_DATA_ERROR_MESSAGE));\n771f6db2 avro-serializer-deserializer/src/test/java/com/amazonaws/services/schemaregistry/deserializers/AWSDeserializerDataParserTest.java           (mohit         2020-11-15 15:39:02 -0800 92)     }\n",
+            "commit_hashes": {
+                "771f6db2": "    Add AWS Glue Schema Registry library implementation",
+                "a7017fb7": "    Add JSON Support (#49)"
+            },
+            "Commit&issueIDs": {
+                "a7017fb7": [
+                    "49"
+                ]
+            },
+            "links": [
+                "https://github.com/awslabs/aws-glue-schema-registry/issues/49",
+                "https://github.com/awslabs/aws-glue-schema-registry/commit/a7017fb7"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/GoogleCloudPlatform/pgadapter/",
+            "file_path": "GoogleCloudPlatform/pgadapter/src/test/java/com/google/cloud/spanner/pgadapter/statements/local/ListDatabasesStatementTest.java",
+            "test_name": "testHashCode",
+            "FQS": "com.google.cloud.spanner.pgadapter.statements.local.ListDatabasesStatementTest.testHashCode()",
+            "start_line": "70",
+            "blame_result": "b9d03630b (Knut Olav L\u00f8ite 2022-06-23 09:29:34 +0200 71)     ConnectionHandler connectionHandler1 = mock(ConnectionHandler.class);\nb9d03630b (Knut Olav L\u00f8ite 2022-06-23 09:29:34 +0200 72)     ConnectionHandler connectionHandler2 = mock(ConnectionHandler.class);\nb9d03630b (Knut Olav L\u00f8ite 2022-06-23 09:29:34 +0200 73)     ListDatabasesStatement statement1 = new ListDatabasesStatement(connectionHandler1);\nb9d03630b (Knut Olav L\u00f8ite 2022-06-23 09:29:34 +0200 74)     ListDatabasesStatement statement2 = new ListDatabasesStatement(connectionHandler1);\nb9d03630b (Knut Olav L\u00f8ite 2022-06-23 09:29:34 +0200 75)     ListDatabasesStatement statement3 = new ListDatabasesStatement(connectionHandler2);\n",
+            "commit_hashes": {
+                "b9d03630b": "    feat: support \\l meta command (#215)"
+            },
+            "Commit&issueIDs": {
+                "b9d03630b": [
+                    "215"
+                ]
+            },
+            "links": [
+                "https://github.com/GoogleCloudPlatform/pgadapter/issues/215",
+                "https://github.com/GoogleCloudPlatform/pgadapter/commit/b9d03630b"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/FasterXML/jackson-core/",
+            "file_path": "FasterXML/jackson-core/src/test/java/com/fasterxml/jackson/core/filter/BasicParserFilteringTest.java",
+            "test_name": "multipleMatchFilteringWithPath1",
+            "FQS": "com.fasterxml.jackson.core.filter.BasicParserFilteringTest.multipleMatchFilteringWithPath1()",
+            "start_line": "418",
+            "blame_result": "e183d16b2 (Cowtowncoder    2015-04-29 16:05:00 -0700 419)     {\ne183d16b2 (Cowtowncoder    2015-04-29 16:05:00 -0700 420)         JsonParser p0 = JSON_F.createParser(SIMPLE);\n6feec20c8 (Rafal Foltynski 2017-06-04 05:32:03 +0200 421)         FilteringParserDelegate p = new FilteringParserDelegate(p0,\ne183d16b2 (Cowtowncoder    2015-04-29 16:05:00 -0700 422)                 new NameMatchFilter(\"value0\", \"value2\"),\n5d3a25664 (Jonathan Haber  2020-11-06 17:21:37 -0500 423)                 Inclusion.INCLUDE_ALL_AND_PATH, true /* multipleMatches */ );\n",
+            "commit_hashes": {
+                "e183d16b2": "    More testing for parser/filter comb",
+                "6feec20c8": "    Fix #208: FilteringParserDelegate match count support",
+                "5d3a25664": "    More customizable TokenFilter inclusion (#573)"
+            },
+            "Commit&issueIDs": {
+                "5d3a25664": [
+                    "573"
+                ]
+            },
+            "links": [
+                "https://github.com/FasterXML/jackson-core/issues/573",
+                "https://github.com/FasterXML/jackson-core/commit/5d3a25664"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/firebase/firebase-admin-java/",
+            "file_path": "firebase/firebase-admin-java/src/test/java/com/google/firebase/database/FirebaseDatabaseTest.java",
+            "test_name": "testGetInstanceForApp",
+            "FQS": "com.google.firebase.database.FirebaseDatabaseTest.testGetInstanceForApp()",
+            "start_line": "98",
+            "blame_result": "^0bc86f9 (Hiranya Jayathilaka 2017-05-04 10:32:58 -0700  99)     FirebaseApp app = FirebaseApp.initializeApp(firebaseOptions, \"testGetInstanceForApp\");\n9ace7b1f (Saraj Munjal        2019-08-23 14:42:21 -0700 100)     try {\n9ace7b1f (Saraj Munjal        2019-08-23 14:42:21 -0700 101)       FirebaseDatabase db = FirebaseDatabase.getInstance(app);\n9ace7b1f (Saraj Munjal        2019-08-23 14:42:21 -0700 102)       assertNotNull(db);\n9ace7b1f (Saraj Munjal        2019-08-23 14:42:21 -0700 103)       assertSame(db, FirebaseDatabase.getInstance(app));\n",
+            "commit_hashes": {
+                "0bc86f9": "    Initial code migration",
+                "9ace7b1f": "    feat(rtdb): Connect to RTDB emulator when valid emulator URL is passed OR env vars are set correctly (#299)"
+            },
+            "Commit&issueIDs": {
+                "9ace7b1f": [
+                    "(#299)"
+                ]
+            },
+            "links": [
+                "https://github.com/firebase/firebase-admin-java/issues/299",
+                "https://github.com/firebase/firebase-admin-java/commit/9ace7b1f"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/firebase/firebase-admin-java/",
+            "file_path": "firebase/firebase-admin-java/src/test/java/com/google/firebase/messaging/FirebaseMessagingTest.java",
+            "test_name": "testDefaultMessagingClient",
+            "FQS": "com.google.firebase.messaging.FirebaseMessagingTest.testDefaultMessagingClient()",
+            "start_line": "113",
+            "blame_result": "c9c9aaca (Hiranya Jayathilaka 2019-04-18 14:45:30 -0700 114)     FirebaseApp app = FirebaseApp.initializeApp(TEST_OPTIONS, \"custom-app\");\ne19ca297 (Hiranya Jayathilaka 2019-03-13 17:00:35 -0700 115)     FirebaseMessaging messaging = FirebaseMessaging.getInstance(app);\nc9c9aaca (Hiranya Jayathilaka 2019-04-18 14:45:30 -0700 116) \nc9c9aaca (Hiranya Jayathilaka 2019-04-18 14:45:30 -0700 117)     FirebaseMessagingClient client = messaging.getMessagingClient();\nc9c9aaca (Hiranya Jayathilaka 2019-04-18 14:45:30 -0700 118) \n",
+            "commit_hashes": {
+                "c9c9aaca": "    Refactoring the FCM API (#261)",
+                "e19ca297": "    Implementing FCM sendAll and sendMulticast APIs (#247)"
+            },
+            "Commit&issueIDs": {
+                "c9c9aaca": [
+                    "(#261)"
+                ],
+                "e19ca297": [
+                    "(#247)"
+                ]
+            },
+            "links": [
+                "https://github.com/firebase/firebase-admin-java/issues/261",
+                "https://github.com/firebase/firebase-admin-java/commit/c9c9aaca",
+                "https://github.com/firebase/firebase-admin-java/issues/247",
+                "https://github.com/firebase/firebase-admin-java/commit/e19ca297"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/firebase/firebase-admin-java/",
+            "file_path": "firebase/firebase-admin-java/src/test/java/com/google/firebase/projectmanagement/IosAppTest.java",
+            "test_name": "testIosAppMetadataEquality",
+            "FQS": "com.google.firebase.projectmanagement.IosAppTest.testIosAppMetadataEquality()",
+            "start_line": "213",
+            "blame_result": "7f5c012f (Hiranya Jayathilaka 2018-11-30 13:49:13 -0800 214)     IosAppMetadata other = new IosAppMetadata(\n7f5c012f (Hiranya Jayathilaka 2018-11-30 13:49:13 -0800 215)         TEST_APP_NAME,\n7f5c012f (Hiranya Jayathilaka 2018-11-30 13:49:13 -0800 216)         TEST_APP_ID,\n7f5c012f (Hiranya Jayathilaka 2018-11-30 13:49:13 -0800 217)         TEST_APP_DISPLAY_NAME,\n7f5c012f (Hiranya Jayathilaka 2018-11-30 13:49:13 -0800 218)         TEST_PROJECT_ID,\n",
+            "commit_hashes": {
+                "7f5c012f": "    More unit tests for project management API (#229)"
+            },
+            "Commit&issueIDs": {
+                "7f5c012f": [
+                    "(#229)"
+                ]
+            },
+            "links": [
+                "https://github.com/firebase/firebase-admin-java/issues/229",
+                "https://github.com/firebase/firebase-admin-java/commit/7f5c012f"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/firebase/firebase-admin-java/",
+            "file_path": "firebase/firebase-admin-java/src/test/java/com/google/firebase/remoteconfig/FirebaseRemoteConfigTest.java",
+            "test_name": "testGetInstanceByApp",
+            "FQS": "com.google.firebase.remoteconfig.FirebaseRemoteConfigTest.testGetInstanceByApp()",
+            "start_line": "62",
+            "blame_result": "5f3b696d (Lahiru Maramba 2020-12-14 14:40:18 -0500 63)     FirebaseApp app = FirebaseApp.initializeApp(TEST_OPTIONS, \"custom-app\");\n5f3b696d (Lahiru Maramba 2020-12-14 14:40:18 -0500 64) \n5f3b696d (Lahiru Maramba 2020-12-14 14:40:18 -0500 65)     FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.getInstance(app);\n5f3b696d (Lahiru Maramba 2020-12-14 14:40:18 -0500 66) \n5f3b696d (Lahiru Maramba 2020-12-14 14:40:18 -0500 67)     assertSame(remoteConfig, FirebaseRemoteConfig.getInstance(app));\n",
+            "commit_hashes": {
+                "5f3b696d": "    feat(rc): Add Remote Config Management API  (#502)"
+            },
+            "Commit&issueIDs": {
+                "5f3b696d": [
+                    "(#502)"
+                ]
+            },
+            "links": [
+                "https://github.com/firebase/firebase-admin-java/issues/502",
+                "https://github.com/firebase/firebase-admin-java/commit/5f3b696d"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/fcrepo/fcrepo/",
+            "file_path": "fcrepo/fcrepo/fcrepo-http-commons/src/test/java/org/fcrepo/http/commons/api/rdf/HttpIdentifierConverterTest.java",
+            "test_name": "testRootUriWithoutTrailingSlash",
+            "FQS": "org.fcrepo.http.commons.api.rdf.HttpIdentifierConverterTest.testRootUriWithoutTrailingSlash()",
+            "start_line": "102",
+            "blame_result": "9f085ceba79 (Jared Whiklo 2019-11-05 11:58:17 -0600 103)         final String testUri = uriBase;\n2ecd5ee46d8 (Jared Whiklo 2019-11-12 12:40:07 -0600 104)         final String fedoraId = converter.toInternalId(testUri);\nd13e9c2a0c5 (Jared Whiklo 2020-04-08 18:16:37 -0500 105)         assertEquals(FEDORA_ID_PREFIX, fedoraId);\n2ecd5ee46d8 (Jared Whiklo 2019-11-12 12:40:07 -0600 106)         final String httpUri = converter.toExternalId(fedoraId);\n9f085ceba79 (Jared Whiklo 2019-11-05 11:58:17 -0600 107)         // We also return the trailing slash.\n",
+            "commit_hashes": {
+                "9f085ceba79": "    Add new identifier translator (#1555)",
+                "2ecd5ee46d8": "    Refactor to a more understandable converter syntax",
+                "d13e9c2a0c5": "    Switch codebase to use FedoraIDs (#1652)"
+            },
+            "Commit&issueIDs": {
+                "9f085ceba79": [
+                    "1555"
+                ],
+                "d13e9c2a0c5": [
+                    "1652"
+                ]
+            },
+            "links": [
+                "https://github.com/fcrepo/fcrepo/issues/1555",
+                "https://github.com/fcrepo/fcrepo/commit/9f085ceba79",
+                "https://github.com/fcrepo/fcrepo/issues/1652",
+                "https://github.com/fcrepo/fcrepo/commit/d13e9c2a0c5"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/fcrepo/fcrepo/",
+            "file_path": "fcrepo/fcrepo/fcrepo-kernel-impl/src/test/java/org/fcrepo/kernel/impl/ContainmentIndexImplTest.java",
+            "test_name": "testCommitRemoveFromTransaction",
+            "FQS": "org.fcrepo.kernel.impl.ContainmentIndexImplTest.testCommitRemoveFromTransaction()",
+            "start_line": "499",
+            "blame_result": "e0188dd799b (Jared Whiklo   2020-03-18 13:34:03 -0500 500)         stubObject(\"parent1\");\ne0188dd799b (Jared Whiklo   2020-03-18 13:34:03 -0500 501)         stubObject(\"child1\");\ne0188dd799b (Jared Whiklo   2020-03-18 13:34:03 -0500 502)         stubObject(\"transaction1\");\ne0188dd799b (Jared Whiklo   2020-03-18 13:34:03 -0500 503)         stubObject(\"transaction2\");\ne28dd00e972 (Peter Winckles 2021-05-04 05:03:12 +0000 504)         containmentIndex.addContainedBy(transaction2, parent1.getFedoraId(), child1.getFedoraId());\n",
+            "commit_hashes": {
+                "e0188dd799b": "    First pass at containment index (#1645)",
+                "e28dd00e972": "    Do not use the tx tables for short-lived transactions (#1896)"
+            },
+            "Commit&issueIDs": {
+                "e0188dd799b": [
+                    "1645"
+                ],
+                "e28dd00e972": [
+                    "1896"
+                ]
+            },
+            "links": [
+                "https://github.com/fcrepo/fcrepo/issues/1645",
+                "https://github.com/fcrepo/fcrepo/commit/e0188dd799b",
+                "https://github.com/fcrepo/fcrepo/issues/1896",
+                "https://github.com/fcrepo/fcrepo/commit/e28dd00e972"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/docker-java/docker-java/",
+            "file_path": "docker-java/docker-java/docker-java/src/test/java/com/github/dockerjava/api/model/RestartPolicyParsingTest.java",
+            "test_name": "noRestart",
+            "FQS": "com.github.dockerjava.api.model.RestartPolicyParsingTest.noRestart()",
+            "start_line": "16",
+            "blame_result": "26cd13ced docker-java/src/test/java/com/github/dockerjava/api/model/RestartPolicyParsingTest.java (Harald Albers 2023-02-09 21:49:21 +0000 17)         assertEquals(RestartPolicy.noRestart(), RestartPolicy.parse(\"no\"));\ne60e7de74 src/test/java/com/github/dockerjava/api/model/RestartPolicy_ParsingTest.java            (Marcus Linke  2015-06-26 20:44:26 +0200 18)     }\ne60e7de74 src/test/java/com/github/dockerjava/api/model/RestartPolicy_ParsingTest.java            (Marcus Linke  2015-06-26 20:44:26 +0200 19) \ne60e7de74 src/test/java/com/github/dockerjava/api/model/RestartPolicy_ParsingTest.java            (Marcus Linke  2015-06-26 20:44:26 +0200 20)     @Test\n26cd13ced docker-java/src/test/java/com/github/dockerjava/api/model/RestartPolicyParsingTest.java (Harald Albers 2023-02-09 21:49:21 +0000 21)     public void alwaysRestart() {\n",
+            "commit_hashes": {
+                "26cd13ced": "    Fix parameter order in `assertEquals` (#2066)",
+                "e60e7de74": "    Formatting sources"
+            },
+            "Commit&issueIDs": {
+                "26cd13ced": [
+                    "(#2066)"
+                ]
+            },
+            "links": [
+                "https://github.com/docker-java/docker-java/issues/2066",
+                "https://github.com/docker-java/docker-java/commit/26cd13ced"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/arnaudroger/SimpleFlatMapper/",
+            "file_path": "arnaudroger/SimpleFlatMapper/sfm-reflect/src/test/java/org/simpleflatmapper/reflect/test/asm/AsmFactoryTest.java",
+            "test_name": "testCreateInstantiatorFinalDbObjectInjectIdAndName",
+            "FQS": "org.simpleflatmapper.reflect.test.asm.AsmFactoryTest.testCreateInstantiatorFinalDbObjectInjectIdAndName()",
+            "start_line": "68",
+            "blame_result": "bb52d0df04 sfm/src/test/java/org/sfm/reflect/asm/AsmFactoryTest.java      (Arnaud Roger 2016-02-10 21:09:55 +0000 69) \t\tExecutableInstantiatorDefinition instantiatorDefinition =\nbb52d0df04 sfm/src/test/java/org/sfm/reflect/asm/AsmFactoryTest.java      (Arnaud Roger 2016-02-10 21:09:55 +0000 70) \t\t\t\t(ExecutableInstantiatorDefinition) AsmInstantiatorDefinitionFactory.extractDefinitions(DbFinalObject.class).get(0);\n1c5f8f646f sfm-core/src/test/java/org/sfm/reflect/asm/AsmFactoryTest.java (Arnaud Roger 2016-08-01 20:13:41 +0000 71) \t\tHashMap<Parameter, Getter<? super Object, ?>> injections = new HashMap<Parameter, Getter<? super Object, ?>>();\n1c5f8f646f sfm-core/src/test/java/org/sfm/reflect/asm/AsmFactoryTest.java (Arnaud Roger 2016-08-01 20:13:41 +0000 72) \t\tinjections.put(new Parameter(0, \"id\", long.class), new ConstantLongGetter<Object>(33l));\n1c5f8f646f sfm-core/src/test/java/org/sfm/reflect/asm/AsmFactoryTest.java (Arnaud Roger 2016-08-01 20:13:41 +0000 73) \t\tinjections.put(new Parameter(1, \"name\", String.class), new ConstantGetter<Object, String>(\"fdo\"));\n",
+            "commit_hashes": {
+                "bb52d0df04": "     #287 add build instantiator",
+                "1c5f8f646f": "    start extracting sfm-jdbc"
+            },
+            "Commit&issueIDs": {
+                "bb52d0df04": [
+                    "#287"
+                ]
+            },
+            "links": [
+                "https://github.com/arnaudroger/SimpleFlatMapper/issues/287",
+                "https://github.com/arnaudroger/SimpleFlatMapper/commit/bb52d0df04"
+            ]
+        },
+        {
+            "poj_link": "https://github.com/apache/commons-collections/",
+            "file_path": "apache/commons-collections/src/test/java/org/apache/commons/collections4/TrieUtilsTest.java",
+            "test_name": "testUnmodifiableTrie",
+            "FQS": "org.apache.commons.collections4.TrieUtilsTest.testUnmodifiableTrie()",
+            "start_line": "33",
+            "blame_result": "059c468f7 (Gary Gregory  2018-01-02 19:51:56 -0700 34)         final Trie<String, Object> trie = TrieUtils.unmodifiableTrie(new PatriciaTrie<>());\na82fa1572 (Arturo Bernal 2021-02-03 22:40:22 +0100 35)         assertTrue(trie instanceof UnmodifiableTrie, \"Returned object should be an UnmodifiableTrie.\");\nf4c041ba9 (John Patrick  2022-03-04 13:36:21 +0000 36) \nf4c041ba9 (John Patrick  2022-03-04 13:36:21 +0000 37)         assertThrows(NullPointerException.class, () -> TrieUtils.unmodifiableTrie(null));\nbe6789ced (ggregory      2017-10-14 13:41:44 -0600 38) \n",
+            "commit_hashes": {
+                "059c468f7": "    Use final.",
+                "a82fa1572": "    COLLECTIONS-779 - Migrate assert to Assertions (#209)",
+                "f4c041ba9": "    COLLECTIONS-777 JUnit v5 (#281)",
+                "be6789ced": "    Remove trailing white spaces on all lines."
+            },
+            "Commit&issueIDs": {
+                "a82fa1572": [
+                    "(#209)"
+                ],
+                "f4c041ba9": [
+                    "(#281)"
+                ]
+            },
+            "links": [
+                "https://github.com/apache/commons-collections/issues/209",
+                "https://github.com/apache/commons-collections/commit/a82fa1572",
+                "https://github.com/apache/commons-collections/issues/281",
+                "https://github.com/apache/commons-collections/commit/f4c041ba9"
+            ]
+        }
+    ]
+}
