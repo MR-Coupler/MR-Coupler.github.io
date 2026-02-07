@@ -1,7 +1,7 @@
 # Examples of MR-Coupler-generated MTCs that are different from developer-written MTCs
 
 
-### Example 1: different MRs
+### Example 1: correct but different MRs -- over different method pairs
 
 For the `readAndWrite` method, the developer constructed an equivalence MR over `readAndWrite` and `a2q`, while MR-Coupler derives an MR over `readAndWrite(x1) = readAndWrite(x2) (x1 = x2)`. 
 
@@ -36,7 +36,7 @@ For the `readAndWrite` method, the developer constructed an equivalence MR over 
 ```
 
 
-### Example 2: correct but different MRs
+### Example 2: correct but different MRs -- over the same method pair
 
 For the `cosineSimilarity` method, the developer-constructed MR captures self-similarity dominance ($\cos(x, x) \ge \cos(x, y)$ for any vector $y \neq x$), while MR-Coupler derives an equivalence MR ($\cos(x, y) = \cos(x, y)$).
 
