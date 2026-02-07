@@ -34,5 +34,7 @@ The other [dataset](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main
 
 ## Supplementary Materials
 ---
-<!-- These materials are omitted from the submitted paper due to space limitations, and the PDF document can be found. -->
-Examples of Relationship over functionally coupled method pair can be found [here](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/doc/Examples of Relationships over MR-coupled methods.md).
+These materials are omitted from the submitted paper due to space limitations.
+
+* Examples of relationships over functionally coupled method pair can be found [here](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/doc/Examples of Relationships over MR-coupled methods.md).
+* Illustrative Examples of the differences between MR-Coupler-generated and developer-written MTCs can be found [here](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/doc/Examples of different MTCs.md).
