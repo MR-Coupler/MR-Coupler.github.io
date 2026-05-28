@@ -4,8 +4,8 @@
     },
     "MTC_metadatas": [
         {
-            "poj_dir": "/ssddata1/cxubl/data/BugRev/projects/optimatika__castle__ojAlgo/",
-            "file_path": "/ssddata1/cxubl/data/BugRev/projects/optimatika__castle__ojAlgo/src/test/java/org/ojalgo/scalar/RationalNumberTest.java",
+            "poj_dir": "optimatika__castle__ojAlgo/",
+            "file_path": "optimatika__castle__ojAlgo/src/test/java/org/ojalgo/scalar/RationalNumberTest.java",
             "test_name": "testMultiplication",
             "FQS": "org.ojalgo.scalar.RationalNumberTest.testMultiplication()",
             "start_line": "110",

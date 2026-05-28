@@ -2,11 +2,11 @@
     "MR_items":[
         {
             "poj_name": "optimatika__castle__ojAlgo",
-            "test_file_path": "/ssddata1/cxubl/data/BugRev/projects/optimatika__castle__ojAlgo/src/test/java/org/ojalgo/scalar/RationalNumberTest.java",
+            "test_file_path": "optimatika__castle__ojAlgo/src/test/java/org/ojalgo/scalar/RationalNumberTest.java",
             "test_simple_name": "testMultiplication",
             "FQS_testMethos": "org.ojalgo.scalar.RationalNumberTest.testMultiplication()",
             "assertionSTMT": "TestUtils.assertEquals(a.multiply(b).doubleValue(), a.doubleValue() * b.doubleValue(), myDiff)",
-            "relationAssertionFilePath": "/ssddata1/cxubl/data/BugRev/projects_MTidentifier_relationAssertion_outputs/optimatika__castle__ojAlgo/org.ojalgo.scalar.RationalNumberTest.testMultiplication__castle__0.json",
+            "relationAssertionFilePath": "optimatika__castle__ojAlgo/org.ojalgo.scalar.RationalNumberTest.testMultiplication__castle__0.json",
             "withInputTransformation": false,
             "invoked_methods_FQS": [
                 "org.ojalgo.scalar.RationalNumber.doubleValue()",

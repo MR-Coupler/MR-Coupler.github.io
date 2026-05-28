@@ -139,7 +139,8 @@ class mrGenerator():
         version_testClass_compilation_info = json_processing.read(path_version_testClass_compilation_info)
         MTC_item_forVerionCheckout = version_testClass_compilation_info["MTC"]
         path_MTC_version_testclass_file = version_testClass_compilation_info["path_test_file"]
-        path_MTC_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_version_testclass_file.split("/projects_bugAfix/")[1] # tmp: to run demo
+        # path_MTC_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_version_testclass_file.split("/projects_bugAfix/")[1] # tmp: to run demo
+        path_MTC_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_version_testclass_file
 
         
        
@@ -152,7 +153,8 @@ class mrGenerator():
         
         fix_version_testClass_compilation_info = json_processing.read(PATH_MTCFQN_VERSION_TESTCLASS_COMPILATION % (MTC_FQN, commitID))
         path_MTC_fix_version_testclass_file = fix_version_testClass_compilation_info["path_test_file"]
-        path_MTC_fix_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_fix_version_testclass_file.split("/projects_bugAfix/")[1] # tmp: to run demo
+        # path_MTC_fix_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_fix_version_testclass_file.split("/projects_bugAfix/")[1] # tmp: to run demo
+        path_MTC_fix_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_fix_version_testclass_file
         
         
         target_methods_FQN = None; invoked_methods_FQS = None; target_methods_FQS = None
@@ -1122,10 +1124,6 @@ def test_generated_MRs(MR_generator, skipCompileIfExist=True, commentFaultyCode=
     Test_result["ES_result"] = None
 
     Test_result["generated_MR_testClass_FQN"] = genreated_test_class_FQN
-    """ measure the similarity of the generated MRs and the developer written tests """
-    Test_result["similarity_to_developer_written_MTC"] = None
-    Test_result["similarity_to_developer_written_MTC"] = MR_similarity.measure_similarity_of_generatedMR_and_developer_written_MTC(MR_generator)
-    print("Test_result['similarity_to_developer_written_MTC']: ", Test_result["similarity_to_developer_written_MTC"])
     
 
     """ write validation result """

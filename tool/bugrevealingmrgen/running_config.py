@@ -18,7 +18,7 @@ Setting = { # revise=0
     "commentFaultyCode": False, # default: True -> post_processing,
     
     "number_of_MR_per_request": "three", # by default: "five", or "one"
-    "number_of_request": 3,
+    "number_of_request": 1,
     "number_of_shot":0,
     "temperature": 0.2,
     

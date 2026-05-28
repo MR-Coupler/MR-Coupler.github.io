@@ -61,7 +61,6 @@ def request_deepseekChat(prompt, model="deepseek-chat", promt_id="default", temp
     # To config
     # client = None  # TODO: Initialize your DeepSeek client here
 
-
     messages = []
     messages.append({"role": "system", "content": system_message})
     for shot_info in few_shot_info:

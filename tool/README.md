@@ -23,8 +23,9 @@ client =
 ## Demo: Metamorphic test case (MTCs) generation 
 
 #### prepare the experimental project
-* download and decompress the `tool/inputs.tar.gz` to replace the  `tool/inputs/` folder
-* download and decompress the `tool/outputs.tar.gz` to replace the  `tool/outputs/` folder
+* download: 
+* decompress the `example_inputs.tar.gz` to replace the  `tool/inputs/` folder
+* decompress the `example_outputs.tar.gz` to replace the  `tool/outputs/` folder
 
 #### execute the tool   
 * Navigate to `tool/bugrevealingmrgen` directory and execute the following command:
@@ -35,21 +36,11 @@ $ cd tool/bugrevealingmrgen; python generate_MTCs.py
 
 #### Output:
 * generated MTCs can be found at `tool/outputs/generateMRs/xxx/generated_MRs/`
+* Example:
+
+![Example](example.png)
 
 
 #### Update
 
 If you have any questions or issues, please feel free to report an issue. We will continue to maintain this project. Thanks for your feedback😄. 
-
-
-
-
-
-
-
-
-
--------------------
-update:
-* config file
-* LLM key
