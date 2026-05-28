@@ -23,7 +23,7 @@ client =
 ## Demo: Metamorphic test case (MTCs) generation 
 
 #### prepare the experimental project
-* download: 
+* download `example_inputs.tar.gz` and `example_outputs.tar.gz` from https://doi.org/10.5281/zenodo.19438045
 * decompress the `example_inputs.tar.gz` to replace the  `tool/inputs/` folder
 * decompress the `example_outputs.tar.gz` to replace the  `tool/outputs/` folder
 
