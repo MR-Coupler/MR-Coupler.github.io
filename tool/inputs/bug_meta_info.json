@@ -1,0 +1,17 @@
+{
+    "bugs": {
+        "org.ojalgo.scalar.RationalNumberTest.testMultiplication": {
+            "buggy": "8bccad8d5b49",
+            "fixed": "220810f1c",
+            "invoked_methods_FQS": [
+                "org.ojalgo.scalar.RationalNumber.multiply(org.ojalgo.scalar.RationalNumber)"
+            ],
+            "target_methods_FQN": ["org.ojalgo.scalar.RationalNumber.multiply"],
+            "target_methods_FQS": ["org.ojalgo.scalar.RationalNumber.multiply(org.ojalgo.scalar.RationalNumber)"],
+            "links": [
+                "https://github.com/optimatika/ojAlgo/issues/49",
+                "https://github.com/optimatika/ojAlgo/commit/220810f1c"
+            ]
+        }
+    }
+}

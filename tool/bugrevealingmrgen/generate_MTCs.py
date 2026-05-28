@@ -6,56 +6,62 @@ import os, sys
 import time
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from util import file_processing,json_processing, java_parser, compile_java_poj, java_test, config, java_file_processing, PIT 
+from bugrevealingmrgen.CyUtil import file_processing,json_processing, java_parser, compile_java_poj, java_test, java_file_processing, PIT
 
 from bugrevealingmrgen import request_LLMs, parse_LLMs_response, construct_prompt, running_config
 from bugrevealingmrgen.util import MR_method_pattern, MR_method_feature
 
 import json
 
-from bugrevealingmrgen.util import MR_Scout_plus, MR_similarity, run_major
+from bugrevealingmrgen.util import MR_similarity, run_major
 from bugrevealingmrgen.construct_prompt import Templates
 from bugrevealingmrgen.request_LLMs import model_symbols, symbols_model
-from bugrevealingmrgen import taskset
 import re
 from  filelock import FileLock
 file_lock = FileLock(f"file.lock")
 
-DIR_DATA = config.DIR_DATA
-BUGREV_CACHE_DIR = f"{DIR_DATA}BugRev/cache/"
-BUGREV_CACHE_COMMIT_INFO_DIR = f"{DIR_DATA}BugRev/cache/commit_info/"
-BUGREV_CACHE_GENERATED_MR_DIR = f"{DIR_DATA}BugRev/cache/generateMRs/"
-BUGREV_CACHE_GITHUB_ISSUE_DIR = f"{DIR_DATA}BugRev/cache/github_issue/"
-BUGREV_EXPERIMENTAL_POJS_BUGAFIX_DIR = DIR_DATA.replace("/ssddata1/" , "/ssddata/") + "BugRev/projects_bugAfix/"  
+# get the path and dir of this file
+this_file_dir = os.path.dirname(os.path.abspath(__file__))
+bugrevealingmrgen_dir = this_file_dir
+# the parent dir of bugrevealingmrgen_dir
+tool_dir = os.path.dirname(bugrevealingmrgen_dir) + "/"
+
+DIR_DATA = tool_dir + "inputs/"
+BUGREV_EXPERIMENTAL_POJS_BUGAFIX_DIR = DIR_DATA + "BugRev/experiemental_projects/"  
 
 PATH_MTCFQN_VERSION_TESTCLASS_COMPILATION = f"{BUGREV_EXPERIMENTAL_POJS_BUGAFIX_DIR}/%s/%s/BugRev/testClass_compilation.json"
 DIR_MTCFQN_VERSION_BUGREV = f"{BUGREV_EXPERIMENTAL_POJS_BUGAFIX_DIR}/%s/%s/BugRev/"
 
 PATH_BUGREV_FILE_DATE = DIR_DATA + "BugRev/projects/%s/AutoMR/file_date.json" 
 
+
+OUTPUT_DIR = tool_dir + 'outputs/'
+BUGREV_CACHE_DIR = f"{OUTPUT_DIR}/"
+BUGREV_CACHE_COMMIT_INFO_DIR = f"{OUTPUT_DIR}/commit_info/"
+BUGREV_CACHE_GENERATED_MR_DIR = f"{OUTPUT_DIR}/generateMRs/"
+BUGREV_CACHE_GITHUB_ISSUE_DIR = f"{OUTPUT_DIR}/github_issue/"
 CACHE_GENERATED_CONTENT_DIR = BUGREV_CACHE_GENERATED_MR_DIR
-OUTPUT_DIR ='outputs/'
-path_reproduced_bugs_metainfo = "projects_reproducedBugs/meta_info.json"
+
+path_reproduced_bugs_metainfo = tool_dir +  "inputs/bug_meta_info.json"
 reproduced_bugs_metainfo = json_processing.read(path_reproduced_bugs_metainfo)["bugs"]
 
-path_identified_MTCs = "MTidentifier_result_example.json"
+path_identified_MTCs = tool_dir +  "inputs/MTidentifier_result_241209_False_cf_all_MTCs_InvocationInfo.json"
 identified_MTCs = json_processing.read(path_identified_MTCs)
 identified_MTCs_dict = { ele["FQS_testMethos"].replace("()",""):ele for ele in identified_MTCs["MR_items"] if "FQS_testMethos" in ele} 
 
-path_collect_MTC = "Collected_result_example.json"
+path_collect_MTC = tool_dir +  "inputs/Collected_result_1209_compilableMTCs.json"
 collected_MTCs = json_processing.read(path_collect_MTC)
 collected_MTCs_dict = { ele["FQS"].replace("()",""):ele for ele in collected_MTCs["MTC_metadatas"]}
 MTC_commit_issue_dict = { ele["FQS"].replace("()",""): ele["Commit&issueIDs"] for ele in collected_MTCs["MTC_metadatas"]}
 
-path_checkout_exe_results = "checkout_exe_results_example.json"
+path_checkout_exe_results = tool_dir +  "inputs/Collected_result_1209_compilableMTCs_checkout_exe_result0105.json"
 checkout_exe_results = json_processing.read(path_checkout_exe_results)
-path_additional_checkout_exe_results = "additional_checkout_exe_results_example.json"
-additional_checkout_exe_results = json_processing.read(path_additional_checkout_exe_results)
-checkout_exe_results["items"].update(additional_checkout_exe_results["items"])
-checkout_exe_results["detailed_lists"]["latest_runable"].update(additional_checkout_exe_results["detailed_lists"]["latest_runable"])
-checkout_exe_results_sccpu4 = json_processing.read("checkout_exe_results_backup_example.json")
+# path_additional_checkout_exe_results = tool_dir +  "inputs/20250520_added_MTCs_checkout_exe_results.json"
+# additional_checkout_exe_results = json_processing.read(path_additional_checkout_exe_results)
+# checkout_exe_results["items"].update(additional_checkout_exe_results["items"])
+# checkout_exe_results["detailed_lists"]["latest_runable"].update(additional_checkout_exe_results["detailed_lists"]["latest_runable"])
 
-all_MTC_checkout_exe_items_info = json_processing.read("checkout_exe_results_reformatted_example.json")
+all_MTC_checkout_exe_items_info = json_processing.read(tool_dir +  "inputs/Collected_result_1209_compilableMTCs_checkout_exe_result0105_reformatted.json")
 
 Junit4_STATEMENT = "import org.junit.Test;\nimport static org.junit.Assert.*;"
 Junit5_STATEMENT = "import org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;"
@@ -99,7 +105,6 @@ def init():
             MTC_FQN_list = updated_MTC_FQN_list
             print("INFO: after CF-filtering MTC_FQN_list: ", len(MTC_FQN_list))
 
-        MTC_FQN_list = [MTC_FQN for MTC_FQN in MTC_FQN_list if MTC_FQN not in MTC_FQN_skip_list]
         MTC_FQN_list = MTC_FQN_list[:100]
         
     elif Setting["targetCUTv"] == "BUGGY":
@@ -134,14 +139,11 @@ class mrGenerator():
         version_testClass_compilation_info = json_processing.read(path_version_testClass_compilation_info)
         MTC_item_forVerionCheckout = version_testClass_compilation_info["MTC"]
         path_MTC_version_testclass_file = version_testClass_compilation_info["path_test_file"]
+        path_MTC_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_version_testclass_file.split("/projects_bugAfix/")[1] # tmp: to run demo
 
         
-        if MTC_FQN in taskset.sccpu4_but_not_sccpu7_reproduced_bugs_MTC.keys(): 
-            checkout_exe_result = taskset.sccpu4_but_not_sccpu7_reproduced_bugs_MTC[MTC_FQN]["checkout_exe_result"]
-            if MTC_FQN in taskset.sccpu4_but_not_sccpu7_reproduced_bugs_MTC:
-                MTC_commit_issue_dict[MTC_FQN] = taskset.sccpu4_but_not_sccpu7_reproduced_bugs_MTC[MTC_FQN]["Commit&issueIDs"]
-        else:
-            checkout_exe_result = checkout_exe_results["detailed_lists"]["latest_runable"][MTC_FQN]
+       
+        checkout_exe_result = checkout_exe_results["detailed_lists"]["latest_runable"][MTC_FQN]
         commit_hash = checkout_exe_result["commit_hash"]
         commit_hash_pre = checkout_exe_result["commit_hash_pre"]
         if fixed_version_commitID is None: 
@@ -150,6 +152,7 @@ class mrGenerator():
         
         fix_version_testClass_compilation_info = json_processing.read(PATH_MTCFQN_VERSION_TESTCLASS_COMPILATION % (MTC_FQN, commitID))
         path_MTC_fix_version_testclass_file = fix_version_testClass_compilation_info["path_test_file"]
+        path_MTC_fix_version_testclass_file = tool_dir +  "/inputs/BugRev/experiemental_projects/" + path_MTC_fix_version_testclass_file.split("/projects_bugAfix/")[1] # tmp: to run demo
         
         
         target_methods_FQN = None; invoked_methods_FQS = None; target_methods_FQS = None
@@ -180,16 +183,16 @@ class mrGenerator():
         
         issueID = None
         if commitID in MTC_commit_issue_dict[MTC_FQN]:
-            issueID = MTC_commit_issue_dict[MTC_FQN][commitID][0].replace("(","").replace(")","").replace("
+            issueID = MTC_commit_issue_dict[MTC_FQN][commitID][0].replace("(","").replace(")","").replace("\n", "")
         else:
             issue_related_commits = list(all_MTC_checkout_exe_items_info[MTC_FQN]["issue_related_commitsANDpreCommit"].keys())
             for issue_related_commit in issue_related_commits:
                 if issue_related_commit not in MTC_commit_issue_dict[MTC_FQN]: continue
-                issueID = MTC_commit_issue_dict[MTC_FQN][issue_related_commit][0].replace("(","").replace(")","").replace("
+                issueID = MTC_commit_issue_dict[MTC_FQN][issue_related_commit][0].replace("(","").replace(")","").replace("\n", "")
                 break 
-        example_poj_name = MTC_item_forVerionCheckout["poj_dir"].split("/")[-2]
-        owner_name = example_poj_name.split("__example__")[0]
-        poj_name = example_poj_name.split("__example__")[1]
+        castle_poj_name = MTC_item_forVerionCheckout["poj_dir"].split("/")[-2]
+        owner_name = castle_poj_name.split("__castle__")[0]
+        poj_name = castle_poj_name.split("__castle__")[1]
         
         prompt_results_content_dir = f"{cache_dir_for_this_setting}prompts_results_content/"
         prompts_results_raw_dir = f"{cache_dir_for_this_setting}prompts_results_raw/"
@@ -1119,42 +1122,6 @@ def test_generated_MRs(MR_generator, skipCompileIfExist=True, commentFaultyCode=
     Test_result["ES_result"] = None
 
     Test_result["generated_MR_testClass_FQN"] = genreated_test_class_FQN
-    """ whether generated tests are MTCs? """
-    if Setting["MRScout"]: 
-        print("---MRScout---")
-        DIR_AUTOMR_DEMO_POJ = config.DIR_AUTOMR_DEMO_POJ
-        cd_cmd = f"cd {DIR_AUTOMR_DEMO_POJ};" 
-        env_dir = config.DIR_ENV
-        java_path = config.PATH_JAVA_11
-        argfile_path = config.AUTOMR_JAVA_DEMO_JAR_PATH
-        Main_path = "com.example.Main"
-        pojname = poj_dir.strip("/").split("/")[-1]
-        
-        specifiedTestFile = path_of_generated_MRs_in_cache
-        exe_log_path = f"{evaluation_execution_log_dir}{genreated_test_class_name}_MRScout.output"
-        print("file_processing.pathExist(specifiedTestFile)", file_processing.pathExist(specifiedTestFile), specifiedTestFile)
-        cmd = f'{cd_cmd} nohup {env_dir} {java_path} -cp {argfile_path} {Main_path} "{pojname}" "{poj_dir}" "{specifiedTestFile}" > {exe_log_path} 2>&1 &'
-        if file_processing.pathExist(exe_log_path) and not Setting.get("overwritePreviousMRScout", True): 
-            print(f"Skip MRScout: {exe_log_path} already exists")
-        else:
-            exe_res = os.system( cmd )
-            print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), f'{poj_dir}  cve_exe_cmd: {exe_res} cmd: {cmd}')
-        
-        budget = Setting["timeout"] 
-        while budget>0:
-            
-            if file_processing.pathExist(exe_log_path) and 'PID_tool_main_end:' in file_processing.read_TXTfile(exe_log_path): 
-                print( "PID_tool_main_end:' in file_processing.read_TXTfile(exe_log_path)", exe_log_path ); break
-            time.sleep(1); budget -= 1; print( f'to sleep {budget}s', exe_log_path)
-        MTidentifier_result = MR_Scout_plus.parse_MRScout_output(pojname, exe_log_path)
-        if Setting["MRScout_plus"]==True:
-            MTidentifier_result = MR_Scout_plus.complement_MRScout(MTidentifier_result, path_of_generated_MRs_in_cache, target_methods_FQS+suggested_methods_FQS)
-        Test_result["MTidentifier_result"] = MTidentifier_result
-        
-        print("MTidentifier_result: ", MTidentifier_result)
-
-
-
     """ measure the similarity of the generated MRs and the developer written tests """
     Test_result["similarity_to_developer_written_MTC"] = None
     Test_result["similarity_to_developer_written_MTC"] = MR_similarity.measure_similarity_of_generatedMR_and_developer_written_MTC(MR_generator)
@@ -1453,8 +1420,11 @@ def one_by_one():
     count = 0
     for index_of_request in range(Setting["number_of_request"]):
         for MTC_FQN in MTC_FQN_list:
+            print(f"Processing, index_of_request: {index_of_request}, MTC_item: {MTC_FQN}")
             task = { "index_of_request": index_of_request, "MTC_FQN": MTC_FQN }
             main_task(task)
+            break
+        break
 
 
 

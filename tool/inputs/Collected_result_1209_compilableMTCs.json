@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "total_keeped_MTCs": 3342
+    },
+    "MTC_metadatas": [
+        {
+            "poj_dir": "/ssddata1/cxubl/data/BugRev/projects/optimatika__castle__ojAlgo/",
+            "file_path": "/ssddata1/cxubl/data/BugRev/projects/optimatika__castle__ojAlgo/src/test/java/org/ojalgo/scalar/RationalNumberTest.java",
+            "test_name": "testMultiplication",
+            "FQS": "org.ojalgo.scalar.RationalNumberTest.testMultiplication()",
+            "start_line": "110",
+            "blame_result": "ef8384a4e test/org/ojalgo/scalar/RationalNumberTest.java (Anders Peterson 2018-03-27 13:48:30 +0200 111)         RationalNumber a = RationalNumber.valueOf(0.04919653065050689);\nef8384a4e test/org/ojalgo/scalar/RationalNumberTest.java (Anders Peterson 2018-03-27 13:48:30 +0200 112)         RationalNumber b = RationalNumber.valueOf(1.2325077080153841);\n220810f1c test/org/ojalgo/scalar/RationalNumberTest.java (Alexey Filippov 2018-03-15 18:09:37 +0000 113) \nef8384a4e test/org/ojalgo/scalar/RationalNumberTest.java (Anders Peterson 2018-03-27 13:48:30 +0200 114)         TestUtils.assertEquals(a.multiply(b).doubleValue(), a.doubleValue() * b.doubleValue(), myDiff);\n220810f1c test/org/ojalgo/scalar/RationalNumberTest.java (Alexey Filippov 2018-03-15 18:09:37 +0000 115)     }\n",
+            "commit_hashes": {
+                "ef8384a4e": "    Fixed junit test annotations and dependencies",
+                "220810f1c": "    Issue #49 - fix multiplication for rationals"
+            },
+            "Commit&issueIDs": {
+                "220810f1c": [
+                    "#49"
+                ]
+            },
+            "links": [
+                "https://github.com/optimatika/ojAlgo/issues/49",
+                "https://github.com/optimatika/ojAlgo/commit/220810f1c"
+            ],
+            "keeped_commit_hashes": {
+                "220810f1c": "    Issue #49 - fix multiplication for rationals"
+            },
+            "keeped_commit_hashesANDissueIDs": {
+                "220810f1c": [
+                    "#49"
+                ]
+            },
+            "keeped_commit_hashesANDpreCommit": {
+                "220810f1c": "8bccad8d5b49e7fbb09da0f43b0b5d6f332968fd"
+            }
+        }
+    ]
+}

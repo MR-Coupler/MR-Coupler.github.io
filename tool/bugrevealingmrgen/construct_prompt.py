@@ -7,70 +7,31 @@ import time
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from util import file_processing,json_processing, java_parser, java_file_processing, config
+from bugrevealingmrgen.CyUtil import file_processing,json_processing, java_parser, java_file_processing, config
 
 from bugrevealingmrgen import request_LLMs, running_config
-from bugrevealingmrgen.request_GitHub import GitHubIssueFetcher
+# from bugrevealingmrgen.request_GitHub import GitHubIssueFetcher
 from bugrevealingmrgen.util import java_file_process_local
 
-from codebleu import calc_codebleu
+# from codebleu import calc_codebleu
 import re, datetime
 import javalang
 
-inputTrans_poj_dir = config.ROOT_DIR
-GT_ITrans_w_dir = config.GT_ITRANS_W_DIR
-GT_ITrans_wo_dir = config.GT_ITRANS_WO_DIR
-benchmark_src_dir = config.BENCHMARK_SRC_DIR
+# get the path and dir of this file
+this_file_dir = os.path.dirname(os.path.abspath(__file__))
 
-GT_CLASS_SUFFIX = config.GT_CLASS_SUFFIX
-HARDCODED_CLASS_SUFFIX = config.HARDCODED_CLASS_SUFFIX
-VALID_INPUT_CLASS_SUFFIX = config.VALID_INPUT_CLASS_SUFFIX
-FEW_SHOT_BASE_DIR = config.FEW_SHOT_BASE_DIR
-
-codeTransform_control_template_path = f"prompt_templates/codeTransform_control.md"
+codeTransform_control_template_path = f"{this_file_dir}/prompt_templates/codeTransform_control.md"
 codeTransform_control_template = file_processing.read_TXTfile(codeTransform_control_template_path)
-codeTransform_renaming_template_path = f"prompt_templates/codeTransform_renaming.md"
+codeTransform_renaming_template_path = f"{this_file_dir}/prompt_templates/codeTransform_renaming.md"
 codeTransform_renaming_template = file_processing.read_TXTfile(codeTransform_renaming_template_path)
 
-mutateMRs_template_path = f"prompt_templates/mutate_MRs.md"
-mutateMRs_template = file_processing.read_TXTfile(mutateMRs_template_path)
-
-
-Template0_path = f"prompt_templates/template0.md"
-Template0 = file_processing.read_TXTfile(Template0_path)
-Template0_1_path = f"prompt_templates/template0-1.md"
-Template0_1 = file_processing.read_TXTfile(Template0_1_path)
-Template1_path = f"prompt_templates/template1.md"
-Template1 = file_processing.read_TXTfile(Template1_path)
-Template1_2_path = f"prompt_templates/template1-2.md"
-Template1_2 = file_processing.read_TXTfile(Template1_2_path)
-Template2_path = f"prompt_templates/template2.md"
-Template2 = file_processing.read_TXTfile(Template2_path)
-Template2_2_path = f"prompt_templates/template2-2.md"
-Template2_2 = file_processing.read_TXTfile(Template2_2_path)
-Template2_1_path = f"prompt_templates/template2-1.md"
-Template2_1 = file_processing.read_TXTfile(Template2_1_path)
-Template3_path = f"prompt_templates/template3.md"
-Template3 = file_processing.read_TXTfile(Template3_path)
-Template4_path = f"prompt_templates/template4.md"
-Template4 = file_processing.read_TXTfile(Template4_path)
-Template5_path = f"prompt_templates/template5.md"
+Template5_path = f"{this_file_dir}/prompt_templates/template.md"
 Template5 = file_processing.read_TXTfile(Template5_path)
 Templates = {
-    "0": Template0,
-    "0-1": Template0_1,
-    "1": Template1,
-    "1-2": Template1_2,
-    "2": Template2,
-    "2-1": Template2_1,
-    "2-2": Template2_2,
-    "3": Template3,
-    "4": Template4,
-    "5": Template5,
-    "M": Template2_1,
+    "5": Template5
 } 
 
-InputGenTemplate0_path = f"prompt_templates/inputGenTemplate0.md"
+InputGenTemplate0_path = f"prompt_templates/inputGenTemplate.md"
 
 
 
@@ -327,9 +288,9 @@ def generate_prompt_from_profile(input_generator):
         pass
     
     """ get:  ISSUE INFO"""
-    issue_info_dict = GitHubIssueFetcher.get_issue_info(owner_name, poj_name, issueID)
-    readable_issue_info = GitHubIssueFetcher.get_readable_issue_titleBodyComments(issue_info_dict)
-    issue_info = f"*Title*\n{readable_issue_info['title']}\n\n*Body*\n{readable_issue_info['body']}\n\n*Comments*\n{readable_issue_info['comments']}"
+    # issue_info_dict = GitHubIssueFetcher.get_issue_info(owner_name, poj_name, issueID)
+    # readable_issue_info = GitHubIssueFetcher.get_readable_issue_titleBodyComments(issue_info_dict)
+    # issue_info = f"*Title*\n{readable_issue_info['title']}\n\n*Body*\n{readable_issue_info['body']}\n\n*Comments*\n{readable_issue_info['comments']}"
     
     FOCAL_METHOD = ("\n").join(declarations_of_focal_methods)
     SUGGESTED_METHODS = ("\n").join(declarations_of_invoked_methods)
@@ -417,9 +378,7 @@ def generate_prompt_from_profile(input_generator):
     prompt = prompt.replace("<EXISTING TESTS>", EXISTING_TESTS)  
     # <SUGGESTED METHODS>
     # prompt = prompt.replace("<SUGGESTED METHODS>", "* " + ("\n* ").join(invoked_methods_signatures)) 
-    prompt = prompt.replace("<SUGGESTED METHODS>", SUGGESTED_METHODS) 
-    prompt = prompt.replace("<MR-ENCODED TESTS>", mr_encoded_tests)
-    prompt = prompt.replace("<ISSUE INFO>", issue_info)
+    prompt = prompt.replace("<SUGGESTED METHODS>", SUGGESTED_METHODS)
     prompt = prompt.replace("<FUNCTIONAL RELEVANCE>", functional_revelance_info)
 
 

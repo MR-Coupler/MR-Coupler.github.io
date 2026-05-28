@@ -1,10 +1,10 @@
 {
     "bugs": {
-        "com.github.jasminb.jsonapi.ResourceConverterTest.testWriteWithKebabCaseRelationships": {
-            "issue": "https://github.com/jasminb/jsonapi-converter/issues/128"
-        },
         "org.ojalgo.scalar.RationalNumberTest.testMultiplication": {
             "issue": "https://github.com/optimatika/ojAlgo/issues/49"
+        },
+        "com.github.jasminb.jsonapi.ResourceConverterTest.testWriteWithKebabCaseRelationships": {
+            "issue": "https://github.com/jasminb/jsonapi-converter/issues/128"
         },
         "com.alipay.sofa.rpc.codec.jackson.JacksonSerializerTest.testMoreParameters": {
             "issue": "https://github.com/sofastack/sofa-rpc/issues/871"

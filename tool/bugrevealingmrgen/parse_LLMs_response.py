@@ -1,4 +1,4 @@
-from util import file_processing,json_processing
+from bugrevealingmrgen.CyUtil import file_processing,json_processing
 
 
 

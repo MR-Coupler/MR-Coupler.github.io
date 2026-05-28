@@ -28,7 +28,7 @@ minors to update:
 import re
 import logging
 
-from util import java_parser
+from bugrevealingmrgen.CyUtil import java_parser
 
 
 

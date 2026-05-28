@@ -38,3 +38,16 @@ $ cd MR-Coupler; python generate_MTCs.py
 #### Update
 
 If you have any questions or issues, please feel free to report an issue. We will continue to maintain this project. Thanks for your feedback😄. 
+
+
+
+
+
+
+
+
+
+-------------------
+update:
+* config file
+* LLM key

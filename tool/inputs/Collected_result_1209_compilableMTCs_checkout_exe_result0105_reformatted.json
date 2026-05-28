@@ -1,0 +1,25 @@
+{
+    "org.ojalgo.scalar.RationalNumberTest.testMultiplication": {
+        "issue_related_commitsANDpreCommit": {
+            "220810f1c": "8bccad8d5b49e7fbb09da0f43b0b5d6f332968fd"
+        },
+        "MTC_compilation_exe_reuslt": {
+            "latest": {
+                "poj_compile_result": true,
+                "test_compile_result": true,
+                "test_exe_result": "pass"
+            },
+            "220810f1c": {
+                "poj_compile_result": true,
+                "test_compile_result": true,
+                "test_exe_result": "pass"
+            },
+            "8bccad8d5b49": {
+                "poj_compile_result": true,
+                "test_compile_result": true,
+                "test_exe_result": null
+            }
+        },
+        "poj": "optimatika__castle__ojAlgo"
+    }
+}

@@ -3,10 +3,10 @@ import subprocess
 import logging
 from typing import Union, List
 
-from util import java_file_processing, java_test
+from bugrevealingmrgen.CyUtil import java_file_processing, java_test, config
 
-major_home = "TO_CONFIG"
-mml_file = "TO_CONFIG"
+major_home = config.major_home
+mml_file = config.mml_file
 
 def run_major(
     poj_dir: str,

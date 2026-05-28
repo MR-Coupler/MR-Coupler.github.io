@@ -51,7 +51,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from util import java_parser, java_file_processing, json_processing
+from bugrevealingmrgen.CyUtil import java_parser, java_file_processing, json_processing
 from bugrevealingmrgen.util.MR_method_pattern import parse_method_signature
 
 

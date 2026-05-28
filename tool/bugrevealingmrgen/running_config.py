@@ -5,13 +5,13 @@ from bugrevealingmrgen.request_LLMs import model_symbols, symbols_model
 """ run tool config: latest """
 Setting = { # revise=0
     "taskset": "all" , # reproduced bugs, 
-    "targetCUTv": "latest", # "BUGGY": buggy&fixed, "latest": latest version
+    "targetCUTv": "BUGGY", # "BUGGY": buggy&fixed, "latest": latest version
     "Pit": False,
     "only2MI": True, # True: only subjects where 2 MI invovled
     "afterCF": False, # True: only subjects after CF date
     "date": "250821", #
     "model": f"{symbols_model['dr']}",  # q3cf, dr, dc, g4om             q3cp, qwq
-    "Prompt_template":"5", # 0, 1 , 1-2, 2, 2-1, 4: one-by-one only paired method, M: manually crafted prompt (default 2-1), when baseline: 0/1,  "commentFaultyCode": False
+    "Prompt_template":"5", 
     
     "number_of_revise": 0, # must run 0 first, and then, 1 2 3
     "number_of_tests_per_MR": 1, # 1: when number_of_revise=0, or 10: when number_of_revise>0 (the last version)
@@ -32,7 +32,7 @@ Setting = { # revise=0
     "result_collect": True, 
     "MRValidation": True,
     "parallel": False,
-    "one_by_one": False, 
+    "one_by_one": True, 
     "overwritePreviousPIT": False, # default: False, to save time
     "overwritePreviousMRScout": False, # default: False, to save time
     "UseGroundTruthMTCclass":False,   # default: False, just used to reproduce GT MTC

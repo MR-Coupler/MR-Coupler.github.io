@@ -2,7 +2,7 @@ import datetime
 import os, sys
 import time
 
-from util import file_processing,json_processing
+from bugrevealingmrgen.CyUtil import file_processing,json_processing
 import openai
 
 prompt_cache_dir_default = "outputs/requesting_LLMs/"
@@ -59,7 +59,8 @@ def request_deepseekChat(prompt, model="deepseek-chat", promt_id="default", temp
                          few_shot_info=[], chat_history=[], include_chat_history=False, return_reasoning_content=False):
     
     # To config
-    client = None  # TODO: Initialize your DeepSeek client here
+    # client = None  # TODO: Initialize your DeepSeek client here
+
 
     messages = []
     messages.append({"role": "system", "content": system_message})
@@ -215,77 +216,6 @@ def request_QwQ(prompt, model="qwq-plus", promt_id="default", temperature=0,
     else:
         return content
     
-# not accessible in China
-import anthropic # type: ignore
-def request_Claude(prompt, model="claude-3-5-haiku-20241022", promt_id="default", temperature=0, 
-                 prompt_results_content_dir=None, system_message="You are a helpful programming assistant", 
-                 few_shot_info=[], chat_history=[], include_chat_history=False, return_reasoning_content=False):
-    client = anthropic.Anthropic(
-        # defaults to os.environ.get("ANTHROPIC_API_KEY")
-        api_key=os.environ.get("ANTHROPIC_API_KEY"),
-    )
-    messages = []
-    messages.append({"role": "system", "content": system_message})
-    for shot_info in few_shot_info:
-        Q = shot_info["Q"]
-        A = shot_info["A"]
-        messages.append({"role": "user", "content": Q})
-        messages.append({"role": "assistant", "content": A})
-    if include_chat_history and chat_history: 
-        messages.extend(chat_history)
-    messages.append({"role": "user", "content": prompt})
-  
-    response = None
-    retries = 3    
-    while retries > 0:    
-        try: 
-            response = client.messages.create(
-                model=model,
-                messages=messages,
-                max_tokens=max_tokens
-            )
-            retries = 0
-        except Exception as e:    
-            if e: 
-                print(e)   
-                print('LOG, INFO: Timeout error, retrying...')    
-                retries -= 1    
-                time.sleep(30) # sleep 30 secs    
-            else:    
-                raise e  
-    
-    
-    content = "" # the content of the response
-    reasoning_content = "" # the reasoning of the response
-    # Handle the response
-    if response:
-        # For non-streamed responses, just get the content
-        content = response.choices[0].message.content
-        if hasattr(response.choices[0].message, 'reasoning_content'):
-            reasoning_content = response.choices[0].message.reasoning_content
-    else:
-        content = "ERROR: No response"
-
-    # Store response
-    if prompt_results_content_dir:
-        json_processing.write(path=f"{prompt_results_content_dir}/{promt_id}_prompt_messages.md", json_content=messages)
-        if content != "ERROR: No response":
-            file_processing.write_TXTfile(path=f"{prompt_results_content_dir}/{promt_id}_response_content.md", content=content)
-            file_processing.write_TXTfile(path=f"{prompt_results_content_dir}/{promt_id}_reasoning_content.md", content=reasoning_content)
-    # BACKUP to default folder
-    promt_id_timestamp = f"{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}_{model}_{temperature}" 
-    dir_promt_id_timestamp = f"{prompt_cache_dir_default}/{promt_id_timestamp}"
-    if file_processing.pathExist(dir_promt_id_timestamp) == False:
-        file_processing.creatFolder_IfExistPass(dir_promt_id_timestamp)
-    json_processing.write(path=f"{dir_promt_id_timestamp}/prompt_messages.md", json_content=messages)
-    file_processing.write_TXTfile(path=f"{dir_promt_id_timestamp}/response_content.md", content=content)
-    file_processing.write_TXTfile(path=f"{dir_promt_id_timestamp}/reasoning_content.md", content=reasoning_content)
-    
-    if return_reasoning_content:
-        return content, reasoning_content
-    else:
-        return content
-
 def extract_generated_ITrans_class(response_content, promt_id,prompt_generated_ITrans_dir=""):
     code_lines = []
     code_flag = False
