@@ -1,3 +1,6 @@
+tool/inputs/
+tool/outputs/
+
 # macOS
 .DS_Store
 .DS_Store?
@@ -4902,3 +4905,11 @@ tool/bugrevealingmrgen/outputs/requesting_LLMs/20260528223909_deepseek-reasoner_
 tool/bugrevealingmrgen/outputs/requesting_LLMs/20260528223936_deepseek-reasoner_0.2/prompt_messages.md
 tool/bugrevealingmrgen/outputs/requesting_LLMs/20260528223936_deepseek-reasoner_0.2/reasoning_content.md
 tool/bugrevealingmrgen/outputs/requesting_LLMs/20260528223936_deepseek-reasoner_0.2/response_content.md
+tool/inputs/BugRev/experiemental_projects/org.ojalgo.scalar.RationalNumberTest.testMultiplication/8bccad8d5b49
+tool/inputs/BugRev/experiemental_projects/org.ojalgo.scalar.RationalNumberTest.testMultiplication/220810f1c
+tool/inputs/BugRev/experiemental_projects/org.ojalgo.scalar.RationalNumberTest.testMultiplication/latest
+tool/inputs.tar.gz
+tool/outputs.tar.gz
+tool/inputs/BugRev/experiemental_projects/org.ojalgo.scalar.RationalNumberTest.testMultiplication/8bccad8d5b49
+tool/inputs/BugRev/experiemental_projects/org.ojalgo.scalar.RationalNumberTest.testMultiplication/220810f1c
+tool/inputs/BugRev/experiemental_projects/org.ojalgo.scalar.RationalNumberTest.testMultiplication/latest

@@ -16,23 +16,25 @@
 * Edit file `MR-Coupler/request_LLMs.py` and update the following fields.
 
 ``` python 
-client = openai.AzureOpenAI(
-    api_key="TODO",         # change to your OpenAI API key
-    api_version="TODO",     # choose the api version
-    azure_endpoint="TODO"   # set the endpoint
-)
+# To config
+client = 
 ```
 
-## Quick Start: Metamorphic test case generation
-    
-Navigate to MR-Coupler's directory and execute the following command:
+## Demo: Metamorphic test case (MTCs) generation 
+
+#### prepare the experimental project
+* download and decompress the `tool/inputs.tar.gz` to replace the  `tool/inputs/` folder
+* download and decompress the `tool/outputs.tar.gz` to replace the  `tool/outputs/` folder
+
+#### execute the tool   
+* Navigate to `tool/bugrevealingmrgen` directory and execute the following command:
 
 ```cmd
-$ cd MR-Coupler; python generate_MTCs.py 
+$ cd tool/bugrevealingmrgen; python generate_MTCs.py 
 ```
 
-   Output:
-   * generate input pairs and the validation results can be found at `validation_generated_MRs_$LLM_name$.json` 
+#### Output:
+* generated MTCs can be found at `tool/outputs/generateMRs/xxx/generated_MRs/`
 
 
 #### Update
