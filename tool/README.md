@@ -8,10 +8,6 @@
 * Java: 11.0.18
 * Python: 3.10, the required depdencies can be found in `requirements.txt`
 
-#### Subjects preparation
-* Download the projects from [dataset1](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/data/Human-written-MTCs.json) or [dataset2](https://github.com/MR-Coupler/MR-Coupler.github.io/blob/main/data/Bug-Revealing-MTCs.json) into the `inputs/experiemental_projects` directory.
-
-
 #### Setting API key for LLMs
 * Edit file `MR-Coupler/request_LLMs.py` and update the following fields.
 
